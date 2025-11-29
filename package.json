@@ -1,0 +1,34 @@
+{
+  "name": "master-designer-v2.0",
+  "version": "1.0.0",
+  "description": "Master Designer v2.0 - Static Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server . --port=3000 --open=./index.html",
+    "build": "echo \"No build step needed for static site\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "static",
+    "html",
+    "css",
+    "javascript",
+    "master-designer"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GayangaBandara/Master-Designer-v2.0.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GayangaBandara/Master-Designer-v2.0/issues"
+  },
+  "homepage": "https://github.com/GayangaBandara/Master-Designer-v2.0#readme",
+  "dependencies": {
+    "react-icons": "^5.5.0"
+  }
+}
