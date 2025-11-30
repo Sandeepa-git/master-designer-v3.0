@@ -365,17 +365,35 @@
         "></div>
 
 <!-- Video -->
-                                        <video id="hero-bg-video" autoplay muted playsinline loop preload="none"
-                                            data-pc="public/assets/videos/hero.mp4"
-                                            data-mobile="public/assets/videos/hero.mp4" style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                position: absolute;
-                top: 0;                                        
-                left: 0;
-                z-index: 1;
-            "></video>
+                                        <video id="hero-bg-video" autoplay muted playsinline loop preload="auto"
+    data-pc="/assets/videos/hero.mp4"
+    data-mobile="/assets/videos/hero.mp4" 
+    style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
+    <source src="/assets/videos/hero.mp4" type="video/mp4">
+</video>
+
+<script>
+    // 1. Get the video element
+    const video = document.getElementById('hero-bg-video');
+    const source = video.querySelector('source');
+
+    // 2. Check if we are running on Localhost
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        
+        console.log("Localhost detected: Adjusting video path...");
+
+        // 3. Add '/public' to the paths for Localhost
+        const localPath = '/public/assets/videos/hero.mp4';
+        
+        video.setAttribute('data-pc', localPath);
+        video.setAttribute('data-mobile', localPath);
+        source.setAttribute('src', localPath);
+        
+        // 4. Reload the video to apply changes
+        video.load();
+        video.play();
+    }
+</script>
 
                                     </div>
                                 </div>
