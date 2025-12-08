@@ -516,17 +516,27 @@
                                     <br> -->
                                     <br><br><br>
                                     <div class="text-center ">
-                                        <CENter><button class=" blob-btn pc-only" onclick="openInNewTab()">
-                                                GALLERY
-                                                <span class="blob-btn__inner">
-                                                    <span class="blob-btn__blobs">
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                    </span>
-                                                </span>
-                                            </button> </CENter>
+                                        <center>
+    <button class="gradient-btn pc-only" onclick="openInNewTab()"
+        style="background: linear-gradient(90deg, #00C3FF, #9B59B6);
+               color: #E0F7FF; 
+               border: 2px solid rgba(155, 89, 182, 0.1); 
+               border-radius: 12px; 
+               padding: 12px 24px; 
+               font-size: 1rem; 
+               cursor: pointer;
+               transition: 0.3s;">
+        GALLERY
+    </button>
+</center>
+
+<!-- Optional simple hover effect -->
+<style>
+    .gradient-btn:hover {
+        opacity: 0.85;
+    }
+</style>
+
                                         <!--                                         <button class=" blob-btn" onclick="openInNewTab1()">
                                             SUBMIT
                                             <span class="blob-btn__inner">
@@ -1209,23 +1219,27 @@
                             designed to
                             embrace the
                             latest trends. Wear with confidence.</p>
-                        <p class="price">LKR. 1700</p>
-                        <div class="sizes">
-                            <p>Available in sizes</p>
-                            <div class="size-buttons">
-                                <button class="size-btn">XS</button>
-                                <button class="size-btn">S</button>
-                                <button class="size-btn">M</button>
-                                <button class="size-btn">L</button>
-                                <button class="size-btn">XL</button>
-                                <button class="size-btn">2XL</button>
-                            </div>
-                            <br>
-                        </div>
-                        <p class="order-deadline">*Order before 28 Jun 2024</p>
-                        <!--                         <a href="https://forms.gle/fHspUNRTXEJtr272A"> -->
-                        <button class="order-now">Order Closed</button>
-                        </a>
+                        <div class="product-card">
+    <p class="price" style="color: #E0F7FF; font-weight: bold; font-size: 1.2rem;">LKR. 1700</p>
+
+    <div class="sizes">
+        <p style="color: #D1EAF5; margin-bottom: 8px;">Available in sizes</p>
+        <div class="size-buttons" style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XS</button>
+            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">S</button>
+            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">M</button>
+            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">L</button>
+            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XL</button>
+            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">2XL</button>
+        </div>
+        <br>
+    </div>
+
+    <p class="order-deadline" style="color: #D1EAF5; font-size: 0.9rem;">*Order before 28 Jun 2024</p>
+
+    <button class="order-now" style="padding: 10px 24px; border-radius: 12px; background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; border: 2px solid rgba(0,134,204,0.1); cursor: not-allowed;">Order Closed</button>
+</div>
+
                     </div>
                 </div>
             </div>
