@@ -53,6 +53,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>MASTER DESIGNER</title>
 
+    <style>
+    /* 1. Change the large Mask/Blob effect (currently purple) */
+    .layer__red {
+        /* Change this hex code to your desired color */
+        background: #610FC0 !important; 
+    }
+
+    /* 2. Change the Custom Cursor (Dot/Text) */
+    .vj-cursor {
+        /* Change the text/icon color inside the cursor */
+        color: #610FC0 !important; 
+        
+        /* If the cursor has a border/circle */
+        border-color: #610FC0 !important;
+    }
+
+    /* 3. Change the cursor background if it is a solid dot */
+    .vj-cursor span {
+        background-color: #610FC0 !important;
+    }
+</style>
+
     <script>
         // Prevent browser from auto-restoring the scroll position
         history.scrollRestoration = "manual";
@@ -110,136 +132,136 @@
 <body>
 
     <!-- ....................loading page .......................................................... -->
-    <style>
-    /* Main Overlay */
-    .page-loading {
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-        z-index: 99999999;
-        background: radial-gradient(circle at center, #2b2b40 0%, #151520 100%);
-        display: flex; justify-content: center; align-items: center;
-        font-family: 'Segoe UI', Roboto, sans-serif;
-        transition: opacity .7s ease, visibility .7s ease;
-    }
+<style>
+/* Main Overlay */
+.page-loading {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 99999999;
+    background: radial-gradient(circle at center, #2b2b40 0%, #151520 100%);
+    display: flex; justify-content: center; align-items: center;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    transition: opacity .7s ease, visibility .7s ease;
+}
 
-    /* Inner Container */
-    .page-loading_inner {
-        position: relative;
-        width: min(380px, 82vw);
-        aspect-ratio: 1 / 1;
-        display: flex; justify-content: center; align-items: center;
-    }
+/* Inner Container */
+.page-loading_inner {
+    position: relative;
+    width: min(380px, 82vw);
+    aspect-ratio: 1 / 1;
+    display: flex; justify-content: center; align-items: center;
+}
 
-    /* SVG Ring */
-    #page-loading_circle {
-        width: 100%; height: 100%;
-        transform: rotate(-90deg);
-        filter: drop-shadow(0 0 20px rgba(0,180,255,.45));
-    }
-    #page-loading_circle circle {
-        fill: none;
-        transition: stroke-dashoffset 0.1s linear;
-    }
+/* SVG Ring */
+#page-loading_circle {
+    width: 100%; height: 100%;
+    transform: rotate(-90deg);
+    filter: drop-shadow(0 0 20px rgba(128,0,255,.45)); /* Updated purple-blue glow */
+}
+#page-loading_circle circle {
+    fill: none;
+    transition: stroke-dashoffset 0.1s linear;
+}
 
-    /* Logo - Centered */
-    .page-loading_logo {
-        position: absolute; top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        animation: floatLogo 3s ease-in-out infinite;
-    }
-    .page-loading_logo img { width: 220px; height: 220px; }
+/* Logo - Centered */
+.page-loading_logo {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: floatLogo 3s ease-in-out infinite;
+}
+.page-loading_logo img { width: 220px; height: 220px; }
 
-    /* --- LOADING TEXT (Centered) --- */
-    #js-page-loading_text {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); /* Perfect horizontal center */
-        bottom: 23%; /* Default Desktop Position */
-        
-        color: #fff;
-        font-size: 15px;
-        letter-spacing: 2px;
-        font-weight: 300;
-        white-space: nowrap;
-        transition: opacity 0.4s ease;
-    }
-    .js-loading_text {
-        font-size: 34px; font-weight: 700;
-        animation: pulseText 2.0s ease-in-out infinite;
-    }
+/* --- LOADING TEXT (Centered) --- */
+#js-page-loading_text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 23%;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    white-space: nowrap;
+    transition: opacity 0.4s ease;
+}
+.js-loading_text {
+    font-size: 34px; font-weight: 700;
+    animation: pulseText 2.0s ease-in-out infinite;
+}
 
-    /* --- ENTER BUTTON (Centered) --- */
-    #js-page-loading_start {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); /* Perfect horizontal center */
-        bottom: 15%; /* Default Desktop Position */
-        
-        padding: 14px 42px;
-        border-radius: 40px;
-        border: 1px solid rgba(255,255,255,.28);
-        background: rgba(255,255,255,.07);
-        backdrop-filter: blur(12px);
-        color: #fff;
-        font-size: 14px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        display: none;
-        cursor: pointer;
-        transition: .3s ease;
-        white-space: nowrap;
-    }
+/* --- ENTER BUTTON (Centered) --- */
+#js-page-loading_start {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15%;
+    padding: 14px 42px;
+    border-radius: 40px;
+    border: 1px solid rgba(255,255,255,.28);
+    background: rgba(255,255,255,.07);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: none;
+    cursor: pointer;
+    transition: .3s ease;
+    white-space: nowrap;
+}
 
-    /* Animations */
-    @keyframes floatLogo {
-        0%,100% { transform: translate(-50%, -50%); }
-        50% { transform: translate(-50%, -54%); }
-    }
-    @keyframes pulseText {
-        0%,100% { opacity: .6; }
-        50% { opacity: 1; }
-    }
+/* Animations */
+@keyframes floatLogo {
+    0%,100% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -54%); }
+}
+@keyframes pulseText {
+    0%,100% { opacity: .6; }
+    50% { opacity: 1; }
+}
 
-    /* --- MOBILE SPECIFIC FIXES --- */
-    @media (max-width: 480px) {
-        /* Adjust sizes */
-        .page-loading_logo img { width: 180px !important; height: 180px !important; }
-        .js-loading_text { font-size: 28px !important; }
-        #js-page-loading_text { font-size: 13px !important; }
-        #js-page-loading_start { font-size: 12px !important; padding: 12px 34px !important; }
-
-        /* CRITICAL: Force both to exact same bottom position */
-        #js-page-loading_text { bottom: 15% !important; }
-        #js-page-loading_start { bottom: 15% !important; }
-    }
+/* --- MOBILE SPECIFIC FIXES --- */
+@media (max-width: 480px) {
+    .page-loading_logo img { width: 180px !important; height: 180px !important; }
+    .js-loading_text { font-size: 28px !important; }
+    #js-page-loading_text { font-size: 13px !important; }
+    #js-page-loading_start { font-size: 12px !important; padding: 12px 34px !important; }
+    #js-page-loading_text { bottom: 15% !important; }
+    #js-page-loading_start { bottom: 15% !important; }
+}
 </style>
 
 <div class="page-loading js-page-loading">
     <div class="page-loading_inner js-page-loading_inner">
 
+        <!-- SVG Ring with gradient light-blue → purple -->
         <svg id="page-loading_circle" viewBox="0 0 270 270">
             <defs>
                 <linearGradient id="loaderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#00c6ff"></stop>
-                    <stop offset="100%" stop-color="#0072ff"></stop>
+                    <stop offset="0%" stop-color="#00C3FF"></stop>
+                    <stop offset="100%" stop-color="#8000FF"></stop>
                 </linearGradient>
             </defs>
             <circle cx="136" cy="136" r="132" stroke="url(#loaderGradient)" stroke-width="6" stroke-linecap="round"/>
         </svg>
 
+        <!-- Logo -->
         <div class="page-loading_logo">
-            <img src="../public/assets/images/logo.png" alt="logo">
+            <img src="../public/assets/images/logo.png" alt="logo" style="width: 100px; height: auto;">
         </div>
 
+        <!-- Loading Text -->
         <span id="js-page-loading_text">
             LOADING <b class="js-loading_text">00</b>%
         </span>
 
+        <!-- Enter Button -->
         <button id="js-page-loading_start">
             ENTER
         </button>
 
     </div>
 </div>
+
 
 <script>
 (function () {
@@ -303,7 +325,7 @@
 <header class="header js-header">
     <div class="header_logo js-header_logo">
         <a class="link-logo" aria-label="Home page" href="/">
-            <img class="png" src="../public/assets/icons/logo.png" alt="logo">
+           <img class="png" src="/public/assets/images/logo.png" alt="logo" style="width: 50px; height: auto; margin-top: 20px;">
         </a>
     </div>
     <div class="header_menu">
@@ -311,8 +333,20 @@
             <li class="header_menu_item js-cursor-contract">
                 <a href="#work" target="_blank" class="desc text-uppercase">
                     <span class="header_menu_item_inner">
-                        <span class="header_menu_item_link header_menu_item_link__deep">Resource</span>
-                        <span class="header_menu_item_link header_menu_item_link__active">Resource</span>
+                        <span class="header_menu_item_link header_menu_item_link__deep" 
+      style="background: linear-gradient(90deg, #ffffff); 
+             -webkit-background-clip: text; 
+             -webkit-text-fill-color: transparent;">
+    Resource
+</span>
+
+<span class="header_menu_item_link header_menu_item_link__active" 
+      style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+             -webkit-background-clip: text; 
+             -webkit-text-fill-color: transparent;">
+    Resource
+</span>
+
                     </span>
                 </a>
             </li>
@@ -320,8 +354,20 @@
             <li class="header_menu_item js-cursor-contract">
                 <a href="#contact" target="_blank" class="desc text-uppercase">
                     <span class="header_menu_item_inner">
-                        <span class="header_menu_item_link header_menu_item_link__deep">Contact</span>
-                        <span class="header_menu_item_link header_menu_item_link__active">Contact</span>
+                       <span class="header_menu_item_link header_menu_item_link__deep" 
+      style="background: linear-gradient(90deg, #ffffff); 
+             -webkit-background-clip: text; 
+             -webkit-text-fill-color: transparent;">
+    Contact
+</span>
+
+<span class="header_menu_item_link header_menu_item_link__active" 
+      style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+             -webkit-background-clip: text; 
+             -webkit-text-fill-color: transparent;">
+    Contact
+</span>
+
                     </span>
                 </a>
             </li>
@@ -424,7 +470,14 @@
 
                                         <span style="color: white;">MASTER</span>
 
-                                        <span style="color: #00B3FF; position: relative; display: inline-block;">
+                                        <span style="
+  background: linear-gradient(to bottom, #00D2FF, #3966E2, #600CD8, #1F1C5A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+">
+
 
                                             DESIGNER
 
@@ -532,41 +585,61 @@
                     <div class="acontainer">
                         <div class="acontent" style="color: white; max-width: 900px; margin: 0 auto;">
                             <br><br>
-                            <h1 class="a_h1"
-                                style="font-size: 3.5rem; color: #00B3FF; text-shadow: 0 0 20px rgba(0,179,255,0.5);">
-                                About</h1><br>
-                            <p class="abtp">
-                                <span class="strong" style="color: #00B3FF;">MASTER DESIGNER V1.0</span>, presented by
-                                the Media Unit of SLTC,
-                                was a 4-day workshop series on Photoshop, Illustrator, and InDesign graphic design
-                                tools.
-                            </p>
+                            <h1 class="a_h1" 
+    style="font-size: 3.5rem; 
+           background: linear-gradient(90deg, #00C3FF, #8000FF); 
+           -webkit-background-clip: text; 
+           -webkit-text-fill-color: transparent; 
+           text-shadow: 0 0 20px rgba(128,0,255,0.5);">
+    About
+</h1>
+<br>
+<p class="abtp">
+    <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                -webkit-background-clip: text; 
+                                -webkit-text-fill-color: transparent;">
+        MASTER DESIGNER V1.0
+    </span>, presented by the Media Unit of SLTC,
+    was a 4-day workshop series on Photoshop, Illustrator, and InDesign graphic design tools.
+</p>
+
                             <br>
                             <p class="abtp">
-                                Its second incarnation, <span class="strong" style="color: #00B3FF;">“MASTER DESIGNER
-                                    V2.0,”</span> is an
-                                all-island competition organized by the Media Unit of SLTC to evaluate the most talented
-                                individuals in the field of graphic design...
-                            </p>
+    Its second incarnation, 
+    <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                -webkit-background-clip: text; 
+                                -webkit-text-fill-color: transparent;">
+        “MASTER DESIGNER V2.0,”
+    </span> 
+    is an all-island competition organized by the Media Unit of SLTC to evaluate the most talented
+    individuals in the field of graphic design...
+</p>
+
                             <div class="abuttons"><br>
-                                <cente<a href="https://drive.google.com/file/d/1TM24mS22xNG_t46yjabVYHcRPJ7LWgaV/view?usp=drive_link"
-   target="_blank"
-   style="
-       display: inline-block;
-       padding: 12px 24px;
-       margin: 8px;
-       border: 2px solid #000;
-       border-radius: 8px;
-       background-color: #fff;
-       text-align: center;
-       text-decoration: none;
-       color: black;
-       cursor: pointer;
-       transition: all 0.3s ease;
-   "
-   onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.borderColor='#0068FF';"
-   onmouseout="this.style.backgroundColor='#fff'; this.style.borderColor='#000';"
->
+    <a href="https://drive.google.com/file/d/1TM24mS22xNG_t46yjabVYHcRPJ7LWgaV/view?usp=drive_link"
+       target="_blank"
+       style="
+           display: inline-block;
+           padding: 12px 24px;
+           margin: 8px;
+           border: 2px solid transparent;
+           border-radius: 8px;
+           background: linear-gradient(90deg, #00C3FF, #8000FF);
+           background-clip: padding-box;
+           text-align: center;
+           text-decoration: none;
+           color: white;
+           font-weight: 600;
+           cursor: pointer;
+           transition: all 0.3s ease;
+       "
+       onmouseover="this.style.background='linear-gradient(90deg, #8000FF, #00C3FF)'; this.style.color='#fff';"
+       onmouseout="this.style.background='linear-gradient(90deg, #00C3FF, #8000FF)'; this.style.color='#fff';"
+    >
+        Download
+    </a>
+</div>
+
    <h5 style="margin: 0; font-size: 16px;">Delegate Booklet</h5>
 </a>
 
@@ -709,44 +782,92 @@
         </div>
         <div class="pc-only">
             <center>
-                <h3 class="timeline-text-center">SELECTIONS OF TEAM CATEGORY</h3><br>
-            </center>
-            <div class="list-container">
-                <ol class="left-column lol">
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team Blend</strong2> Lead By Navamin Soysa
-                    </li>
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team Artirexa</strong2> Lead By I.C.Weerakoon
-                    </li>
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team Dream Achievers</strong2> Lead By B.Sathurshan
-                    </li>
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team Pixel crafters</strong2> Lead By H.M.De Silva
-                    </li>
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team MD Graphic</strong2> Lead By Maleesha Dewshan
-                    </li>
-                </ol>
-                <ol class="right-column lol">
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team Judgemental</strong2> Lead By A. S. Jayamanna
-                    </li>
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team Pixel masters</strong2> Lead By T.H.Munasinghe
-                    </li>
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team Golden Iris</strong2> Lead By Bosilu Nisalitha
-                    </li>
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team Wizards</strong2> Lead By Hansana Eranga
-                    </li>
-                    <li style="font: 1em sans-serif; ;" class="lolli">
-                        <strong2 class="strong2">Team Vinchi</strong2> Lead By Wanushka Lakmal
-                    </li>
-                </ol>
-            </div>
+    <h3 class="timeline-text-center" 
+        style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+               -webkit-background-clip: text; 
+               -webkit-text-fill-color: transparent;">
+        SELECTIONS OF TEAM CATEGORY
+    </h3>
+    <br>
+</center>
+
+<div class="list-container">
+    <ol class="left-column lol">
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team Blend
+            </span> Lead By Navamin Soysa
+        </li>
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team Artirexa
+            </span> Lead By I.C.Weerakoon
+        </li>
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team Dream Achievers
+            </span> Lead By B.Sathurshan
+        </li>
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team Pixel Crafters
+            </span> Lead By H.M.De Silva
+        </li>
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team MD Graphic
+            </span> Lead By Maleesha Dewshan
+        </li>
+    </ol>
+    <ol class="right-column lol">
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team Judgemental
+            </span> Lead By A. S. Jayamanna
+        </li>
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team Pixel Masters
+            </span> Lead By T.H.Munasinghe
+        </li>
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team Golden Iris
+            </span> Lead By Bosilu Nisalitha
+        </li>
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team Wizards
+            </span> Lead By Hansana Eranga
+        </li>
+        <li style="font: 1em sans-serif;" class="lolli">
+            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                         -webkit-background-clip: text; 
+                                         -webkit-text-fill-color: transparent;">
+                Team Vinchi
+            </span> Lead By Wanushka Lakmal
+        </li>
+    </ol>
+</div>
+
         </div><br><br>
 
         <div class="pc-only">
