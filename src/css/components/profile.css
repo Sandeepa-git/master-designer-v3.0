@@ -107,21 +107,17 @@
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .profile-row {
-    align-items: center;
     flex-direction: column;
-    /* Arrange items horizontally */
-    flex-wrap: nowrap;
-    /* Prevent wrapping */
-    overflow-x: auto;
-    /* Add horizontal scrolling if needed */
+    align-items: center;
+    margin-bottom: 0;
   }
 
   .profile {
-    margin-left: -10%;
-    margin-right: -10%;
+    width: 90%;
+    max-width: 350px;
+    margin: 15px auto;
     flex: 0 0 auto;
-    /* Prevent profiles from shrinking */
-    margin-top: 10px;
-    /* Maintain margin around profiles */
+    height: auto;
+    min-height: 280px;
   }
 }
