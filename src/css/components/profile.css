@@ -9,6 +9,8 @@
   flex: 1;
   justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  /* Allow wrapping for multiple rows */
 }
 
 .profile {
@@ -16,10 +18,13 @@
   position: relative;
   overflow: hidden;
   margin: 10px;
-  height: 290px;
+  height: 280px;
+  /* Reduced space now that icons are horizontal and mt100 removed */
   min-width: 230px;
-  max-width: 290px;
-  width: 100%;
+  max-width: 300px;
+  /* Adjusted to fit 3 per row nicely */
+  width: calc(33.33% - 20px);
+  /* Suggest 3 per row */
   color: #000000;
   text-align: center;
   font-size: 16px;
@@ -89,6 +94,9 @@
 
 .profile .profile-img {
   width: 100px;
+  height: 100px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   display: inline-block;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
@@ -100,15 +108,20 @@
 @media screen and (max-width: 768px) {
   .profile-row {
     align-items: center;
-    flex-direction: column; /* Arrange items horizontally */
-    flex-wrap: nowrap; /* Prevent wrapping */
-    overflow-x: auto; /* Add horizontal scrolling if needed */
+    flex-direction: column;
+    /* Arrange items horizontally */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    overflow-x: auto;
+    /* Add horizontal scrolling if needed */
   }
-  
+
   .profile {
     margin-left: -10%;
     margin-right: -10%;
-    flex: 0 0 auto; /* Prevent profiles from shrinking */
-    margin-top: 10px; /* Maintain margin around profiles */
+    flex: 0 0 auto;
+    /* Prevent profiles from shrinking */
+    margin-top: 10px;
+    /* Maintain margin around profiles */
   }
 }

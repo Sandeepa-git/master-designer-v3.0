@@ -54,26 +54,26 @@
     <title>MASTER DESIGNER</title>
 
     <style>
-    /* 1. Change the large Mask/Blob effect (currently purple) */
-    .layer__red {
-        /* Change this hex code to your desired color */
-        background: #610FC0 !important; 
-    }
+        /* 1. Change the large Mask/Blob effect (currently purple) */
+        .layer__red {
+            /* Change this hex code to your desired color */
+            background: #610FC0 !important;
+        }
 
-    /* 2. Change the Custom Cursor (Dot/Text) */
-    .vj-cursor {
-        /* Change the text/icon color inside the cursor */
-        color: #610FC0 !important; 
-        
-        /* If the cursor has a border/circle */
-        border-color: #610FC0 !important;
-    }
+        /* 2. Change the Custom Cursor (Dot/Text) */
+        .vj-cursor {
+            /* Change the text/icon color inside the cursor */
+            color: #610FC0 !important;
 
-    /* 3. Change the cursor background if it is a solid dot */
-    .vj-cursor span {
-        background-color: #610FC0 !important;
-    }
-</style>
+            /* If the cursor has a border/circle */
+            border-color: #610FC0 !important;
+        }
+
+        /* 3. Change the cursor background if it is a solid dot */
+        .vj-cursor span {
+            background-color: #610FC0 !important;
+        }
+    </style>
 
     <script>
         // Prevent browser from auto-restoring the scroll position
@@ -132,249 +132,314 @@
 <body>
 
     <!-- ....................loading page .......................................................... -->
-<style>
-/* Main Overlay */
-.page-loading {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 99999999;
-    background: radial-gradient(circle at center, #2b2b40 0%, #151520 100%);
-    display: flex; justify-content: center; align-items: center;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    transition: opacity .7s ease, visibility .7s ease;
-}
-
-/* Inner Container */
-.page-loading_inner {
-    position: relative;
-    width: min(380px, 82vw);
-    aspect-ratio: 1 / 1;
-    display: flex; justify-content: center; align-items: center;
-}
-
-/* SVG Ring */
-#page-loading_circle {
-    width: 100%; height: 100%;
-    transform: rotate(-90deg);
-    filter: drop-shadow(0 0 20px rgba(128,0,255,.45));
-}
-#page-loading_circle circle {
-    fill: none;
-    transition: stroke-dashoffset 0.1s linear;
-}
-
-/* Logo - Centered */
-.page-loading_logo {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    animation: floatLogo 3s ease-in-out infinite;
-}
-.page-loading_logo img { 
-    width: 120px;    /* slightly larger default */
-    height: auto;
-    max-width: 80%;
-    transition: width 0.3s ease;
-}
-
-/* --- LOADING TEXT (Centered) --- */
-#js-page-loading_text {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 23%;
-    color: #fff;
-    font-size: 15px;
-    letter-spacing: 2px;
-    font-weight: 300;
-    white-space: nowrap;
-    transition: opacity 0.4s ease;
-}
-.js-loading_text {
-    font-size: 34px; font-weight: 700;
-    animation: pulseText 2.0s ease-in-out infinite;
-}
-
-/* --- ENTER BUTTON (Centered) --- */
-#js-page-loading_start {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 15%;
-    padding: 14px 42px;
-    border-radius: 40px;
-    border: 1px solid rgba(255,255,255,.28);
-    background: rgba(255,255,255,.07);
-    backdrop-filter: blur(12px);
-    color: #fff;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    display: none;
-    cursor: pointer;
-    transition: .3s ease;
-    white-space: nowrap;
-}
-
-/* Animations */
-@keyframes floatLogo {
-    0%,100% { transform: translate(-50%, -50%); }
-    50% { transform: translate(-50%, -54%); }
-}
-@keyframes pulseText {
-    0%,100% { opacity: .6; }
-    50% { opacity: 1; }
-}
-
-/* --- MOBILE SPECIFIC FIXES --- */
-@media (max-width: 1024px) {
-    .page-loading_logo img { width: 90px !important; }
-}
-@media (max-width: 768px) {
-    .page-loading_logo img { width: 70px !important; }
-    .js-loading_text { font-size: 28px !important; }
-    #js-page-loading_text { font-size: 13px !important; bottom: 18% !important; }
-    #js-page-loading_start { font-size: 12px !important; padding: 12px 34px !important; bottom: 15% !important; }
-}
-@media (max-width: 480px) {
-    .page-loading_logo img { width: 55px !important; }
-    .js-loading_text { font-size: 24px !important; }
-    #js-page-loading_text { font-size: 12px !important; bottom: 12% !important; }
-    #js-page-loading_start { font-size: 12px !important; padding: 10px 28px !important; bottom: 10% !important; }
-}
-</style>
-
-<div class="page-loading js-page-loading">
-    <div class="page-loading_inner js-page-loading_inner">
-
-        <!-- SVG Ring with gradient light-blue → purple -->
-        <svg id="page-loading_circle" viewBox="0 0 270 270">
-            <defs>
-                <linearGradient id="loaderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#00C3FF"></stop>
-                    <stop offset="100%" stop-color="#8000FF"></stop>
-                </linearGradient>
-            </defs>
-            <circle cx="136" cy="136" r="132" stroke="url(#loaderGradient)" stroke-width="6" stroke-linecap="round"/>
-        </svg>
-
-        <!-- Logo -->
-        <div class="page-loading_logo">
-            <img src="../public/assets/images/logo.png" alt="logo">
-        </div>
-
-        <!-- Loading Text -->
-        <span id="js-page-loading_text">
-            LOADING <b class="js-loading_text">00</b>%
-        </span>
-
-        <!-- Enter Button -->
-        <button id="js-page-loading_start">
-            ENTER
-        </button>
-
-    </div>
-</div>
-
-<script>
-(function () {
-    const circle = document.querySelector('#page-loading_circle circle');
-    const percentText = document.querySelector('.js-loading_text');
-    const textWrap = document.getElementById('js-page-loading_text');
-    const startBtn = document.getElementById('js-page-loading_start');
-    const overlay = document.querySelector('.js-page-loading');
-
-    let radius = circle.r.baseVal.value;
-    let circumference = 2 * Math.PI * radius;
-    circle.style.strokeDasharray = circumference;
-    circle.style.strokeDashoffset = circumference;
-
-    let progress = 0;
-
-    function runLoader() {
-        if (progress < 100) {
-            progress++;
-            percentText.textContent = progress < 10 ? "0" + progress : progress;
-            circle.style.strokeDashoffset = circumference - (progress / 100) * circumference;
-            setTimeout(runLoader, 15 + Math.random() * 20);
-        } else {
-            textWrap.style.opacity = "0";
-            setTimeout(() => {
-                textWrap.style.display = "none";
-                startBtn.style.display = "block";
-                startBtn.animate(
-                    [
-                        { opacity: 0, transform: "translate(-50%, 10px)" },
-                        { opacity: 1, transform: "translate(-50%, 0px)" }
-                    ],
-                    { duration: 600, fill: "forwards", easing: "ease-out" }
-                );
-            }, 400);
+    <style>
+        /* Main Overlay */
+        .page-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999;
+            background: radial-gradient(circle at center, #2b2b40 0%, #151520 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            transition: opacity .7s ease, visibility .7s ease;
         }
-    }
 
-    runLoader();
+        /* Inner Container */
+        .page-loading_inner {
+            position: relative;
+            width: min(380px, 82vw);
+            aspect-ratio: 1 / 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    startBtn.addEventListener("click", () => {
-        overlay.style.opacity = "0";
-        overlay.style.visibility = "hidden";
-        setTimeout(() => { overlay.style.display = "none"; }, 700);
-    });
-})();
-</script>
+        /* SVG Ring */
+        #page-loading_circle {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+            filter: drop-shadow(0 0 20px rgba(128, 0, 255, .45));
+        }
+
+        #page-loading_circle circle {
+            fill: none;
+            transition: stroke-dashoffset 0.1s linear;
+        }
+
+        /* Logo - Centered */
+        .page-loading_logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+
+        .page-loading_logo img {
+            width: 120px;
+            /* slightly larger default */
+            height: auto;
+            max-width: 80%;
+            transition: width 0.3s ease;
+        }
+
+        /* --- LOADING TEXT (Centered) --- */
+        #js-page-loading_text {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 23%;
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: 2px;
+            font-weight: 300;
+            white-space: nowrap;
+            transition: opacity 0.4s ease;
+        }
+
+        .js-loading_text {
+            font-size: 34px;
+            font-weight: 700;
+            animation: pulseText 2.0s ease-in-out infinite;
+        }
+
+        /* --- ENTER BUTTON (Centered) --- */
+        #js-page-loading_start {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 15%;
+            padding: 14px 42px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, .28);
+            background: rgba(255, 255, 255, .07);
+            backdrop-filter: blur(12px);
+            color: #fff;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: none;
+            cursor: pointer;
+            transition: .3s ease;
+            white-space: nowrap;
+        }
+
+        /* Animations */
+        @keyframes floatLogo {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%);
+            }
+
+            50% {
+                transform: translate(-50%, -54%);
+            }
+        }
+
+        @keyframes pulseText {
+
+            0%,
+            100% {
+                opacity: .6;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* --- MOBILE SPECIFIC FIXES --- */
+        @media (max-width: 1024px) {
+            .page-loading_logo img {
+                width: 90px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-loading_logo img {
+                width: 70px !important;
+            }
+
+            .js-loading_text {
+                font-size: 28px !important;
+            }
+
+            #js-page-loading_text {
+                font-size: 13px !important;
+                bottom: 18% !important;
+            }
+
+            #js-page-loading_start {
+                font-size: 12px !important;
+                padding: 12px 34px !important;
+                bottom: 15% !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-loading_logo img {
+                width: 55px !important;
+            }
+
+            .js-loading_text {
+                font-size: 24px !important;
+            }
+
+            #js-page-loading_text {
+                font-size: 12px !important;
+                bottom: 12% !important;
+            }
+
+            #js-page-loading_start {
+                font-size: 12px !important;
+                padding: 10px 28px !important;
+                bottom: 10% !important;
+            }
+        }
+    </style>
+
+    <div class="page-loading js-page-loading">
+        <div class="page-loading_inner js-page-loading_inner">
+
+            <!-- SVG Ring with gradient light-blue → purple -->
+            <svg id="page-loading_circle" viewBox="0 0 270 270">
+                <defs>
+                    <linearGradient id="loaderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00C3FF"></stop>
+                        <stop offset="100%" stop-color="#8000FF"></stop>
+                    </linearGradient>
+                </defs>
+                <circle cx="136" cy="136" r="132" stroke="url(#loaderGradient)" stroke-width="6"
+                    stroke-linecap="round" />
+            </svg>
+
+            <!-- Logo -->
+            <div class="page-loading_logo">
+                <img src="../public/assets/images/logo.png" alt="logo">
+            </div>
+
+            <!-- Loading Text -->
+            <span id="js-page-loading_text">
+                LOADING <b class="js-loading_text">00</b>%
+            </span>
+
+            <!-- Enter Button -->
+            <button id="js-page-loading_start">
+                ENTER
+            </button>
+
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const circle = document.querySelector('#page-loading_circle circle');
+            const percentText = document.querySelector('.js-loading_text');
+            const textWrap = document.getElementById('js-page-loading_text');
+            const startBtn = document.getElementById('js-page-loading_start');
+            const overlay = document.querySelector('.js-page-loading');
+
+            let radius = circle.r.baseVal.value;
+            let circumference = 2 * Math.PI * radius;
+            circle.style.strokeDasharray = circumference;
+            circle.style.strokeDashoffset = circumference;
+
+            let progress = 0;
+
+            function runLoader() {
+                if (progress < 100) {
+                    progress++;
+                    percentText.textContent = progress < 10 ? "0" + progress : progress;
+                    circle.style.strokeDashoffset = circumference - (progress / 100) * circumference;
+                    setTimeout(runLoader, 15 + Math.random() * 20);
+                } else {
+                    textWrap.style.opacity = "0";
+                    setTimeout(() => {
+                        textWrap.style.display = "none";
+                        startBtn.style.display = "block";
+                        startBtn.animate(
+                            [
+                                { opacity: 0, transform: "translate(-50%, 10px)" },
+                                { opacity: 1, transform: "translate(-50%, 0px)" }
+                            ],
+                            { duration: 600, fill: "forwards", easing: "ease-out" }
+                        );
+                    }, 400);
+                }
+            }
+
+            runLoader();
+
+            startBtn.addEventListener("click", () => {
+                overlay.style.opacity = "0";
+                overlay.style.visibility = "hidden";
+                setTimeout(() => { overlay.style.display = "none"; }, 700);
+            });
+        })();
+    </script>
 
     <!-- ....................loading page endddddddddddddddddd.......................................................... -->
-   <!-- ....................logo start.......................................................... -->
-<header class="header js-header">
-    <div class="header_logo js-header_logo">
-        <a class="link-logo" aria-label="Home page" href="/">
-           <img class="png" src="/public/assets/images/logo.png" alt="logo" style="width: 50px; height: auto; margin-top: 20px;">
-        </a>
-    </div>
-    <div class="header_menu">
-        <ul class="header_menu_list ul__reset">
-            <li class="header_menu_item js-cursor-contract">
-                <a href="#work" target="_blank" class="desc text-uppercase">
-                    <span class="header_menu_item_inner">
-                        <span class="header_menu_item_link header_menu_item_link__deep" 
-      style="background: linear-gradient(90deg, #ffffff); 
+    <!-- ....................logo start.......................................................... -->
+    <header class="header js-header">
+        <div class="header_logo js-header_logo">
+            <a class="link-logo" aria-label="Home page" href="/">
+                <img class="png" src="/public/assets/images/logo.png" alt="logo"
+                    style="width: 50px; height: auto; margin-top: 20px;">
+            </a>
+        </div>
+        <div class="header_menu">
+            <ul class="header_menu_list ul__reset">
+                <li class="header_menu_item js-cursor-contract">
+                    <a href="#work" target="_blank" class="desc text-uppercase">
+                        <span class="header_menu_item_inner">
+                            <span class="header_menu_item_link header_menu_item_link__deep" style="background: linear-gradient(90deg, #ffffff); 
              -webkit-background-clip: text; 
+             background-clip: text; 
              -webkit-text-fill-color: transparent;">
-    Resource
-</span>
+                                Resource
+                            </span>
 
-<span class="header_menu_item_link header_menu_item_link__active" 
-      style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            <span class="header_menu_item_link header_menu_item_link__active" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
              -webkit-background-clip: text; 
+             background-clip: text; 
              -webkit-text-fill-color: transparent;">
-    Resource
-</span>
+                                Resource
+                            </span>
 
-                    </span>
-                </a>
-            </li>
-            <!-- FAQ is still commented out -->
-            <li class="header_menu_item js-cursor-contract">
-                <a href="#contact" target="_blank" class="desc text-uppercase">
-                    <span class="header_menu_item_inner">
-                       <span class="header_menu_item_link header_menu_item_link__deep" 
-      style="background: linear-gradient(90deg, #ffffff); 
+                        </span>
+                    </a>
+                </li>
+                <!-- FAQ is still commented out -->
+                <li class="header_menu_item js-cursor-contract">
+                    <a href="#contact" target="_blank" class="desc text-uppercase">
+                        <span class="header_menu_item_inner">
+                            <span class="header_menu_item_link header_menu_item_link__deep" style="background: linear-gradient(90deg, #ffffff); 
              -webkit-background-clip: text; 
+             background-clip: text; 
              -webkit-text-fill-color: transparent;">
-    Contact
-</span>
+                                Contact
+                            </span>
 
-<span class="header_menu_item_link header_menu_item_link__active" 
-      style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            <span class="header_menu_item_link header_menu_item_link__active" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
              -webkit-background-clip: text; 
+             background-clip: text; 
              -webkit-text-fill-color: transparent;">
-    Contact
-</span>
+                                Contact
+                            </span>
 
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</header>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
     </header>
 
@@ -411,36 +476,35 @@
             pointer-events: none;
         "></div>
 
-<!-- Video -->
+                                        <!-- Video -->
                                         <video id="hero-bg-video" autoplay muted playsinline loop preload="auto"
-    data-pc="/assets/videos/hero.mp4"
-    data-mobile="/assets/videos/hero.mp4" 
-    style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
-    <source src="/assets/videos/hero.mp4" type="video/mp4">
-</video>
+                                            data-pc="/assets/videos/hero.mp4" data-mobile="/assets/videos/hero.mp4"
+                                            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
+                                            <source src="/assets/videos/hero.mp4" type="video/mp4">
+                                        </video>
 
-<script>
-    // 1. Get the video element
-    const video = document.getElementById('hero-bg-video');
-    const source = video.querySelector('source');
+                                        <script>
+                                            // 1. Get the video element
+                                            const video = document.getElementById('hero-bg-video');
+                                            const source = video.querySelector('source');
 
-    // 2. Check if we are running on Localhost
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        
-        console.log("Localhost detected: Adjusting video path...");
+                                            // 2. Check if we are running on Localhost
+                                            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
 
-        // 3. Add '/public' to the paths for Localhost
-        const localPath = '/public/assets/videos/hero.mp4';
-        
-        video.setAttribute('data-pc', localPath);
-        video.setAttribute('data-mobile', localPath);
-        source.setAttribute('src', localPath);
-        
-        // 4. Reload the video to apply changes
-        video.load();
-        video.play();
-    }
-</script>
+                                                console.log("Localhost detected: Adjusting video path...");
+
+                                                // 3. Add '/public' to the paths for Localhost
+                                                const localPath = '/public/assets/videos/hero.mp4';
+
+                                                video.setAttribute('data-pc', localPath);
+                                                video.setAttribute('data-mobile', localPath);
+                                                source.setAttribute('src', localPath);
+
+                                                // 4. Reload the video to apply changes
+                                                video.load();
+                                                video.play();
+                                            }
+                                        </script>
 
                                     </div>
                                 </div>
@@ -473,7 +537,8 @@
 
                                         <span style="
   background: linear-gradient(to bottom, #00D2FF, #3966E2, #600CD8, #1F1C5A);
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; 
+             background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   display: inline-block;
@@ -518,8 +583,7 @@
                                     <br><br><br>
                                     <div class="text-center ">
                                         <center>
-    <button class="gradient-btn pc-only" onclick="openInNewTab()"
-        style="background: linear-gradient(90deg, #00C3FF, #9B59B6);
+                                            <button class="gradient-btn pc-only" onclick="openInNewTab()" style="background: linear-gradient(90deg, #00C3FF, #9B59B6);
                color: #E0F7FF; 
                border: 2px solid rgba(155, 89, 182, 0.1); 
                border-radius: 12px; 
@@ -527,16 +591,16 @@
                font-size: 1rem; 
                cursor: pointer;
                transition: 0.3s;">
-        GALLERY
-    </button>
-</center>
+                                                GALLERY
+                                            </button>
+                                        </center>
 
-<!-- Optional simple hover effect -->
-<style>
-    .gradient-btn:hover {
-        opacity: 0.85;
-    }
-</style>
+                                        <!-- Optional simple hover effect -->
+                                        <style>
+                                            .gradient-btn:hover {
+                                                opacity: 0.85;
+                                            }
+                                        </style>
 
                                         <!--                                         <button class=" blob-btn" onclick="openInNewTab1()">
                                             SUBMIT
@@ -576,9 +640,6 @@
                         width="150px" style="margin-bottom: -10px;">
                     <img class="marquee__item img2" src="../public/assets/images/white media.png" height="80" alt=""
                         width="150px">
-                    <img class="marquee__item pc-only" src="../public/assets/images/white master.png" height="80" alt=""
-                        width="150px">
-
                 </div>
 
                 <!-- about start - WITH INLINE BACKGROUND IMAGE -->
@@ -596,40 +657,43 @@
                     <div class="acontainer">
                         <div class="acontent" style="color: white; max-width: 900px; margin: 0 auto;">
                             <br><br>
-                            <h1 class="a_h1" 
-    style="font-size: 3.5rem; 
+                            <h1 class="a_h1" style="font-size: 3.5rem; 
            background: linear-gradient(90deg, #00C3FF, #8000FF); 
            -webkit-background-clip: text; 
+             background-clip: text; 
            -webkit-text-fill-color: transparent; 
            text-shadow: 0 0 20px rgba(128,0,255,0.5);">
-    About
-</h1>
-<br>
-<p class="abtp">
-    <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                About
+                            </h1>
+                            <br>
+                            <p class="abtp">
+                                <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                 -webkit-background-clip: text; 
+             background-clip: text; 
                                 -webkit-text-fill-color: transparent;">
-        MASTER DESIGNER V1.0
-    </span>, presented by the Media Unit of SLTC,
-    was a 4-day workshop series on Photoshop, Illustrator, and InDesign graphic design tools.
-</p>
+                                    MASTER DESIGNER V1.0
+                                </span>, presented by the Media Unit of SLTC,
+                                was a 4-day workshop series on Photoshop, Illustrator, and InDesign graphic design
+                                tools.
+                            </p>
 
                             <br>
                             <p class="abtp">
-    Its second incarnation, 
-    <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                Its second incarnation,
+                                <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                 -webkit-background-clip: text; 
+             background-clip: text; 
                                 -webkit-text-fill-color: transparent;">
-        “MASTER DESIGNER V2.0,”
-    </span> 
-    is an all-island competition organized by the Media Unit of SLTC to evaluate the most talented
-    individuals in the field of graphic design...
-</p>
+                                    “MASTER DESIGNER V2.0,”
+                                </span>
+                                is an all-island competition organized by the Media Unit of SLTC to evaluate the most
+                                talented
+                                individuals in the field of graphic design...
+                            </p>
 
                             <div class="abuttons"><br>
-    <a href="https://drive.google.com/file/d/1TM24mS22xNG_t46yjabVYHcRPJ7LWgaV/view?usp=drive_link"
-       target="_blank"
-       style="
+                                <a href="https://drive.google.com/file/d/1TM24mS22xNG_t46yjabVYHcRPJ7LWgaV/view?usp=drive_link"
+                                    target="_blank" style="
            display: inline-block;
            padding: 12px 24px;
            margin: 8px;
@@ -643,109 +707,106 @@
            font-weight: 600;
            cursor: pointer;
            transition: all 0.3s ease;
-       "
-       onmouseover="this.style.background='linear-gradient(90deg, #8000FF, #00C3FF)'; this.style.color='#fff';"
-       onmouseout="this.style.background='linear-gradient(90deg, #00C3FF, #8000FF)'; this.style.color='#fff';"
-    >
-        Download
-    </a>
-</div>
-
-   <h5 style="margin: 0; font-size: 16px;">Delegate Booklet</h5>
-</a>
-
-                                </center>
+       " onmouseover="this.style.background='linear-gradient(90deg, #8000FF, #00C3FF)'; this.style.color='#fff';"
+                                    onmouseout="this.style.background='linear-gradient(90deg, #00C3FF, #8000FF)'; this.style.color='#fff';">
+                                    Download
+                                </a>
                             </div>
+
+                            <h5 style="margin: 0; font-size: 16px;">Delegate Booklet</h5>
+                            </a>
+
+                            </center>
                         </div>
                     </div>
                 </div>
-                <!-- about end -->
+            </div>
+            <!-- about end -->
 
 
 
-                <!-- .........................................phase     pc                     ...............start -->
-                <div id="work">
-                    <div class="work" id="work">
-                        <div class="work_history pc-only">
-                            <div class="row work_heading work_history_heading">
-                                <div class="col-lg-8 col-sm-10 offset-lg-2 offset-sm-1 col-12">
-                                    <p class="work_content_label container_content body-text text-uppercase mb-0">PHASES
-                                    </p>
-                                </div>
+            <!-- .........................................phase     pc                     ...............start -->
+            <div id="work">
+                <div class="work" id="work">
+                    <div class="work_history pc-only">
+                        <div class="row work_heading work_history_heading">
+                            <div class="col-lg-8 col-sm-10 offset-lg-2 offset-sm-1 col-12">
+                                <p class="work_content_label container_content body-text text-uppercase mb-0">PHASES
+                                </p>
                             </div>
-                            <div class="heading-mask heading-mask__now">
-                                <div class="heading-mask_el container_content heading-mask_el__deep">
-                                    <div class="row">
-                                        <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
-                                            <div class="simple-masking">
-                                                <div class="simple-masking_el"><span class="h3 mb-1">PHASE 01</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-sm-8 col-9">
-                                            <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
-                                                <p class="h4 mb-1">In the first phase, designs for one field selected
-                                                    from the given fields are submitted under the online mode. During
-                                                    the submission, the contestants should submit a suitable name for
-                                                    the creation and the contestants can submit the design individually
-                                                    or as a team of three members. 15 teams and 15 individual
-                                                    competitors will be selected for the final stage of the competition
-                                                    that is the physical competition round.
-                                                </p>
+                        </div>
+                        <div class="heading-mask heading-mask__now">
+                            <div class="heading-mask_el container_content heading-mask_el__deep">
+                                <div class="row">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h3 mb-1">PHASE 01</span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="heading-mask_el container_content heading-mask_el__masking">
-                                    <div class="row">
-                                        <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
-                                            <div class="simple-masking">
-                                                <div class="simple-masking_el"><span class="h2 mb-1 text-dark">01</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-sm-8 col-9">
-                                            <div class="simple-masking_el">
-                                                <h4 class="h3 mb-1 text-dark">"Submit Your Creation, Name Your Vision,
-                                                    Inspire the Future"</h4>
-                                            </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
+                                            <p class="h4 mb-1">In the first phase, designs for one field selected
+                                                from the given fields are submitted under the online mode. During
+                                                the submission, the contestants should submit a suitable name for
+                                                the creation and the contestants can submit the design individually
+                                                or as a team of three members. 15 teams and 15 individual
+                                                competitors will be selected for the final stage of the competition
+                                                that is the physical competition round.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="heading-mask">
-                                <div class="heading-mask_el container_content heading-mask_el__deep">
-                                    <div class="row">
-                                        <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
-                                            <div class="simple-masking">
-                                                <div class="simple-masking_el"><span class="h3 mb-1">PHASE 02</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-sm-8 col-9">
-                                            <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
-                                                <p class="h4 mb-1">In the second phase (final phase) the two selected
-                                                    groups, 15 teams and 15 individual competitors, will measure their
-                                                    skills at a specific time. There will be one task for individual
-                                                    competitors and three tasks for group competitors. Among the designs
-                                                    created in this way, the greatest designs are evaluated.</p>
+                            <div class="heading-mask_el container_content heading-mask_el__masking">
+                                <div class="row">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h2 mb-1 text-dark">01</span>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el">
+                                            <h4 class="h3 mb-1 text-dark">"Submit Your Creation, Name Your Vision,
+                                                Inspire the Future"</h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="heading-mask_el container_content heading-mask_el__masking">
-                                    <div class="row">
-                                        <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
-                                            <div class="simple-masking">
-                                                <div class="simple-masking_el"><span class="h2 mb-1 text-dark">02</span>
-                                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-mask">
+                            <div class="heading-mask_el container_content heading-mask_el__deep">
+                                <div class="row">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h3 mb-1">PHASE 02</span>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 col-sm-8 col-9">
-                                            <div class="simple-masking_el">
-                                                <p class="h3 mb-1 text-dark">"15 Teams, 15 Individuals: One Stage to
-                                                    Shine"</p>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
+                                            <p class="h4 mb-1">In the second phase (final phase) the two selected
+                                                groups, 15 teams and 15 individual competitors, will measure their
+                                                skills at a specific time. There will be one task for individual
+                                                competitors and three tasks for group competitors. Among the designs
+                                                created in this way, the greatest designs are evaluated.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-mask_el container_content heading-mask_el__masking">
+                                <div class="row">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h2 mb-1 text-dark">02</span>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el">
+                                            <p class="h3 mb-1 text-dark">"15 Teams, 15 Individuals: One Stage to
+                                                Shine"</p>
                                         </div>
                                     </div>
                                 </div>
@@ -754,6 +815,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <!-- phases pc endddddddddddddddddddddddddddddddddddddddddddddddddddd  -->
@@ -793,91 +855,101 @@
         </div>
         <div class="pc-only">
             <center>
-    <h3 class="timeline-text-center" 
-        style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                <h3 class="timeline-text-center" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                -webkit-background-clip: text; 
+             background-clip: text; 
                -webkit-text-fill-color: transparent;">
-        SELECTIONS OF TEAM CATEGORY
-    </h3>
-    <br>
-</center>
+                    SELECTIONS OF TEAM CATEGORY
+                </h3>
+                <br>
+            </center>
 
-<div class="list-container">
-    <ol class="left-column lol">
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+            <div class="list-container">
+                <ol class="left-column lol">
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team Blend
-            </span> Lead By Navamin Soysa
-        </li>
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            Team Blend
+                        </span> Lead By Navamin Soysa
+                    </li>
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team Artirexa
-            </span> Lead By I.C.Weerakoon
-        </li>
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            Team Artirexa
+                        </span> Lead By I.C.Weerakoon
+                    </li>
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team Dream Achievers
-            </span> Lead By B.Sathurshan
-        </li>
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            Team Dream Achievers
+                        </span> Lead By B.Sathurshan
+                    </li>
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team Pixel Crafters
-            </span> Lead By H.M.De Silva
-        </li>
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            Team Pixel Crafters
+                        </span> Lead By H.M.De Silva
+                    </li>
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team MD Graphic
-            </span> Lead By Maleesha Dewshan
-        </li>
-    </ol>
-    <ol class="right-column lol">
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            Team MD Graphic
+                        </span> Lead By Maleesha Dewshan
+                    </li>
+                </ol>
+                <ol class="right-column lol">
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team Judgemental
-            </span> Lead By A. S. Jayamanna
-        </li>
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            Team Judgemental
+                        </span> Lead By A. S. Jayamanna
+                    </li>
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team Pixel Masters
-            </span> Lead By T.H.Munasinghe
-        </li>
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            Team Pixel Masters
+                        </span> Lead By T.H.Munasinghe
+                    </li>
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team Golden Iris
-            </span> Lead By Bosilu Nisalitha
-        </li>
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            Team Golden Iris
+                        </span> Lead By Bosilu Nisalitha
+                    </li>
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team Wizards
-            </span> Lead By Hansana Eranga
-        </li>
-        <li style="font: 1em sans-serif;" class="lolli">
-            <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                            Team Wizards
+                        </span> Lead By Hansana Eranga
+                    </li>
+                    <li style="font: 1em sans-serif;" class="lolli">
+                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                          -webkit-background-clip: text; 
+             background-clip: text; 
                                          -webkit-text-fill-color: transparent;">
-                Team Vinchi
-            </span> Lead By Wanushka Lakmal
-        </li>
-    </ol>
-</div>
+                            Team Vinchi
+                        </span> Lead By Wanushka Lakmal
+                    </li>
+                </ol>
+            </div>
 
         </div><br><br>
 
@@ -1221,25 +1293,34 @@
                             embrace the
                             latest trends. Wear with confidence.</p>
                         <div class="product-card">
-    <p class="price" style="color: #E0F7FF; font-weight: bold; font-size: 1.2rem;">LKR. 1700</p>
+                            <p class="price" style="color: #E0F7FF; font-weight: bold; font-size: 1.2rem;">LKR. 1700</p>
 
-    <div class="sizes">
-        <p style="color: #D1EAF5; margin-bottom: 8px;">Available in sizes</p>
-        <div class="size-buttons" style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XS</button>
-            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">S</button>
-            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">M</button>
-            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">L</button>
-            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XL</button>
-            <button class="size-btn" style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">2XL</button>
-        </div>
-        <br>
-    </div>
+                            <div class="sizes">
+                                <p style="color: #D1EAF5; margin-bottom: 8px;">Available in sizes</p>
+                                <div class="size-buttons" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                    <button class="size-btn"
+                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XS</button>
+                                    <button class="size-btn"
+                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">S</button>
+                                    <button class="size-btn"
+                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">M</button>
+                                    <button class="size-btn"
+                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">L</button>
+                                    <button class="size-btn"
+                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XL</button>
+                                    <button class="size-btn"
+                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">2XL</button>
+                                </div>
+                                <br>
+                            </div>
 
-    <p class="order-deadline" style="color: #D1EAF5; font-size: 0.9rem;">*Order before 28 Jun 2024</p>
+                            <p class="order-deadline" style="color: #D1EAF5; font-size: 0.9rem;">*Order before 28 Jun
+                                2024</p>
 
-    <button class="order-now" style="padding: 10px 24px; border-radius: 12px; background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; border: 2px solid rgba(0,134,204,0.1); cursor: not-allowed;">Order Closed</button>
-</div>
+                            <button class="order-now"
+                                style="padding: 10px 24px; border-radius: 12px; background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; border: 2px solid rgba(0,134,204,0.1); cursor: not-allowed;">Order
+                                Closed</button>
+                        </div>
 
                     </div>
                 </div>
@@ -1251,7 +1332,7 @@
         <!-- profiles start........................................................ -->
         <div class="p-body" id="contact">
             <div style="margin-left: 10%; margin-right: 10%;">
-                <br><br><br><br><br><br><br><br>
+                <br><br><br><br>
                 <p class="contact-text body-text text-uppercase">
                     Contact us
                 </p>
@@ -1260,16 +1341,16 @@
 
                 <div class="profile-row">
 
-                    <!--! Profile - 01 -->
+                    <!--! Profile - 01: Induwara Lakdinu -->
                     <figure class="profile">
-                        <img src="../profile/profile1.jpg" alt="profile-sample3" class="profile-img" />
+                        <img src="../profile/chairperson.jpeg" alt="Induwara Lakdinu" class="profile-img" />
                         <figcaption>
-                            <h2 class="profile-h2">Madushan Lakshitha</h2>
-                            <h4 class="profile-h4">Project Chairman</h4>
+                            <h2 class="profile-h2">Induwara Lakdinu</h2>
+                            <h4 class="profile-h4">Chairperson</h4>
                         </figcaption>
                         <section class="p-section">
-                            <div class="height450">
-                                <div class="social-overlap process-scetion mt100">
+                            <div>
+                                <div class="social-overlap process-scetion">
                                     <div class="container">
                                         <div class="row justify-content-center">
                                             <div class="col-md-10">
@@ -1277,15 +1358,14 @@
                                                     <div class="process-section">
                                                         <div class="social-icons profile-mb-3 iconpad">
                                                             <a class="slider-nav-item"
-                                                                href="mailto:lakshithamadushan186@gmail.com"
+                                                                href="mailto:induwaralakdinu23@gmail.com"
                                                                 onclick="handleClick()" target="_blank">
                                                                 <i class="">
                                                                     <img src="../public/assets/icons/gmail-icon.png"
                                                                         alt="" class="social-icon-img">
                                                                 </i>
                                                             </a>
-                                                            <a class="slider-nav-item"
-                                                                href="https://wa.me/message/7LIMGKXNW5YCC1?src=qr"
+                                                            <a class="slider-nav-item" href="https://wa.me/94755843076"
                                                                 target="_blank"><i class=""><img
                                                                         src="../public/assets/icons/wapp-icon.png"
                                                                         alt="" class="social-icon-img"></i></a>
@@ -1300,17 +1380,16 @@
                         </section>
                     </figure>
 
-                    <!--! Profile - 02 -->
+                    <!--! Profile - 02: Bosilu Pupulewela -->
                     <figure class="profile">
-
-                        <img src="../profile/profile2.jpg" alt="profile-sample3" class="profile-img" />
+                        <img src="../profile/vicechairperson.jpeg" alt="Bosilu Pupulewela" class="profile-img" />
                         <figcaption>
-                            <h2 class="profile-h2">Ashika Muthukuda</h2>
-                            <h4 class="profile-h4">Project Secretary</h4>
+                            <h2 class="profile-h2">Bosilu Pupulewela</h2>
+                            <h4 class="profile-h4">Vice Chairperson</h4>
                         </figcaption>
                         <section class="p-section">
-                            <div class="height450">
-                                <div class="social-overlap process-scetion mt100">
+                            <div>
+                                <div class="social-overlap process-scetion">
                                     <div class="container">
                                         <div class="row justify-content-center">
                                             <div class="col-md-10">
@@ -1318,15 +1397,14 @@
                                                     <div class="process-section">
                                                         <div class="social-icons profile-mb-3 iconpad">
                                                             <a class="slider-nav-item"
-                                                                href="mailto:ashikamuthukuda@gmail.com"
+                                                                href="mailto:pupulewelabosilu2004@gmail.com"
                                                                 onclick="handleClick()" target="_blank">
                                                                 <i class="">
                                                                     <img src="../public/assets/icons/gmail-icon.png"
                                                                         alt="" class="social-icon-img">
                                                                 </i>
                                                             </a>
-                                                            <a class="slider-nav-item"
-                                                                href="https://wa.me/message/7LIMGKXNW5YCC1?src=qr"
+                                                            <a class="slider-nav-item" href="https://wa.me/94740975541"
                                                                 target="_blank"><i class=""><img
                                                                         src="../public/assets/icons/wapp-icon.png"
                                                                         alt="" class="social-icon-img"></i></a>
@@ -1341,17 +1419,56 @@
                         </section>
                     </figure>
 
-
-                    <!--! Profile - 03 -->
+                    <!--! Profile - 03: Udula Theekshana -->
                     <figure class="profile">
-                        <img src="../profile/profile3.jpg" alt="profile-sample3" class="profile-img" />
+                        <img src="../profile/vicechairperson2.png" alt="Udula Theekshana" class="profile-img" />
                         <figcaption>
-                            <h2 class="profile-h2">Sithija Ishan</h4>
-                                <h4 class="profile-h4">Program Team Head</h4>
+                            <h2 class="profile-h2">Udula Theekshana</h2>
+                            <h4 class="profile-h4">Vice Chairperson</h4>
                         </figcaption>
                         <section class="p-section">
-                            <div class="height450">
-                                <div class="social-overlap process-scetion mt100">
+                            <div>
+                                <div class="social-overlap process-scetion">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-10">
+                                                <div class="social-bar">
+                                                    <div class="process-section">
+                                                        <div class="social-icons profile-mb-3 iconpad">
+                                                            <a class="slider-nav-item" href="mailto:udula.u20@gmail.com"
+                                                                onclick="handleClick()" target="_blank">
+                                                                <i class="">
+                                                                    <img src="../public/assets/icons/gmail-icon.png"
+                                                                        alt="" class="social-icon-img">
+                                                                </i>
+                                                            </a>
+                                                            <a class="slider-nav-item" href="https://wa.me/94714570995"
+                                                                target="_blank"><i class=""><img
+                                                                        src="../public/assets/icons/wapp-icon.png"
+                                                                        alt="" class="social-icon-img"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </figure>
+                </div>
+
+                <div class="profile-row">
+                    <!--! Profile - 04: Samadhi Rajapaksha -->
+                    <figure class="profile">
+                        <img src="../profile/secretary.jpeg" alt="Samadhi Rajapaksha" class="profile-img" />
+                        <figcaption>
+                            <h2 class="profile-h2">Samadhi Rajapaksha</h2>
+                            <h4 class="profile-h4">Secretary</h4>
+                        </figcaption>
+                        <section class="p-section">
+                            <div>
+                                <div class="social-overlap process-scetion">
                                     <div class="container">
                                         <div class="row justify-content-center">
                                             <div class="col-md-10">
@@ -1359,15 +1476,14 @@
                                                     <div class="process-section">
                                                         <div class="social-icons profile-mb-3 iconpad">
                                                             <a class="slider-nav-item"
-                                                                href="mailto:ranaweerakasi@gmail.com"
+                                                                href="mailto:samadhirajapaksha20@gmail.com"
                                                                 onclick="handleClick()" target="_blank">
                                                                 <i class="">
                                                                     <img src="../public/assets/icons/gmail-icon.png"
                                                                         alt="" class="social-icon-img">
                                                                 </i>
                                                             </a>
-                                                            <a class="slider-nav-item"
-                                                                href="https://wa.me/message/7LIMGKXNW5YCC1?src=qr"
+                                                            <a class="slider-nav-item" href="https://wa.me/94725778561"
                                                                 target="_blank"><i class=""><img
                                                                         src="../public/assets/icons/wapp-icon.png"
                                                                         alt="" class="social-icon-img"></i></a>
@@ -1382,16 +1498,16 @@
                         </section>
                     </figure>
 
-                    <!--! Profile - 04 -->
+                    <!--! Profile - 05: Supipi Sonalee -->
                     <figure class="profile">
-                        <img src="../profile/profile4.jpg" alt="profile-sample3" class="profile-img" />
+                        <img src="../profile/coordinationteamhead.jpeg" alt="Supipi Sonalee" class="profile-img" />
                         <figcaption>
-                            <h2 class="profile-h2">Nipuni Vimarshana</h4>
-                                <h4 class="profile-h4">Coordination Team Head</h4>
+                            <h2 class="profile-h2">Supipi Sonalee</h2>
+                            <h4 class="profile-h4">Coordination Team Head</h4>
                         </figcaption>
                         <section class="p-section">
-                            <div class="height450">
-                                <div class="social-overlap process-scetion mt100">
+                            <div>
+                                <div class="social-overlap process-scetion">
                                     <div class="container">
                                         <div class="row justify-content-center">
                                             <div class="col-md-10">
@@ -1399,15 +1515,53 @@
                                                     <div class="process-section">
                                                         <div class="social-icons profile-mb-3 iconpad">
                                                             <a class="slider-nav-item"
-                                                                href="mailto:nipwimarshana@gmail.com"
+                                                                href="mailto:Supisonalee2005@gmail.com"
                                                                 onclick="handleClick()" target="_blank">
                                                                 <i class="">
                                                                     <img src="../public/assets/icons/gmail-icon.png"
                                                                         alt="" class="social-icon-img">
                                                                 </i>
                                                             </a>
+                                                            <a class="slider-nav-item" href="https://wa.me/94763399887"
+                                                                target="_blank"><i class=""><img
+                                                                        src="../public/assets/icons/wapp-icon.png"
+                                                                        alt="" class="social-icon-img"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </figure>
+
+                    <!--! Profile - 06: Sanoji Sasmika -->
+                    <figure class="profile">
+                        <img src="../profile/financeteamhead.jpeg" alt="Sanoji Sasmika" class="profile-img" />
+                        <figcaption>
+                            <h2 class="profile-h2">Sanoji Sasmika</h2>
+                            <h4 class="profile-h4">Finance Team Head</h4>
+                        </figcaption>
+                        <section class="p-section">
+                            <div>
+                                <div class="social-overlap process-scetion">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-10">
+                                                <div class="social-bar">
+                                                    <div class="process-section">
+                                                        <div class="social-icons profile-mb-3 iconpad">
                                                             <a class="slider-nav-item"
-                                                                href="https://wa.me/message/7LIMGKXNW5YCC1?src=qr"
+                                                                href="mailto:sanojithilakarathna6@gmail.com"
+                                                                onclick="handleClick()" target="_blank">
+                                                                <i class="">
+                                                                    <img src="../public/assets/icons/gmail-icon.png"
+                                                                        alt="" class="social-icon-img">
+                                                                </i>
+                                                            </a>
+                                                            <a class="slider-nav-item" href="https://wa.me/94760059252"
                                                                 target="_blank"><i class=""><img
                                                                         src="../public/assets/icons/wapp-icon.png"
                                                                         alt="" class="social-icon-img"></i></a>
@@ -1423,12 +1577,12 @@
                     </figure>
                 </div>
             </div>
-            <br><br><br><br>
+            <br><br>
         </div>
         <!-- profile end ........................................................... -->
         <!-- sponsor ship starts ........................................................... -->
         <div style="margin-left: 10%; margin-right: 10%;">
-            <br><br><br><br><br><br><br><br>
+            <br><br><br><br>
             <p class="contact-text body-text text-uppercase">
                 Sponsored bY
             </p>
