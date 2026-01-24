@@ -1,95 +1,101 @@
-
 .container_pr {
     text-align: center;
-    margin-top: auto;
-}
-
-h1 {
-    margin-bottom: 20px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .prizes_pr {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
 }
 
 .prize_pr {
-    background-color: #3740c518;
-    padding: 20px;
-    border-radius: 20px;
-    width: 200px;
+    background: rgba(55, 64, 197, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px 20px;
+    border-radius: 24px;
+    width: 280px;
     text-align: center;
-    border: 1px solid;
-    border-color: rgba(255, 255, 255, 0.733);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prize_pr:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 195, 255, 0.5);
+    background: rgba(55, 64, 197, 0.15);
 }
 
 .prize_pr img {
-    max-width: 50%;
+    width: 120px;
     height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
 }
 
 .position_pr {
-    font-size: 1.2em;
-    margin: 10px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 15px 0;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .amount_pr {
-    font-size: 1.5em;
-    color: #eee784d5;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #00C3FF;
+    background: linear-gradient(90deg, #00C3FF, #8000FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
 }
 
 .custom-hr {
-    border: 0.5px dotted;
-    background: #ffffffd5; /* Change this color to your desired HR color */
-    margin: 10px auto; /* Center the hr element */
-    width: 120px;
-    display: block; /* Ensure hr is treated as a block-level element */
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    margin: 15px auto;
+    width: 80%;
 }
 
 /* Media Queries */
 
-/* Large screens */
-@media (min-width: 1200px) {
-    .prizes_pr {
-        gap: 40px;
-    }
+/* Tablet Screens */
+@media (max-width: 991px) {
     .prize_pr {
-        width: 230px;
-        height: min-content;
-    }
-    .position_pr {
-        font-size: 1.5em;
-    }
-    .amount_pr {
-        font-size: 2em;
+        width: calc(50% - 30px);
+        min-width: 240px;
     }
 }
 
-/* Medium screens */
-@media (min-width: 768px) and (max-width: 1199px) {
+/* Mobile Screens */
+@media (max-width: 576px) {
     .prizes_pr {
-        gap: 30px;
+        gap: 20px;
     }
-    .prize_pr {
-        width: 150px;
-    }
-    .position_pr {
-        font-size: 1.3em;
-    }
-    .amount_pr {
-        font-size: 1.7em;
-    }
-}
 
-/* Small screens */
-@media (max-width: 767px) {
-    .prizes_pr {
-        flex-direction: column;
-        align-items: center;
-    }
     .prize_pr {
-        width: 75%;
-        margin-bottom: 20px;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .amount_pr {
+        font-size: 1.2rem;
+    }
+
+    .container_pr {
+        padding: 40px 15px;
     }
 }

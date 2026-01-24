@@ -582,8 +582,9 @@
                                     <br> -->
                                     <br><br><br>
                                     <div class="text-center ">
-                                        <center>
-                                            <button class="gradient-btn pc-only" onclick="openInNewTab()" style="background: linear-gradient(90deg, #00C3FF, #9B59B6);
+                                        <center
+                                            style="display: none; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                                            <button class="gradient-btn" onclick="openInNewTab()" style="background: linear-gradient(90deg, #00C3FF, #9B59B6);
                color: #E0F7FF; 
                border: 2px solid rgba(155, 89, 182, 0.1); 
                border-radius: 12px; 
@@ -592,6 +593,16 @@
                cursor: pointer;
                transition: 0.3s;">
                                                 GALLERY
+                                            </button>
+                                            <button class="gradient-btn" onclick="openInNewTab1()" style="background: linear-gradient(90deg, #8000FF, #00C3FF);
+               color: #E0F7FF; 
+               border: 2px solid rgba(0, 195, 255, 0.1); 
+               border-radius: 12px; 
+               padding: 12px 24px; 
+               font-size: 1rem; 
+               cursor: pointer;
+               transition: 0.3s;">
+                                                REGISTER NOW
                                             </button>
                                         </center>
 
@@ -633,7 +644,7 @@
                 </div>
 
 
-                <div class="marquee marquee--5 ">
+                <div class="marquee marquee--5 " style="display: none;">
                     <img class="marquee__item img3" src="../public/assets/images/white sltc.png" height="60" alt=""
                         width="170px">
                     <img class="marquee__item img1" src="../public/assets/images/insight white.png" height="95" alt=""
@@ -657,7 +668,7 @@
                     <div class="acontainer">
                         <div class="acontent" style="color: white; max-width: 900px; margin: 0 auto;">
                             <br><br>
-                            <h1 class="a_h1" style="font-size: 3.5rem; 
+                            <h1 class="a_h1" style="font-size: 2.8rem; 
            background: linear-gradient(90deg, #00C3FF, #8000FF); 
            -webkit-background-clip: text; 
              background-clip: text; 
@@ -666,29 +677,35 @@
                                 About
                             </h1>
                             <br>
-                            <p class="abtp">
+                            <p class="abtp" style="font-size: 1.05rem; line-height: 1.6;">
                                 <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                 -webkit-background-clip: text; 
              background-clip: text; 
                                 -webkit-text-fill-color: transparent;">
                                     MASTER DESIGNER V1.0
-                                </span>, presented by the Media Unit of SLTC,
-                                was a 4-day workshop series on Photoshop, Illustrator, and InDesign graphic design
-                                tools.
-                            </p>
-
-                            <br>
-                            <p class="abtp">
-                                Its second incarnation,
+                                </span>, presented by the Media Unit of SLTC, was a 4-day workshop series strictly
+                                focused on Photoshop, Illustrator, and InDesign tools. This was followed by
                                 <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
                                 -webkit-background-clip: text; 
              background-clip: text; 
                                 -webkit-text-fill-color: transparent;">
-                                    “MASTER DESIGNER V2.0,”
-                                </span>
-                                is an all-island competition organized by the Media Unit of SLTC to evaluate the most
-                                talented
-                                individuals in the field of graphic design...
+                                    MASTER DESIGNER V2.0
+                                </span>, an all-island competition designed to evaluate the most talented individuals in
+                                the field of graphic design across the nation.
+                            </p>
+
+                            <br>
+                            <p class="abtp" style="font-size: 1.05rem; line-height: 1.6;">
+                                Now,
+                                <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                -webkit-background-clip: text; 
+             background-clip: text; 
+                                -webkit-text-fill-color: transparent;">
+                                    Master Designer V3.0
+                                </span> is here as the ultimate all-island graphic design competition and workshop
+                                series. Aimed at discovering top design talent in Sri Lanka, it promotes creativity and
+                                growth in digital design, including the use of AI tools. It consists of three immersive
+                                phases, from expert-led workshops to a live, physical final round.
                             </p>
 
                             <div class="abuttons"><br>
@@ -746,13 +763,9 @@
                                     </div>
                                     <div class="col-lg-6 col-sm-8 col-9">
                                         <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
-                                            <p class="h4 mb-1">In the first phase, designs for one field selected
-                                                from the given fields are submitted under the online mode. During
-                                                the submission, the contestants should submit a suitable name for
-                                                the creation and the contestants can submit the design individually
-                                                or as a team of three members. 15 teams and 15 individual
-                                                competitors will be selected for the final stage of the competition
-                                                that is the physical competition round.
+                                            <p class="h4 mb-1">Online weekend workshops on Adobe Illustrator and Adobe
+                                                Photoshop. This phase is open to all ages, providing a foundational and
+                                                advanced learning experience guided by industry experts.
                                             </p>
                                         </div>
                                     </div>
@@ -768,8 +781,8 @@
                                     </div>
                                     <div class="col-lg-6 col-sm-8 col-9">
                                         <div class="simple-masking_el">
-                                            <h4 class="h3 mb-1 text-dark">"Submit Your Creation, Name Your Vision,
-                                                Inspire the Future"</h4>
+                                            <h4 class="h3 mb-1 text-dark">"Immersive Workshop Series: From Fundamentals
+                                                to Advanced Concepts"</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -786,11 +799,9 @@
                                     </div>
                                     <div class="col-lg-6 col-sm-8 col-9">
                                         <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
-                                            <p class="h4 mb-1">In the second phase (final phase) the two selected
-                                                groups, 15 teams and 15 individual competitors, will measure their
-                                                skills at a specific time. There will be one task for individual
-                                                competitors and three tasks for group competitors. Among the designs
-                                                created in this way, the greatest designs are evaluated.</p>
+                                            <p class="h4 mb-1">Contestants invite original design submissions based on a
+                                                specific theme. Showcase your creative excellence on a national platform
+                                                individually or as a team of up to three.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -805,8 +816,41 @@
                                     </div>
                                     <div class="col-lg-6 col-sm-8 col-9">
                                         <div class="simple-masking_el">
-                                            <p class="h3 mb-1 text-dark">"15 Teams, 15 Individuals: One Stage to
-                                                Shine"</p>
+                                            <p class="h3 mb-1 text-dark">"Showcase Your Creative Excellence"</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-mask">
+                            <div class="heading-mask_el container_content heading-mask_el__deep">
+                                <div class="row">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h3 mb-1">PHASE 03</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
+                                            <p class="h4 mb-1">The top 15 individuals and teams will compete in a live
+                                                physical final round. Finalists will present their designs in a live
+                                                competition, competing for top honors and recognition.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-mask_el container_content heading-mask_el__masking">
+                                <div class="row">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h2 mb-1 text-dark">03</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el">
+                                            <p class="h3 mb-1 text-dark">"Grand Final & Live Competition"</p>
                                         </div>
                                     </div>
                                 </div>
@@ -827,22 +871,24 @@
                 <div class="container_p">
                     <div class="step_p">
                         <div class="content_p">
-                            <h2>PHASES 01</h2><br>
-                            <p>In the first phase, designs for one field selected from the given fields are submitted
-                                under the online mode. During the submission, the contestants should submit a suitable
-                                name for the creation and the contestants can submit the design individually or as a
-                                team of three members. 15 teams and 15 individual competitors will be selected for the
-                                final stage of the competition that is the physical competition round.</p>
+                            <h2>PHASE 01</h2><br>
+                            <p>Online weekend workshops (Adobe Illustrator & Photoshop). Open to all ages. Journey from
+                                fundamentals to advanced concepts guided by industry experts.</p>
                         </div>
 
                     </div>
                     <div class="step_p">
                         <div class="content_p">
-                            <h2>PHASES 02</h2><br>
-                            <p>In the second phase (final phase) the two selected groups, 15 teams and 15 individual
-                                competitors, will measure their skills at a specific time. There will be one task for
-                                individual competitors and three tasks for group competitors. Among the designs created
-                                in this way, the greatest designs are evaluated.</p>
+                            <h2>PHASE 02</h2><br>
+                            <p>Original design submissions based on a specific theme. Showcase your creative excellence
+                                on a national platform.</p>
+                        </div>
+                    </div>
+                    <div class="step_p">
+                        <div class="content_p">
+                            <h2>PHASE 03</h2><br>
+                            <p>Top 15 individuals and teams compete in a live physical final round to showcase
+                                brilliance and compete for top honors.</p>
                         </div>
                     </div>
                 </div>
@@ -853,326 +899,132 @@
             <!-- guideline start        ...............................  -->
                       
         </div>
-        <div class="pc-only">
-            <center>
-                <h3 class="timeline-text-center" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-               -webkit-background-clip: text; 
-             background-clip: text; 
-               -webkit-text-fill-color: transparent;">
-                    SELECTIONS OF TEAM CATEGORY
-                </h3>
-                <br>
-            </center>
-
-            <div class="list-container">
-                <ol class="left-column lol">
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team Blend
-                        </span> Lead By Navamin Soysa
-                    </li>
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team Artirexa
-                        </span> Lead By I.C.Weerakoon
-                    </li>
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team Dream Achievers
-                        </span> Lead By B.Sathurshan
-                    </li>
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team Pixel Crafters
-                        </span> Lead By H.M.De Silva
-                    </li>
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team MD Graphic
-                        </span> Lead By Maleesha Dewshan
-                    </li>
-                </ol>
-                <ol class="right-column lol">
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team Judgemental
-                        </span> Lead By A. S. Jayamanna
-                    </li>
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team Pixel Masters
-                        </span> Lead By T.H.Munasinghe
-                    </li>
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team Golden Iris
-                        </span> Lead By Bosilu Nisalitha
-                    </li>
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team Wizards
-                        </span> Lead By Hansana Eranga
-                    </li>
-                    <li style="font: 1em sans-serif;" class="lolli">
-                        <span class="strong2" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
-                                         -webkit-background-clip: text; 
-             background-clip: text; 
-                                         -webkit-text-fill-color: transparent;">
-                            Team Vinchi
-                        </span> Lead By Wanushka Lakmal
-                    </li>
-                </ol>
-            </div>
-
-        </div><br><br>
-
-        <div class="pc-only">
-            <center>
-                <h3 class="timeline-text-center">SELECTIONS OF INDIVIDUAL CATEGORY</h3><br>
-
-            </center>
-            <center>
-                <img src="../public/assets/images/i_winner.png" alt="" class="i_img"
-                    style="width: 800px; border: solid 1px;">
-            </center>
+        <div class="pc-only" style="display: none;">
+            <!-- Selections hidden for V3.0 until finalists are announced -->
         </div>
-        <div>
-            <div class="slideshow-container mobile-only">
-                <!-- <center><p class="work_content_label body-text text-uppercase">
-                    SELECTIONS</p></center> -->
-
-                <div class="container_p">
-                    <div class="step_pr">
-                        <div class="content_p">
-                            <center>
-                                <h4 class="timeline-text-center">SELECTIONS OF TEAM CATEGORY</h4><br>
-                                <p style="font: 0.85em sans-serif;">Team Blend<br> Lead By Navamin Soysa</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Team Artirexa<br> Lead By I.C.Weerakoon</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Team Dream Achievers<br> Lead By B.Sathurshan</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Team Pixel crafters<br> Lead By H.M.De Silva</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Team MD Graphic<br> Lead By Maleesha Dewshan</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Team Judgemental<br> Lead By A. S. Jayamanna</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Team Pixel masters<br> Lead By T.H.Munasinghe</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Team Golden Iris<br> Lead By Bosilu Nisalitha</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Team Wizards<br> Lead By Hansana Eranga</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Team Vinchi<br> Lead By Wanushka Lakmal</p>
-                            </center>
-                        </div>
-
-                    </div>
-                    <div class="step_pr">
-                        <div class="content_p">
-                            <center>
-                                <h4 class="timeline-text-center">SELECTIONS OF INDIVIDUAL CATEGORY</h4><br>
-                                <p style="font: 0.85em sans-serif;">Yasitha Ranasinghe</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Chamika Pathirage</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Thushad Wimarsha</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Thanuka Vishal</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Radishan D Silva</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Jayanindu Shamon</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Rasika Fernando</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Sanoj Vishwajith</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Chandu Balasooriya</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Hansi Shaneesha</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Dhananjaya Gunathilaka</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Kaveen Theekshana</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Ravindu Priyan</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Chethiya Nidushan</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Anuradha Dilshan</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Mineth Banula</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Hasini Sarathchandra</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Dilshan Kankanamge</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Chamuditha Perera</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Chamara Sampath</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Chathura Kodikara</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Tharusha Nimeshana</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">T D Chandrawansha</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Nadeesha Rathnayake</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Dushyantha Thilakarathne</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Manavee Amasha</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Mohammed Hamdhan</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Pathum Deshan</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">K Pasindu Dllhara</p>
-                                <hr>
-                                <p style="font: 0.85em sans-serif;">Sasanka Malshan</p>
-                            </center>
-                        </div>
-
-                    </div>
-                </div>
-                <br><br><br><br><br><br><br><br><br>
-            </div>
-            <!-- guideline start        ...............................  -->
+        <!-- guideline start        ...............................  -->
 
 
-            <div class="client js-client" id="client">
-                <div class="row client_info">
-                    <div class="col-lg-9 col-sm-10 offset-lg-2 offset-sm-1 col-12">
-                        <div class="client_content container_content ">
-                            <p class="work_content_label body-text text-uppercase">
-                                GuideLines</p>
-                            <div class="client_content_desc h22">
-                                <div class="scroll-paragraph-mask js-scroll-paragraph-mask">Teams or individuals
-                                    interested
-                                    in participating in the competition should register through the registration link.
-                                    <hr>
-                                    Everyone should fill out all the information in the registration form correctly.
-                                    <hr>
-                                    Anyone above the age of 16 can participate in the competition.
-                                    <hr>
-                                    The last date to register for the competition is (deadline). No registrations will
-                                    be
-                                    accepted beyond this deadline.
-                                    <hr>
-                                    After registering your team, you can't change your team members.
-                                    <hr>
-                                    Upon successful registration, participants will receive a confirmation email.
-                                    <hr>
-                                    After the registration process, you will get a number. You should keep that number
-                                    with
-                                    you for the future work of the competition.
-                                    <hr>
-                                    If you are participating individually, you cannot participate in a team.          
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br class="mobile-only"><br class="mobile-only">
-                <br class="mobile-only"><br class="mobile-only">
-                <br class="mobile-only"><br class="mobile-only">
-
-
-
-
-            </div>
-
-            <!-- ...........timeline.................................................. -->
-            <div class="timeline-containertimeline">
-                <h3 class="timeline-text-center">Timeline</h3>
-                <div class="timeline-experience">
-                    <div class="timeline-item">
-                        <h4 class="timeline-company-name"><b>Registration Period</b></h4>
-                        <p><i class="fa-li fa fa-hand-o-right"></i>Sign up now to showcase your talent with Master
-                            Designer
-                            V2.0. Don't miss your chance to shine and secure your spot in this exciting competition.</p>
-                        <div class="timeline-job-info">
-                            <div>
-                                <h4><b>10<sup>th</sup> june 2024 to <br>22<sup>nd</sup> june 2024</b></h4>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="timeline-item">
-                        <h5 class="timeline-company-name"><b>Submission Period</b>
-                        </h5>
-                        <p><i class="fa-li fa fa-hand-o-right"></i>Submit your designs online and unleash your
-                            creativity in
-                            Phase 1. Show the world your innovative ideas and stand out.</p>
-                        <!--                      <div class="abuttons"><br>
-                            <button class="abt-button"><a href="https://forms.gle/uTR63j9EccAL4SP89" class="button delegate" target="_blank">
-                                        <h5 class="a_h5">Submit Now </h5>
-                                    </a></button><br>
-                        </div> -->
-                        <div class="timeline-job-info">
-                            <div>
-                                <h4><b>15<sup>th</sup> june 2024 to <br>22<sup>nd</sup> june 2024</b>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h5 class="timeline-company-name"><b>Voting Round</b></h5>
-                        <p><i class="fa-li fa fa-hand-o-right"></i>Cast your vote for the top designs and prepare to win
-                            exciting prizes. Support your favorite designers and be part of the selection process.</b>
-                        </p>
-                        <div class="timeline-job-info">
-                            <div>
-                                <h4><b>28<sup>th</sup> june 2024 to <br>7<sup>th</sup> july 2024</b>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h5 class="timeline-company-name"><b>Grand Final Competition </b></h5>
-                        <p><i class="fa-li fa fa-hand-o-right"></i>Exhibit your design brilliance in our grand finale
-                            physical competition. Showcase your work to industry leaders and compete for top honors.</p>
-                        <div class="timeline-job-info">
-                            <div>
-                                <h4><b>14<sup>th</sup> july 2024</b>
+        <div class="client js-client" id="client">
+            <div class="row client_info">
+                <div class="col-lg-9 col-sm-10 offset-lg-2 offset-sm-1 col-12">
+                    <div class="client_content container_content ">
+                        <p class="work_content_label body-text text-uppercase">
+                            GuideLines</p>
+                        <div class="client_content_desc h22">
+                            <div class="scroll-paragraph-mask js-scroll-paragraph-mask">Teams or individuals
+                                interested
+                                in participating in the competition should register through the registration link.
+                                <hr>
+                                Everyone should fill out all the information in the registration form correctly.
+                                <hr>
+                                Anyone above the age of 15 can participate in the competition.
+                                <hr>
+                                The registration deadline varies for workshops and competition rounds. Please refer to
+                                the timeline for specific dates.
+                                <hr>
+                                After registering your team, you can't change your team members.
+                                <hr>
+                                Upon successful registration, participants will receive a confirmation email.
+                                <hr>
+                                After the registration process, you will get a number. You should keep that number
+                                with
+                                you for the future work of the competition.
+                                <hr>
+                                If you are participating individually, you cannot participate in a team.          
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <br><br><br><br>
-                    
+            <br class="mobile-only"><br class="mobile-only">
+            <br class="mobile-only"><br class="mobile-only">
+            <br class="mobile-only"><br class="mobile-only">
+
+
+
+
+        </div>
+
+        <!-- ...........timeline.................................................. -->
+        <div class="timeline-containertimeline">
+            <h3 class="timeline-text-center">Timeline</h3>
+            <div class="timeline-experience">
+                <div class="timeline-item">
+                    <h4 class="timeline-company-name"><b>Registration for Workshops</b></h4>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Register to be part of Master Designer v3.0 workshops and
+                        secure your spot to gain graphic design knowledge.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>23<sup>rd</sup> January to <br>29<sup>th</sup> January 2026</b></h4>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Workshop Series</b>
+                    </h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>An eight-day immersive workshop series guided by industry
+                        experts, covering fundamentals to advanced concepts.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>31<sup>st</sup> January to <br>22<sup>nd</sup> February 2026</b>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Registration for Competition</b></h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Showcase your creative excellence on a national platform.
+                        Register for the online competition phase.</b>
+                    </p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>9<sup>th</sup> February to <br>16<sup>th</sup> February 2026</b>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Submission Period (Phase 02)</b></h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Submit your original designs and let your creativity
+                        speak. Unleash your innovation.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>16<sup>th</sup> February to <br>21<sup>st</sup> February 2026</b>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Voting Round</b></h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Promote your design and rally support through public
+                        voting to choose the most outstanding creations.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>24<sup>th</sup> February to <br>3<sup>rd</sup> March 2026</b>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Grand Final & Closing</b></h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Finalists present designs in a live competition,
+                        competing for top honors and industry recognition.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>7<sup>th</sup> March 2026</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+                
         </div>
 
         <!-- ...................timeline end....................................... -->
@@ -1213,26 +1065,17 @@
                     <div class="prize_pr">
                         <img src="../public/assets/images/runner_2.png" alt="1st Runner Up">
                         <p class="position_pr">1<sup>st</sup> RUNNER UP</p>
-                        <p class="amount_pr">
-                            <hr class="custom-hr">LKR 20,000 <br> & <br>LKR 4,000 voucher
-                            <hr class="custom-hr">
-                        </p>
+                        <p class="amount_pr">LKR 45,000</p>
                     </div>
                     <div class="prize_pr">
                         <img src="../public/assets/images/runner_1.png" alt="Winner">
                         <p class="position_pr">WINNER</p>
-                        <p class="amount_pr">
-                            <hr class="custom-hr">LKR 30,000 <br> & <br>LKR 5,000 voucher
-                            <hr class="custom-hr">
-                        </p>
+                        <p class="amount_pr">LKR 60,000</p>
                     </div>
                     <div class="prize_pr">
                         <img src="../public/assets/images/runner_3.png" alt="2nd Runner Up">
                         <p class="position_pr">2<sup>nd</sup> RUNNER UP</p>
-                        <p class="amount_pr">
-                            <hr class="custom-hr">LKR 15,000 <br> & <br>LKR 3,000 voucher
-                            <hr class="custom-hr">
-                        </p>
+                        <p class="amount_pr">LKR 30,000</p>
                     </div>
                 </div><br><br>
 
@@ -1241,369 +1084,377 @@
                     <div class="prize_pr">
                         <img src="../public/assets/images/runner_2.png" alt="1st Runner Up">
                         <p class="position_pr">1<sup>st</sup> RUNNER UP</p>
-                        <p class="amount_pr">
-                            <hr class="custom-hr">LKR 15,000 <br> & <br>LKR 4,000 voucher
-                            <hr class="custom-hr">
-                        </p>
+                        <p class="amount_pr">LKR 15,000</p>
                     </div>
                     <div class="prize_pr">
                         <img src="../public/assets/images/runner_1.png" alt="Winner">
                         <p class="position_pr">WINNER</p>
-                        <p class="amount_pr">
-                            <hr class="custom-hr">LKR 20,000 <br> & <br>LKR 5,000 voucher
-                            <hr class="custom-hr">
-                        </p>
+                        <p class="amount_pr">LKR 20,000</p>
                     </div>
                     <div class="prize_pr">
                         <img src="../public/assets/images/runner_3.png" alt="2nd Runner Up">
                         <p class="position_pr">2<sup>nd</sup> RUNNER UP</p>
-                        <p class="amount_pr">
-                            <hr class="custom-hr">LKR 10,000 <br> & <br>LKR 3,000 voucher
-                            <hr class="custom-hr">
-                        </p>
+                        <p class="amount_pr">LKR 10,000</p>
                     </div>
-                </div>
-            </div>
-        </div>
-        <br><br>
+                </div><br><br>
 
-
-        <!-- tshirsection.............................................................................................................. -->
-
-        <br><br>
-
-
-        <!-- tshirsection.............................................................................................................. -->
-
-        <div class="tbody">
-            <div class="tshirt-container">
-                <header>
-                    <h1 class="thb">Official Master Designer V2.0</h1>
-                    <h2>T-shirt & Sticker Pack Now Available!</h2>
-                </header>
-                <div class="product-section">
-                    <div class="product-image">
-                        <img src="../public/assets/images/t_shirt_f.png" alt="Master Designer V2.0 T-shirt">
+                <h3 class="timeline-text-center">Popularity prize</h3><br>
+                <div class="prizes_pr">
+                    <div class="prize_pr">
+                        <img src="../public/assets/images/runner_1.png" alt="Most Popular">
+                        <p class="position_pr">MOST POPULAR</p>
+                        <p class="amount_pr">LKR 10,000</p>
                     </div>
-                    <div class="product-details">
-                        <h3>T-shirt & Sticker Pack Now Available!</h3>
-                        <span class="badge">Material - baby crocodile</span><br><br>
-                        <p>Step into style with the all-new Master Designer V2.0 official T-shirt & Sticker Pack,
-                            designed to
-                            embrace the
-                            latest trends. Wear with confidence.</p>
-                        <div class="product-card">
-                            <p class="price" style="color: #E0F7FF; font-weight: bold; font-size: 1.2rem;">LKR. 1700</p>
-
-                            <div class="sizes">
-                                <p style="color: #D1EAF5; margin-bottom: 8px;">Available in sizes</p>
-                                <div class="size-buttons" style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                    <button class="size-btn"
-                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XS</button>
-                                    <button class="size-btn"
-                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">S</button>
-                                    <button class="size-btn"
-                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">M</button>
-                                    <button class="size-btn"
-                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">L</button>
-                                    <button class="size-btn"
-                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XL</button>
-                                    <button class="size-btn"
-                                        style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">2XL</button>
-                                </div>
-                                <br>
-                            </div>
-
-                            <p class="order-deadline" style="color: #D1EAF5; font-size: 0.9rem;">*Order before 28 Jun
-                                2024</p>
-
-                            <button class="order-now"
-                                style="padding: 10px 24px; border-radius: 12px; background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; border: 2px solid rgba(0,134,204,0.1); cursor: not-allowed;">Order
-                                Closed</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- tshirsection.............................................................................................................. -->
-
-        <!-- profiles start........................................................ -->
-        <div class="p-body" id="contact">
-            <div style="margin-left: 10%; margin-right: 10%;">
-                <br><br><br><br>
-                <p class="contact-text body-text text-uppercase">
-                    Contact us
-                </p>
-            </div>
-            <div class="profile-row-container">
-
-                <div class="profile-row">
-
-                    <!--! Profile - 01: Induwara Lakdinu -->
-                    <figure class="profile">
-                        <img src="../profile/chairperson.jpeg" alt="Induwara Lakdinu" class="profile-img" />
-                        <figcaption>
-                            <h2 class="profile-h2">Induwara Lakdinu</h2>
-                            <h4 class="profile-h4">Chairperson</h4>
-                        </figcaption>
-                        <section class="p-section">
-                            <div>
-                                <div class="social-overlap process-scetion">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-10">
-                                                <div class="social-bar">
-                                                    <div class="process-section">
-                                                        <div class="social-icons profile-mb-3 iconpad">
-                                                            <a class="slider-nav-item"
-                                                                href="mailto:induwaralakdinu23@gmail.com"
-                                                                onclick="handleClick()" target="_blank">
-                                                                <i class="">
-                                                                    <img src="../public/assets/icons/gmail-icon.png"
-                                                                        alt="" class="social-icon-img">
-                                                                </i>
-                                                            </a>
-                                                            <a class="slider-nav-item" href="https://wa.me/94755843076"
-                                                                target="_blank"><i class=""><img
-                                                                        src="../public/assets/icons/wapp-icon.png"
-                                                                        alt="" class="social-icon-img"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </figure>
-
-                    <!--! Profile - 02: Bosilu Pupulewela -->
-                    <figure class="profile">
-                        <img src="../profile/vicechairperson.jpeg" alt="Bosilu Pupulewela" class="profile-img" />
-                        <figcaption>
-                            <h2 class="profile-h2">Bosilu Pupulewela</h2>
-                            <h4 class="profile-h4">Vice Chairperson</h4>
-                        </figcaption>
-                        <section class="p-section">
-                            <div>
-                                <div class="social-overlap process-scetion">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-10">
-                                                <div class="social-bar">
-                                                    <div class="process-section">
-                                                        <div class="social-icons profile-mb-3 iconpad">
-                                                            <a class="slider-nav-item"
-                                                                href="mailto:pupulewelabosilu2004@gmail.com"
-                                                                onclick="handleClick()" target="_blank">
-                                                                <i class="">
-                                                                    <img src="../public/assets/icons/gmail-icon.png"
-                                                                        alt="" class="social-icon-img">
-                                                                </i>
-                                                            </a>
-                                                            <a class="slider-nav-item" href="https://wa.me/94740975541"
-                                                                target="_blank"><i class=""><img
-                                                                        src="../public/assets/icons/wapp-icon.png"
-                                                                        alt="" class="social-icon-img"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </figure>
-
-                    <!--! Profile - 03: Udula Theekshana -->
-                    <figure class="profile">
-                        <img src="../profile/vicechairperson2.png" alt="Udula Theekshana" class="profile-img" />
-                        <figcaption>
-                            <h2 class="profile-h2">Udula Theekshana</h2>
-                            <h4 class="profile-h4">Vice Chairperson</h4>
-                        </figcaption>
-                        <section class="p-section">
-                            <div>
-                                <div class="social-overlap process-scetion">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-10">
-                                                <div class="social-bar">
-                                                    <div class="process-section">
-                                                        <div class="social-icons profile-mb-3 iconpad">
-                                                            <a class="slider-nav-item" href="mailto:udula.u20@gmail.com"
-                                                                onclick="handleClick()" target="_blank">
-                                                                <i class="">
-                                                                    <img src="../public/assets/icons/gmail-icon.png"
-                                                                        alt="" class="social-icon-img">
-                                                                </i>
-                                                            </a>
-                                                            <a class="slider-nav-item" href="https://wa.me/94714570995"
-                                                                target="_blank"><i class=""><img
-                                                                        src="../public/assets/icons/wapp-icon.png"
-                                                                        alt="" class="social-icon-img"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </figure>
-                </div>
-
-                <div class="profile-row">
-                    <!--! Profile - 04: Samadhi Rajapaksha -->
-                    <figure class="profile">
-                        <img src="../profile/secretary.jpeg" alt="Samadhi Rajapaksha" class="profile-img" />
-                        <figcaption>
-                            <h2 class="profile-h2">Samadhi Rajapaksha</h2>
-                            <h4 class="profile-h4">Secretary</h4>
-                        </figcaption>
-                        <section class="p-section">
-                            <div>
-                                <div class="social-overlap process-scetion">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-10">
-                                                <div class="social-bar">
-                                                    <div class="process-section">
-                                                        <div class="social-icons profile-mb-3 iconpad">
-                                                            <a class="slider-nav-item"
-                                                                href="mailto:samadhirajapaksha20@gmail.com"
-                                                                onclick="handleClick()" target="_blank">
-                                                                <i class="">
-                                                                    <img src="../public/assets/icons/gmail-icon.png"
-                                                                        alt="" class="social-icon-img">
-                                                                </i>
-                                                            </a>
-                                                            <a class="slider-nav-item" href="https://wa.me/94725778561"
-                                                                target="_blank"><i class=""><img
-                                                                        src="../public/assets/icons/wapp-icon.png"
-                                                                        alt="" class="social-icon-img"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </figure>
-
-                    <!--! Profile - 05: Supipi Sonalee -->
-                    <figure class="profile">
-                        <img src="../profile/coordinationteamhead.jpeg" alt="Supipi Sonalee" class="profile-img" />
-                        <figcaption>
-                            <h2 class="profile-h2">Supipi Sonalee</h2>
-                            <h4 class="profile-h4">Coordination Team Head</h4>
-                        </figcaption>
-                        <section class="p-section">
-                            <div>
-                                <div class="social-overlap process-scetion">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-10">
-                                                <div class="social-bar">
-                                                    <div class="process-section">
-                                                        <div class="social-icons profile-mb-3 iconpad">
-                                                            <a class="slider-nav-item"
-                                                                href="mailto:Supisonalee2005@gmail.com"
-                                                                onclick="handleClick()" target="_blank">
-                                                                <i class="">
-                                                                    <img src="../public/assets/icons/gmail-icon.png"
-                                                                        alt="" class="social-icon-img">
-                                                                </i>
-                                                            </a>
-                                                            <a class="slider-nav-item" href="https://wa.me/94763399887"
-                                                                target="_blank"><i class=""><img
-                                                                        src="../public/assets/icons/wapp-icon.png"
-                                                                        alt="" class="social-icon-img"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </figure>
-
-                    <!--! Profile - 06: Sanoji Sasmika -->
-                    <figure class="profile">
-                        <img src="../profile/financeteamhead.jpeg" alt="Sanoji Sasmika" class="profile-img" />
-                        <figcaption>
-                            <h2 class="profile-h2">Sanoji Sasmika</h2>
-                            <h4 class="profile-h4">Finance Team Head</h4>
-                        </figcaption>
-                        <section class="p-section">
-                            <div>
-                                <div class="social-overlap process-scetion">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-10">
-                                                <div class="social-bar">
-                                                    <div class="process-section">
-                                                        <div class="social-icons profile-mb-3 iconpad">
-                                                            <a class="slider-nav-item"
-                                                                href="mailto:sanojithilakarathna6@gmail.com"
-                                                                onclick="handleClick()" target="_blank">
-                                                                <i class="">
-                                                                    <img src="../public/assets/icons/gmail-icon.png"
-                                                                        alt="" class="social-icon-img">
-                                                                </i>
-                                                            </a>
-                                                            <a class="slider-nav-item" href="https://wa.me/94760059252"
-                                                                target="_blank"><i class=""><img
-                                                                        src="../public/assets/icons/wapp-icon.png"
-                                                                        alt="" class="social-icon-img"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </figure>
                 </div>
             </div>
             <br><br>
-        </div>
-        <!-- profile end ........................................................... -->
-        <!-- sponsor ship starts ........................................................... -->
-        <div style="margin-left: 10%; margin-right: 10%;">
-            <br><br><br><br>
-            <p class="contact-text body-text text-uppercase">
-                Sponsored bY
-            </p>
-            <div class="sponsor-marquee-container">
-                <div class="sponsor-marquee-content">
-                    <p class="text-uppercase">OFFICIAL gift parTNER</p>
-                    <img src="../public/assets/images/white_par1.png" alt="">
-                </div>
-                <div class="sponsor-marquee-content">
-                    <p class="text-uppercase">OFFICIAL DIGITAL CERTIFICATE PARTNER</p>
-                    <img src="../public/assets/images/white_par2.png" alt="">
+
+
+            <!-- tshirsection.............................................................................................................. -->
+
+            <br><br>
+
+
+            <!-- tshirsection.............................................................................................................. -->
+
+            <div class="tbody" style="display: none;">
+                <div class="tshirt-container">
+                    <header>
+                        <h1 class="thb">Official Master Designer V3.0</h1>
+                        <h2>T-shirt & Sticker Pack Coming Soon!</h2>
+                    </header>
+                    <div class="product-section">
+                        <div class="product-image">
+                            <img src="../public/assets/images/t_shirt_f.png" alt="Master Designer V3.0 T-shirt">
+                        </div>
+                        <div class="product-details">
+                            <h3>T-shirt & Sticker Pack Now Available!</h3>
+                            <span class="badge">Material - baby crocodile</span><br><br>
+                            <p>Step into style with the all-new Master Designer V3.0 official T-shirt & Sticker Pack,
+                                designed to
+                                embrace the
+                                latest trends. Wear with confidence.</p>
+                            <div class="product-card">
+                                <p class="price" style="color: #E0F7FF; font-weight: bold; font-size: 1.2rem;">LKR. 1700
+                                </p>
+
+                                <div class="sizes">
+                                    <p style="color: #D1EAF5; margin-bottom: 8px;">Available in sizes</p>
+                                    <div class="size-buttons" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XS</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">S</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">M</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">L</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XL</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">2XL</button>
+                                    </div>
+                                    <br>
+                                </div>
+
+                                <p class="order-deadline" style="color: #D1EAF5; font-size: 0.9rem;">*Order before 28
+                                    Jun
+                                    2024</p>
+
+                                <button class="order-now"
+                                    style="padding: 10px 24px; border-radius: 12px; background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; border: 2px solid rgba(0,134,204,0.1); cursor: not-allowed;">Order
+                                    Closed</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <br class="mobile-only"><br class="mobile-only">
-        <hr style="border: 1px solid #00B3FF; margin: 50px auto; width: 80%; opacity: 0.5;">
-        <br><br><br><br>
+
+            <!-- tshirsection.............................................................................................................. -->
+
+            <!-- profiles start........................................................ -->
+            <div class="p-body" id="contact">
+                <div style="margin-left: 10%; margin-right: 10%;">
+                    <br><br><br><br>
+                    <p class="contact-text body-text text-uppercase">
+                        Contact us
+                    </p>
+                </div>
+                <div class="profile-row-container">
+
+                    <div class="profile-row">
+
+                        <!--! Profile - 01: Induwara Lakdinu -->
+                        <figure class="profile">
+                            <img src="../profile/chairperson.jpeg" alt="Induwara Lakdinu" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Induwara Lakdinu</h2>
+                                <h4 class="profile-h4">Chairperson</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:induwaralakdinu23@gmail.com"
+                                                                    onclick="handleClick()" target="_blank">
+                                                                    <i class="">
+                                                                        <img src="../public/assets/icons/gmail-icon.png"
+                                                                            alt="" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94755843076" target="_blank"><i
+                                                                        class=""><img
+                                                                            src="../public/assets/icons/wapp-icon.png"
+                                                                            alt="" class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+
+                        <!--! Profile - 02: Bosilu Pupulewela -->
+                        <figure class="profile">
+                            <img src="../profile/vicechairperson.jpeg" alt="Bosilu Pupulewela" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Bosilu Pupulewela</h2>
+                                <h4 class="profile-h4">Vice Chairperson</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:pupulewelabosilu2004@gmail.com"
+                                                                    onclick="handleClick()" target="_blank">
+                                                                    <i class="">
+                                                                        <img src="../public/assets/icons/gmail-icon.png"
+                                                                            alt="" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94740975541" target="_blank"><i
+                                                                        class=""><img
+                                                                            src="../public/assets/icons/wapp-icon.png"
+                                                                            alt="" class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+
+                        <!--! Profile - 03: Udula Theekshana -->
+                        <figure class="profile">
+                            <img src="../profile/vicechairperson2.png" alt="Udula Theekshana" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Udula Theekshana</h2>
+                                <h4 class="profile-h4">Vice Chairperson</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:udula.u20@gmail.com"
+                                                                    onclick="handleClick()" target="_blank">
+                                                                    <i class="">
+                                                                        <img src="../public/assets/icons/gmail-icon.png"
+                                                                            alt="" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94714570995" target="_blank"><i
+                                                                        class=""><img
+                                                                            src="../public/assets/icons/wapp-icon.png"
+                                                                            alt="" class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+                    </div>
+
+                    <div class="profile-row">
+                        <!--! Profile - 04: Samadhi Rajapaksha -->
+                        <figure class="profile">
+                            <img src="../profile/secretary.jpeg" alt="Samadhi Rajapaksha" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Samadhi Rajapaksha</h2>
+                                <h4 class="profile-h4">Secretary</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:samadhirajapaksha20@gmail.com"
+                                                                    onclick="handleClick()" target="_blank">
+                                                                    <i class="">
+                                                                        <img src="../public/assets/icons/gmail-icon.png"
+                                                                            alt="" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94725778561" target="_blank"><i
+                                                                        class=""><img
+                                                                            src="../public/assets/icons/wapp-icon.png"
+                                                                            alt="" class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+
+                        <!--! Profile - 05: Supipi Sonalee -->
+                        <figure class="profile">
+                            <img src="../profile/coordinationteamhead.jpeg" alt="Supipi Sonalee" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Supipi Sonalee</h2>
+                                <h4 class="profile-h4">Coordination Team Head</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:Supisonalee2005@gmail.com"
+                                                                    onclick="handleClick()" target="_blank">
+                                                                    <i class="">
+                                                                        <img src="../public/assets/icons/gmail-icon.png"
+                                                                            alt="" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94763399887" target="_blank"><i
+                                                                        class=""><img
+                                                                            src="../public/assets/icons/wapp-icon.png"
+                                                                            alt="" class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+
+                        <!--! Profile - 06: Sanoji Sasmika -->
+                        <figure class="profile">
+                            <img src="../profile/financeteamhead.jpeg" alt="Sanoji Sasmika" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Sanoji Sasmika</h2>
+                                <h4 class="profile-h4">Finance Team Head</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:sanojithilakarathna6@gmail.com"
+                                                                    onclick="handleClick()" target="_blank">
+                                                                    <i class="">
+                                                                        <img src="../public/assets/icons/gmail-icon.png"
+                                                                            alt="" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94760059252" target="_blank"><i
+                                                                        class=""><img
+                                                                            src="../public/assets/icons/wapp-icon.png"
+                                                                            alt="" class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!-- profile end ........................................................... -->
+            <!-- sponsor ship starts ........................................................... -->
+            <div style="margin-left: 10%; margin-right: 10%; display: none;">
+                <br><br><br><br>
+                <p class="contact-text body-text text-uppercase">
+                    Sponsored bY
+                </p>
+                <div class="sponsor-marquee-container">
+                    <div class="sponsor-marquee-content">
+                        <p class="text-uppercase">OFFICIAL gift parTNER</p>
+                        <img src="../public/assets/images/white_par1.png" alt="">
+                    </div>
+                    <div class="sponsor-marquee-content">
+                        <p class="text-uppercase">OFFICIAL DIGITAL CERTIFICATE PARTNER</p>
+                        <img src="../public/assets/images/white_par2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <br class="mobile-only"><br class="mobile-only">
+            <hr style="border: 1px solid #00B3FF; margin: 50px auto; width: 80%; opacity: 0.5;">
+            <br><br><br><br>
 
 
 
-        <!-- sponsor ship ends ........................................................... -->
+            <!-- sponsor ship ends ........................................................... -->
 
 
 
