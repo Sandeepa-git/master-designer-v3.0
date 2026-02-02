@@ -1,0 +1,101 @@
+/* Previous Events Section Styling */
+.previous-events-section {
+    padding: 100px 0;
+    position: relative;
+    background-color: transparent;
+    /* Assuming main background covers it */
+}
+
+.previous-events-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.previous-events-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00C3FF, #8000FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.event-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 195, 255, 0.15);
+    border-color: rgba(0, 195, 255, 0.3);
+}
+
+.event-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    /* Aspect Ratio 16:9 approx */
+    overflow: hidden;
+}
+
+.event-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image {
+    transform: scale(1.05);
+}
+
+.event-content {
+    padding: 25px;
+}
+
+.event-date {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #00C3FF;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.event-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .previous-events-title {
+        font-size: 2rem;
+    }
+
+    .event-card {
+        margin-bottom: 30px;
+    }
+}

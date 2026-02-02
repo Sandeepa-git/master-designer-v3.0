@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="/src/css/components/timeline.css">
     <link rel="stylesheet" href="/src/css/components/sponsors.css">
     <link rel="stylesheet" href="/src/css/components/tshirt.css">
+    <link rel="stylesheet" href="/src/css/components/v2-archive.css">
+    <link rel="stylesheet" href="/src/css/components/previous-events.css">
 
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="/src/css/pages/winners.css">
@@ -53,6 +55,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>MASTER DESIGNER</title>
     <link rel="preload" as="video" href="/assets/videos/hero.mp4" type="video/mp4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif !important;
+        }
+    </style>
 
     <style>
         /* 1. Change the large Mask/Blob effect (currently purple) */
@@ -323,7 +333,7 @@
 
             <!-- Logo -->
             <div class="page-loading_logo">
-                <img src="../public/assets/images/logo.png" alt="logo">
+                <img src="/public/assets/images/logo.png" alt="logo">
             </div>
 
             <!-- Loading Text -->
@@ -398,7 +408,7 @@
         <div class="header_menu">
             <ul class="header_menu_list ul__reset">
                 <li class="header_menu_item js-cursor-contract">
-                    <a href="#work" target="_blank" class="desc text-uppercase">
+                    <a href="#work" target="_blank" rel="noopener noreferrer" class="desc text-uppercase">
                         <span class="header_menu_item_inner">
                             <span class="header_menu_item_link header_menu_item_link__deep" style="background: linear-gradient(90deg, #ffffff); 
              -webkit-background-clip: text; 
@@ -419,7 +429,7 @@
                 </li>
                 <!-- FAQ is still commented out -->
                 <li class="header_menu_item js-cursor-contract">
-                    <a href="#contact" target="_blank" class="desc text-uppercase">
+                    <a href="#contact" target="_blank" rel="noopener noreferrer" class="desc text-uppercase">
                         <span class="header_menu_item_inner">
                             <span class="header_menu_item_link header_menu_item_link__deep" style="background: linear-gradient(90deg, #ffffff); 
              -webkit-background-clip: text; 
@@ -479,7 +489,8 @@
 
                                         <!-- Video -->
                                         <video id="hero-bg-video" autoplay muted playsinline loop preload="auto"
-                                            data-pc="/assets/videos/hero.mp4" data-mobile="/assets/videos/hero.mp4"
+                                            poster="/assets/images/logo.png" data-pc="/assets/videos/hero.mp4"
+                                            data-mobile="/assets/videos/hero.mp4"
                                             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
                                             <source src="/assets/videos/hero.mp4" type="video/mp4">
                                         </video>
@@ -496,9 +507,11 @@
 
                                                 // 3. Add '/public' to the paths for Localhost
                                                 const localPath = '/public/assets/videos/hero.mp4';
+                                                const localPoster = '/public/assets/images/logo.png';
 
                                                 video.setAttribute('data-pc', localPath);
                                                 video.setAttribute('data-mobile', localPath);
+                                                video.setAttribute('poster', localPoster);
                                                 source.setAttribute('src', localPath);
 
                                                 // 4. Reload the video to apply changes
@@ -646,18 +659,18 @@
 
 
                 <div class="marquee marquee--5 " style="display: none;">
-                    <img class="marquee__item img3" src="../public/assets/images/white sltc.png" height="60" alt=""
-                        width="170px">
-                    <img class="marquee__item img1" src="../public/assets/images/insight white.png" height="95" alt=""
-                        width="150px" style="margin-bottom: -10px;">
-                    <img class="marquee__item img2" src="../public/assets/images/white media.png" height="80" alt=""
-                        width="150px">
+                    <img class="marquee__item img3" src="/public/assets/images/white sltc.png" height="60"
+                        alt="SLTC Logo" width="170px">
+                    <img class="marquee__item img1" src="/public/assets/images/insight white.png" height="95"
+                        alt="Insight Logo" width="150px" style="margin-bottom: -10px;">
+                    <img class="marquee__item img2" src="/public/assets/images/white media.png" height="80"
+                        alt="Media Logo" width="150px">
                 </div>
 
                 <!-- about start - WITH INLINE BACKGROUND IMAGE -->
                 <div class="abody" style="
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.65)), 
-                url('../public/assets/images/work.png') center/cover no-repeat fixed;
+                url('/public/assets/images/work.png') center/cover no-repeat fixed;
     min-height: 100vh;
     padding: 140px 20px 100px;
     position: relative;
@@ -711,7 +724,7 @@
 
                             <div class="abuttons"><br>
                                 <a href="https://drive.google.com/file/d/1TM24mS22xNG_t46yjabVYHcRPJ7LWgaV/view?usp=drive_link"
-                                    target="_blank" style="
+                                    target="_blank" rel="noopener noreferrer" style="
            display: inline-block;
            padding: 12px 24px;
            margin: 8px;
@@ -892,11 +905,22 @@
                                 brilliance and compete for top honors.</p>
                         </div>
                     </div>
+
                 </div>
                 <br>
             </div>
 
             <!-- phases mobile endddddddddddddddddddddddddddddddddddddddddddddddddddd  -->
+            <style>
+                @media (max-width: 768px) {
+                    .client {
+                        margin-top: 60px !important;
+                        position: relative;
+                        z-index: 10;
+                        clear: both;
+                    }
+                }
+            </style>
             <!-- guideline start        ...............................  -->
                       
         </div>
@@ -1029,16 +1053,73 @@
         </div>
 
         <!-- ...................timeline end....................................... -->
+
+        <!-- V2.0 ARCHIVE SECTION START (Added as per request) -->
+        <div class="v2-archive-section">
+            <div class="container">
+                <h2 class="v2-title">Master Designer V2.0 Highlights</h2>
+
+                <div class="v2-phase-container">
+                    <!-- Phase 01 -->
+                    <div class="v2-phase-row">
+                        <div class="v2-phase-label">PHASE 01</div>
+                        <div class="v2-phase-content">
+                            In the first phase, designs for one field selected from the given fields are submitted under
+                            the online mode.
+                            During the submission, the contestants should submit a suitable name for the creation and
+                            the contestants
+                            can submit the design individually or as a team of three members. 15 teams and 15 individual
+                            competitors will
+                            be selected for the final stage of the competition that is the physical competition round.
+                        </div>
+                    </div>
+
+                    <!-- Phase 02 -->
+                    <div class="v2-phase-row">
+                        <div class="v2-phase-label">PHASE 02</div>
+                        <div class="v2-phase-content">
+                            In the second phase (final phase) the two selected groups, 15 teams and 15 individual
+                            competitors, will
+                            measure their skills at a specific time. There will be one task for individual competitors
+                            and three tasks for
+                            group competitors. Among the designs created in this way, the greatest designs are
+                            evaluated.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- V2 Sponsors -->
+                <div class="v2-sponsors-container">
+                    <h2 class="v2-sponsor-label">SPONSORED BY</h2>
+                    <div class="v2-sponsor-grid">
+                        <div class="v2-sponsor-card">
+                            <span class="v2-sponsor-role">OFFICIAL GIFT PARTNER</span>
+                            <img src="/public/assets/images/white_par1.png" alt="Shooting Arena"
+                                class="v2-sponsor-logo">
+                            <!-- Ideally use specific logo if available, using placeholder matching V3 for now as requested from V2 context -->
+                        </div>
+                        <div class="v2-sponsor-card">
+                            <span class="v2-sponsor-role">OFFICIAL DIGITAL CERTIFICATE PARTNER</span>
+                            <img src="/public/assets/images/white_par2.png" alt="Micro Rewards" class="v2-sponsor-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- V2.0 ARCHIVE SECTION END -->
+
+
+
         <div class="motto">
             <div class="motto_bg" data-lenis-speed=".3">
                 <picture class="image__object-fit d-sm-block d-none"><img
-                        src="../public/assets/images/banner-bottom-50.png"
-                        data-srcset="../public/assets/images/banner-bottom-400.jpg 400w, ../public/assets/images/banner-bottom-800.jpg 800w, ../public/assets/images/banner-bottom-1200.png 1200w, ../public/assets/images/banner-bottom-1600.jpg 1600w, ../public/assets/images/banner-bottom-2400.jpg 2400w, ../public/assets/images/banner-bottom.jpg 3456w"
+                        src="/public/assets/images/banner-bottom-50.png"
+                        data-srcset="/public/assets/images/banner-bottom-400.jpg 400w, /public/assets/images/banner-bottom-800.jpg 800w, /public/assets/images/banner-bottom-1200.png 1200w, /public/assets/images/banner-bottom-1600.jpg 1600w, /public/assets/images/banner-bottom-2400.jpg 2400w, /public/assets/images/banner-bottom.jpg 3456w"
                         width="1728" height="1008" sizes="(max-width: 1728px) 100vw, 1728px" alt="banner-bottom" />
                 </picture>
                 <picture class="image__object-fit d-sm-none d-block">
-                    <img src="../public/assets/images/banner-bottom-mobile-50.png"
-                        data-srcset="../public/assets/images/banner-bottom-mobile-50.jpg 400w, ../public/assets/images/banner-bottom-mobile-800.jpg 800w, ../public/assets/images/banner-bottom-mobile.jpg 856w"
+                    <img src="/public/assets/images/banner-bottom-mobile-50.png"
+                        data-srcset="/public/assets/images/banner-bottom-mobile-50.jpg 400w, /public/assets/images/banner-bottom-mobile-800.jpg 800w, /public/assets/images/banner-bottom-mobile.jpg 856w"
                         width="856" height="1720" sizes="(max-width: 856px) 100vw, 856px" alt="banner-bottom-mobile"
                         style="object-position: 85% 50%;" />
                 </picture>
@@ -1064,17 +1145,17 @@
                 <h3 class="timeline-text-center">Team prizes</h3><br>
                 <div class="prizes_pr">
                     <div class="prize_pr">
-                        <img src="../public/assets/images/runner_2.png" alt="1st Runner Up">
+                        <img src="/public/assets/images/runner_2.png" alt="1st Runner Up">
                         <p class="position_pr">1<sup>st</sup> RUNNER UP</p>
                         <p class="amount_pr">LKR 45,000</p>
                     </div>
                     <div class="prize_pr">
-                        <img src="../public/assets/images/runner_1.png" alt="Winner">
+                        <img src="/public/assets/images/runner_1.png" alt="Winner">
                         <p class="position_pr">WINNER</p>
                         <p class="amount_pr">LKR 60,000</p>
                     </div>
                     <div class="prize_pr">
-                        <img src="../public/assets/images/runner_3.png" alt="2nd Runner Up">
+                        <img src="/public/assets/images/runner_3.png" alt="2nd Runner Up">
                         <p class="position_pr">2<sup>nd</sup> RUNNER UP</p>
                         <p class="amount_pr">LKR 30,000</p>
                     </div>
@@ -1083,17 +1164,17 @@
                 <h3 class="timeline-text-center">Individual prizes</h3><br>
                 <div class="prizes_pr">
                     <div class="prize_pr">
-                        <img src="../public/assets/images/runner_2.png" alt="1st Runner Up">
+                        <img src="/public/assets/images/runner_2.png" alt="1st Runner Up">
                         <p class="position_pr">1<sup>st</sup> RUNNER UP</p>
                         <p class="amount_pr">LKR 15,000</p>
                     </div>
                     <div class="prize_pr">
-                        <img src="../public/assets/images/runner_1.png" alt="Winner">
+                        <img src="/public/assets/images/runner_1.png" alt="Winner">
                         <p class="position_pr">WINNER</p>
                         <p class="amount_pr">LKR 20,000</p>
                     </div>
                     <div class="prize_pr">
-                        <img src="../public/assets/images/runner_3.png" alt="2nd Runner Up">
+                        <img src="/public/assets/images/runner_3.png" alt="2nd Runner Up">
                         <p class="position_pr">2<sup>nd</sup> RUNNER UP</p>
                         <p class="amount_pr">LKR 10,000</p>
                     </div>
@@ -1102,7 +1183,7 @@
                 <h3 class="timeline-text-center">Popularity prize</h3><br>
                 <div class="prizes_pr">
                     <div class="prize_pr">
-                        <img src="../public/assets/images/runner_1.png" alt="Most Popular">
+                        <img src="/public/assets/images/runner_1.png" alt="Most Popular">
                         <p class="position_pr">MOST POPULAR</p>
                         <p class="amount_pr">LKR 10,000</p>
                     </div>
@@ -1126,7 +1207,7 @@
                     </header>
                     <div class="product-section">
                         <div class="product-image">
-                            <img src="../public/assets/images/t_shirt_f.png" alt="Master Designer V3.0 T-shirt">
+                            <img src="/public/assets/images/t_shirt_f.png" alt="Master Designer V3.0 T-shirt">
                         </div>
                         <div class="product-details">
                             <h3>T-shirt & Sticker Pack Now Available!</h3>
@@ -1188,7 +1269,7 @@
 
                         <!--! Profile - 01: Induwara Lakdinu -->
                         <figure class="profile">
-                            <img src="../profile/chairperson.jpeg" alt="Induwara Lakdinu" class="profile-img" />
+                            <img src="/profile/chairperson.jpeg" alt="Induwara Lakdinu" class="profile-img" />
                             <figcaption>
                                 <h2 class="profile-h2">Induwara Lakdinu</h2>
                                 <h4 class="profile-h4">Chairperson</h4>
@@ -1204,17 +1285,19 @@
                                                             <div class="social-icons profile-mb-3 iconpad">
                                                                 <a class="slider-nav-item"
                                                                     href="mailto:induwaralakdinu23@gmail.com"
-                                                                    onclick="handleClick()" target="_blank">
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
                                                                     <i class="">
-                                                                        <img src="../public/assets/icons/gmail-icon.png"
-                                                                            alt="" class="social-icon-img">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
                                                                     </i>
                                                                 </a>
                                                                 <a class="slider-nav-item"
-                                                                    href="https://wa.me/94755843076" target="_blank"><i
-                                                                        class=""><img
-                                                                            src="../public/assets/icons/wapp-icon.png"
-                                                                            alt="" class="social-icon-img"></i></a>
+                                                                    href="https://wa.me/94755843076" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1228,7 +1311,7 @@
 
                         <!--! Profile - 02: Bosilu Pupulewela -->
                         <figure class="profile">
-                            <img src="../profile/vicechairperson.jpeg" alt="Bosilu Pupulewela" class="profile-img" />
+                            <img src="/profile/vicechairperson.jpeg" alt="Bosilu Pupulewela" class="profile-img" />
                             <figcaption>
                                 <h2 class="profile-h2">Bosilu Pupulewela</h2>
                                 <h4 class="profile-h4">Vice Chairperson</h4>
@@ -1244,17 +1327,19 @@
                                                             <div class="social-icons profile-mb-3 iconpad">
                                                                 <a class="slider-nav-item"
                                                                     href="mailto:pupulewelabosilu2004@gmail.com"
-                                                                    onclick="handleClick()" target="_blank">
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
                                                                     <i class="">
-                                                                        <img src="../public/assets/icons/gmail-icon.png"
-                                                                            alt="" class="social-icon-img">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
                                                                     </i>
                                                                 </a>
                                                                 <a class="slider-nav-item"
-                                                                    href="https://wa.me/94740975541" target="_blank"><i
-                                                                        class=""><img
-                                                                            src="../public/assets/icons/wapp-icon.png"
-                                                                            alt="" class="social-icon-img"></i></a>
+                                                                    href="https://wa.me/94740975541" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1268,7 +1353,7 @@
 
                         <!--! Profile - 03: Udula Theekshana -->
                         <figure class="profile">
-                            <img src="../profile/vicechairperson2.png" alt="Udula Theekshana" class="profile-img" />
+                            <img src="/profile/vicechairperson2.png" alt="Udula Theekshana" class="profile-img" />
                             <figcaption>
                                 <h2 class="profile-h2">Udula Theekshana</h2>
                                 <h4 class="profile-h4">Vice Chairperson</h4>
@@ -1284,17 +1369,19 @@
                                                             <div class="social-icons profile-mb-3 iconpad">
                                                                 <a class="slider-nav-item"
                                                                     href="mailto:udula.u20@gmail.com"
-                                                                    onclick="handleClick()" target="_blank">
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
                                                                     <i class="">
-                                                                        <img src="../public/assets/icons/gmail-icon.png"
-                                                                            alt="" class="social-icon-img">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
                                                                     </i>
                                                                 </a>
                                                                 <a class="slider-nav-item"
-                                                                    href="https://wa.me/94714570995" target="_blank"><i
-                                                                        class=""><img
-                                                                            src="../public/assets/icons/wapp-icon.png"
-                                                                            alt="" class="social-icon-img"></i></a>
+                                                                    href="https://wa.me/94714570995" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1310,7 +1397,7 @@
                     <div class="profile-row">
                         <!--! Profile - 04: Samadhi Rajapaksha -->
                         <figure class="profile">
-                            <img src="../profile/secretary.jpeg" alt="Samadhi Rajapaksha" class="profile-img" />
+                            <img src="/profile/secretary.jpeg" alt="Samadhi Rajapaksha" class="profile-img" />
                             <figcaption>
                                 <h2 class="profile-h2">Samadhi Rajapaksha</h2>
                                 <h4 class="profile-h4">Secretary</h4>
@@ -1326,17 +1413,19 @@
                                                             <div class="social-icons profile-mb-3 iconpad">
                                                                 <a class="slider-nav-item"
                                                                     href="mailto:samadhirajapaksha20@gmail.com"
-                                                                    onclick="handleClick()" target="_blank">
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
                                                                     <i class="">
-                                                                        <img src="../public/assets/icons/gmail-icon.png"
-                                                                            alt="" class="social-icon-img">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
                                                                     </i>
                                                                 </a>
                                                                 <a class="slider-nav-item"
-                                                                    href="https://wa.me/94725778561" target="_blank"><i
-                                                                        class=""><img
-                                                                            src="../public/assets/icons/wapp-icon.png"
-                                                                            alt="" class="social-icon-img"></i></a>
+                                                                    href="https://wa.me/94725778561" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1350,7 +1439,7 @@
 
                         <!--! Profile - 05: Supipi Sonalee -->
                         <figure class="profile">
-                            <img src="../profile/coordinationteamhead.jpeg" alt="Supipi Sonalee" class="profile-img" />
+                            <img src="/profile/coordinationteamhead.jpeg" alt="Supipi Sonalee" class="profile-img" />
                             <figcaption>
                                 <h2 class="profile-h2">Supipi Sonalee</h2>
                                 <h4 class="profile-h4">Coordination Team Head</h4>
@@ -1366,17 +1455,19 @@
                                                             <div class="social-icons profile-mb-3 iconpad">
                                                                 <a class="slider-nav-item"
                                                                     href="mailto:Supisonalee2005@gmail.com"
-                                                                    onclick="handleClick()" target="_blank">
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
                                                                     <i class="">
-                                                                        <img src="../public/assets/icons/gmail-icon.png"
-                                                                            alt="" class="social-icon-img">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
                                                                     </i>
                                                                 </a>
                                                                 <a class="slider-nav-item"
-                                                                    href="https://wa.me/94763399887" target="_blank"><i
-                                                                        class=""><img
-                                                                            src="../public/assets/icons/wapp-icon.png"
-                                                                            alt="" class="social-icon-img"></i></a>
+                                                                    href="https://wa.me/94763399887" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1390,7 +1481,7 @@
 
                         <!--! Profile - 06: Sanoji Sasmika -->
                         <figure class="profile">
-                            <img src="../profile/financeteamhead.jpeg" alt="Sanoji Sasmika" class="profile-img" />
+                            <img src="/profile/financeteamhead.jpeg" alt="Sanoji Sasmika" class="profile-img" />
                             <figcaption>
                                 <h2 class="profile-h2">Sanoji Sasmika</h2>
                                 <h4 class="profile-h4">Finance Team Head</h4>
@@ -1406,17 +1497,19 @@
                                                             <div class="social-icons profile-mb-3 iconpad">
                                                                 <a class="slider-nav-item"
                                                                     href="mailto:sanojithilakarathna6@gmail.com"
-                                                                    onclick="handleClick()" target="_blank">
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
                                                                     <i class="">
-                                                                        <img src="../public/assets/icons/gmail-icon.png"
-                                                                            alt="" class="social-icon-img">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
                                                                     </i>
                                                                 </a>
                                                                 <a class="slider-nav-item"
-                                                                    href="https://wa.me/94760059252" target="_blank"><i
-                                                                        class=""><img
-                                                                            src="../public/assets/icons/wapp-icon.png"
-                                                                            alt="" class="social-icon-img"></i></a>
+                                                                    href="https://wa.me/94760059252" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1441,11 +1534,11 @@
                 <div class="sponsor-marquee-container">
                     <div class="sponsor-marquee-content">
                         <p class="text-uppercase">OFFICIAL gift parTNER</p>
-                        <img src="../public/assets/images/white_par1.png" alt="">
+                        <img src="/public/assets/images/white_par1.png" alt="Sponsor 1">
                     </div>
                     <div class="sponsor-marquee-content">
                         <p class="text-uppercase">OFFICIAL DIGITAL CERTIFICATE PARTNER</p>
-                        <img src="../public/assets/images/white_par2.png" alt="">
+                        <img src="/public/assets/images/white_par2.png" alt="Sponsor 2">
                     </div>
                 </div>
             </div>
@@ -1499,7 +1592,7 @@
             <!-- Facebook -->
             <li class="social js-social">
                 <a class="social_link social_link__dribbble" href="https://www.facebook.com/SLTCMedia?mibextid=LQQJ4d"
-                    target="_blank" style="color:#fff; text-decoration:none; font-size:22px;">
+                    target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:none; font-size:22px;">
                     <svg width="22" height="22" fill="currentColor" viewBox="0 0 320 512">
                         <path d="M279.14 288l14.22-92.66h-88.91V127.86c0-25.35
                 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0C141.09
@@ -1512,7 +1605,7 @@
             <li class="social js-social">
                 <a class="social_link social_link__instagram"
                     href="https://www.instagram.com/sltc_media?igsh=MWxpOG52aHdkcjV0aQ==" target="_blank"
-                    style="color:#fff; text-decoration:none; font-size:22px;">
+                    rel="noopener noreferrer" style="color:#fff; text-decoration:none; font-size:22px;">
                     <svg width="22" height="22" fill="currentColor" viewBox="0 0 448 512">
                         <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5
                 370.8 224.1 370.8 339 319.5 339 255.9 287.7 141 224.1
@@ -1527,7 +1620,7 @@
             <!-- YouTube -->
             <li class="social js-social">
                 <a class="social_link social_link__youtube" href="https://youtube.com/@insightsltc?si=8Y7upEFEYXyfMxje"
-                    target="_blank" style="color:#fff; text-decoration:none; font-size:22px;">
+                    target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:none; font-size:22px;">
                     <svg width="22" height="22" fill="currentColor" viewBox="0 0 576 512">
                         <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C456.72
                 64 288 64 288 64S119.28 64 74.629 75.486c-23.497 6.32-42.003
@@ -1544,7 +1637,7 @@
             <li class="social js-social">
                 <a class="social_link social_link__linkedin"
                     href="https://www.linkedin.com/company/master-designer-v-2-0/" target="_blank"
-                    style="color:#fff; text-decoration:none; font-size:22px;">
+                    rel="noopener noreferrer" style="color:#fff; text-decoration:none; font-size:22px;">
                     <svg width="22" height="22" fill="currentColor" viewBox="0 0 448 512">
                         <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341.2C24.34
                 106.8 0 82.5 0 52.7A52.69 52.69 0 0 1 53.84 0C83.7
@@ -1566,18 +1659,18 @@
     </footer>
     <audio loop class="js-web-sound" src="/public/assets/audio/1.mp3"></audio>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="../s../components/box.js"></script>
-    <script src="../s../components/nav.js"></script>
-    <script src="../s../components/timeline.js"></script>
-    <script src="../s../components/count.js"></script>
-    <script src="../s../components/test.js"></script>
+    <script src="/src/js/components/box.js"></script>
+    <script src="/src/js/components/nav.js"></script>
+    <script src="/src/js/components/timeline.js"></script>
+    <script src="/src/js/components/count.js"></script>
+    <script src="/src/js/components/test.js"></script>
 
     <script>
         function openInNewTab() {
-            window.open('gallery.html', '_blank');
+            window.open('gallery.html', '_blank', 'noopener,noreferrer');
         }
         function openInNewTab1() {
-            window.open('https://docs.google.com/forms/d/e/1FAIpQLSc8k0ZcFv_kr_oDjTttSGaAFkoQ39UbDC1vxnDVwjzGdR826Q/viewform', '_blank');
+            window.open('https://docs.google.com/forms/d/e/1FAIpQLSc8k0ZcFv_kr_oDjTttSGaAFkoQ39UbDC1vxnDVwjzGdR826Q/viewform', '_blank', 'noopener,noreferrer');
         }
 
         // Function to handle all external links
@@ -1594,7 +1687,7 @@
                 link.addEventListener('click', function (e) {
                     console.log('Social link clicked:', this.href);
                     e.preventDefault();
-                    window.open(this.href, '_blank');
+                    window.open(this.href, '_blank', 'noopener,noreferrer');
                 });
             });
 

@@ -1,0 +1,165 @@
+/* V2 Archive Section Styles - Clean & Minimal */
+.v2-archive-section {
+    padding: 80px 0;
+    position: relative;
+    background-color: #000;
+    /* Deep black background */
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.v2-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.v2-phase-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.v2-phase-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 40px;
+}
+
+.v2-phase-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.v2-phase-label {
+    flex: 0 0 250px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1;
+}
+
+.v2-phase-content {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+    font-weight: 300;
+}
+
+/* Sponsors Area */
+.v2-sponsors-container {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.v2-sponsor-label {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.v2-sponsor-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.v2-sponsor-card {
+    border: 1px solid #00C3FF;
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.v2-sponsor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 195, 255, 0.2);
+}
+
+.v2-sponsor-role {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.v2-sponsor-logo {
+    max-height: 60px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    /* Make logos white if they aren't */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .v2-archive-section {
+        padding: 40px 0;
+    }
+
+    .v2-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .v2-phase-container {
+        padding: 0 15px;
+    }
+
+    .v2-phase-row {
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+    }
+
+    .v2-phase-label {
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+        flex: auto;
+    }
+
+    .v2-phase-content {
+        font-size: 0.95rem;
+    }
+
+    .v2-sponsors-container {
+        margin-top: 50px;
+    }
+
+    .v2-sponsor-label {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .v2-sponsor-grid {
+        gap: 20px;
+    }
+
+    .v2-sponsor-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .v2-sponsor-card img {
+        max-width: 80%;
+        /* Prevent logo overflow */
+    }
+}
