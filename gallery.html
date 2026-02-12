@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MASTER DESIGNER GALLERY</title>
-  <link rel="icon" type="image/x-icon" href="../public/assets/images/logomb.png">
-  <link rel="stylesheet" href="../src/css/pages/gallery.css">
+  <link rel="icon" type="image/x-icon" href="public/assets/images/logomb.png">
+  <link rel="stylesheet" href="src/css/pages/gallery.css">
+  <link rel="stylesheet" href="src/css/components/v2-preview.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    <h1>MASTER DESIGNER GALLERY</h1>
+  <!-- V2.0 Preview near top -->
+  <div class="v2-site-preview-container">
+    <div class="v2-preview-card">
+      <div class="v2-preview-header">
+        <span class="v2-dot red"></span>
+        <span class="v2-dot yellow"></span>
+        <span class="v2-dot green"></span>
+        <span class="v2-url-text">master-designer-v2-0.vercel.app</span>
+      </div>
+      <a href="https://master-designer-v2-0.vercel.app/" target="_blank" class="v2-preview-link-wrap">
+        <img src="public/assets/images/logo.png" alt="V2.0 Preview" class="v2-preview-img">
+        <div class="v2-preview-overlay">
+          <i class="bx bx-show"></i>
+          <span>VISIT V2.0</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <h1>MASTER DESIGNER GALLERY</h1>
   <div class="gallery" id="gallery">
     <!-- Gallery items will be inserted here by JavaScript -->
   </div>
@@ -23,7 +46,8 @@
     <img class="popup-content" id="popup-content">
     <div class="popup-caption" id="popup-caption"></div>
   </div>
-  
-    <script src="../s../components/gallery.js"></script>
-  </body>
+
+  <script src="src/js/components/gallery.js"></script>
+</body>
+
 </html>
