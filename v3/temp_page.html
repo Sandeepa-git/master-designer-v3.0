@@ -1,0 +1,1793 @@
+<!doctype html>
+<html lang="en" class="js no-system-cursor">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMM2E82LXW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LMM2E82LXW'); 
+    </script>
+    <!--  gtag -->
+    <link rel="icon" type="image/x-icon" href="/public/assets/images/logomb.png">
+    <!-- Layout CSS -->
+    <link rel="stylesheet" href="/src/css/layouts/mobile.css">
+    <link rel="stylesheet" href="/src/css/layouts/mediaq.css">
+    <link rel="stylesheet" href="/src/css/layouts/footer.css">
+    <link rel="stylesheet" href="/src/css/layouts/nva.css">
+
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="/src/css/components/button.css">
+    <link rel="stylesheet" href="/src/css/components/reg-button.css">
+    <link rel="stylesheet" href="/src/css/components/profile.css">
+    <link rel="stylesheet" href="/src/css/components/profileicon.css">
+    <link rel="stylesheet" href="/src/css/components/timeline.css">
+    <link rel="stylesheet" href="/src/css/components/sponsors.css">
+    <link rel="stylesheet" href="/src/css/components/tshirt.css">
+    <link rel="stylesheet" href="/src/css/components/v2-archive.css">
+    <link rel="stylesheet" href="/src/css/components/previous-events.css">
+    <link rel="stylesheet" href="src/css/components/v2-preview.css">
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="/src/css/pages/winners.css">
+    <link rel="stylesheet" href="/src/css/pages/style1.css">
+    <link rel="stylesheet" href="/src/css/pages/style2.css">
+    <link rel="stylesheet" href="/src/css/pages/style3.css">
+    <link rel="stylesheet" href="/src/css/pages/about.css">
+    <link rel="stylesheet" href="/src/css/pages/work.css">
+    <link rel="stylesheet" href="/src/css/pages/logoscroll.css">
+    <link rel="stylesheet" href="/src/css/pages/prize.css">
+    <link rel="stylesheet" href="/src/css/pages/count.css">
+
+    <!-- Third-party CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Add FontAwesome for better social icons fallback -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link href="/dist/app.css?v=1.0.0.3" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/pages/test.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MASTER DESIGNER</title>
+    <link rel="preload" as="video" href="/assets/videos/hero.mp4" type="video/mp4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif !important;
+        }
+    </style>
+
+    <style>
+        /* 1. Change the large Mask/Blob effect (currently purple) */
+        .layer__red {
+            /* Change this hex code to your desired color */
+            background: #610FC0 !important;
+        }
+
+        /* 2. Change the Custom Cursor (Dot/Text) */
+        .vj-cursor {
+            /* Change the text/icon color inside the cursor */
+            color: #610FC0 !important;
+
+            /* If the cursor has a border/circle */
+            border-color: #610FC0 !important;
+        }
+
+        /* 3. Change the cursor background if it is a solid dot */
+        .vj-cursor span {
+            background-color: #610FC0 !important;
+        }
+    </style>
+
+    <script>
+        // Prevent browser from auto-restoring the scroll position
+        history.scrollRestoration = "manual";
+    </script>
+
+
+    <link rel="manifest" href="/public/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#0d0d0d">
+    <meta name="theme-color" content="#0d0d0d">
+
+
+    <style>
+        body:not(.site__template-mobile) .is-animation-loading {
+            opacity: 0;
+        }
+
+        body,
+        html {
+            scroll-behavior: unset !important;
+            overscroll-behavior-y: none !important;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+
+        body {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-79VFDFP12E"></script>
+    <script>
+        function handleClick(event) {
+            event.preventDefault(); // Prevent the default action (optional if you don't want to open the email client)
+            const link = document.getElementById('email-link');
+            link.classList.add('clicked');
+            console.log('Email link clicked');
+            // Add any additional JavaScript you want to run when the link is clicked
+        }
+    </script>
+
+    <script defer="defer" src="/dist/vendor.bundle.js?v=1.0.0.3"></script>
+    <script defer="defer" src="/dist/app.bundle.js?v=1.0.0.3"></script>
+
+</head>
+
+<body>
+
+    <!-- ....................loading page .......................................................... -->
+    <style>
+        /* Main Overlay */
+        .page-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999;
+            background: radial-gradient(circle at center, #2b2b40 0%, #151520 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            transition: opacity .7s ease, visibility .7s ease;
+        }
+
+        /* Inner Container */
+        .page-loading_inner {
+            position: relative;
+            width: min(380px, 82vw);
+            aspect-ratio: 1 / 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* SVG Ring */
+        #page-loading_circle {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+            filter: drop-shadow(0 0 20px rgba(128, 0, 255, .45));
+        }
+
+        #page-loading_circle circle {
+            fill: none;
+            transition: stroke-dashoffset 0.1s linear;
+        }
+
+        /* Logo - Centered */
+        .page-loading_logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+
+        .page-loading_logo img {
+            width: 120px;
+            /* slightly larger default */
+            height: auto;
+            max-width: 80%;
+            transition: width 0.3s ease;
+        }
+
+        /* --- LOADING TEXT (Centered) --- */
+        #js-page-loading_text {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 23%;
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: 2px;
+            font-weight: 300;
+            white-space: nowrap;
+            transition: opacity 0.4s ease;
+        }
+
+        .js-loading_text {
+            font-size: 34px;
+            font-weight: 700;
+            animation: pulseText 2.0s ease-in-out infinite;
+        }
+
+        /* --- ENTER BUTTON (Centered) --- */
+        #js-page-loading_start {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 15%;
+            padding: 14px 42px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, .28);
+            background: rgba(255, 255, 255, .07);
+            backdrop-filter: blur(12px);
+            color: #fff;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: none;
+            cursor: pointer;
+            transition: .3s ease;
+            white-space: nowrap;
+        }
+
+        /* Animations */
+        @keyframes floatLogo {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%);
+            }
+
+            50% {
+                transform: translate(-50%, -54%);
+            }
+        }
+
+        @keyframes pulseText {
+
+            0%,
+            100% {
+                opacity: .6;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* --- MOBILE SPECIFIC FIXES --- */
+        @media (max-width: 1024px) {
+            .page-loading_logo img {
+                width: 90px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-loading_logo img {
+                width: 70px !important;
+            }
+
+            .js-loading_text {
+                font-size: 28px !important;
+            }
+
+            #js-page-loading_text {
+                font-size: 13px !important;
+                bottom: 18% !important;
+            }
+
+            #js-page-loading_start {
+                font-size: 12px !important;
+                padding: 12px 34px !important;
+                bottom: 15% !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-loading_logo img {
+                width: 55px !important;
+            }
+
+            .js-loading_text {
+                font-size: 24px !important;
+            }
+
+            #js-page-loading_text {
+                font-size: 12px !important;
+                bottom: 12% !important;
+            }
+
+            #js-page-loading_start {
+                font-size: 12px !important;
+                padding: 10px 28px !important;
+                bottom: 10% !important;
+            }
+        }
+    </style>
+
+    <div class="page-loading js-page-loading">
+        <div class="page-loading_inner js-page-loading_inner">
+
+            <!-- SVG Ring with gradient light-blue → purple -->
+            <svg id="page-loading_circle" viewBox="0 0 270 270">
+                <defs>
+                    <linearGradient id="loaderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00C3FF"></stop>
+                        <stop offset="100%" stop-color="#8000FF"></stop>
+                    </linearGradient>
+                </defs>
+                <circle cx="136" cy="136" r="132" stroke="url(#loaderGradient)" stroke-width="6"
+                    stroke-linecap="round" />
+            </svg>
+
+            <!-- Logo -->
+            <div class="page-loading_logo">
+                <img src="/public/assets/images/logo.png" alt="logo">
+            </div>
+
+            <!-- Loading Text -->
+            <span id="js-page-loading_text">
+                LOADING <b class="js-loading_text">00</b>%
+            </span>
+
+            <!-- Enter Button -->
+            <button id="js-page-loading_start">
+                ENTER
+            </button>
+
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const circle = document.querySelector('#page-loading_circle circle');
+            const percentText = document.querySelector('.js-loading_text');
+            const textWrap = document.getElementById('js-page-loading_text');
+            const startBtn = document.getElementById('js-page-loading_start');
+            const overlay = document.querySelector('.js-page-loading');
+
+            let radius = circle.r.baseVal.value;
+            let circumference = 2 * Math.PI * radius;
+            circle.style.strokeDasharray = circumference;
+            circle.style.strokeDashoffset = circumference;
+
+            const video = document.getElementById('hero-bg-video'); // Ensure this ID matches your video tag attributes
+            let videoReady = false;
+
+            // Check if video is already ready
+            if (video && video.readyState >= 3) {
+                videoReady = true;
+            } else if (video) {
+                // Wait for it
+                video.addEventListener('canplaythrough', () => {
+                    videoReady = true;
+                }, { once: true });
+                // Fallback: if 'canplaythrough' doesn't fire (sometimes happens), check 'loadeddata'
+                video.addEventListener('loadeddata', () => {
+                    // heavily buffered or fast network might skip canplaythrough
+                    if (!videoReady) videoReady = true;
+                }, { once: true });
+            } else {
+                // If no video found, just proceed
+                videoReady = true;
+            }
+
+            let progress = 0;
+
+            function runLoader() {
+                // If progress < 90, we simulate loading comfortably
+                if (progress < 90) {
+                    progress++;
+                    updateUI(progress);
+                    setTimeout(runLoader, 20 + Math.random() * 30);
+                }
+                // If progress >= 90, we require videoReady to finish
+                else if (progress < 100) {
+                    if (videoReady) {
+                        progress++;
+                        updateUI(progress);
+                        setTimeout(runLoader, 10); // Fast finish
+                    } else {
+                        // Stall at 99% waiting for video
+                        if (progress < 99) {
+                            progress++;
+                            updateUI(progress);
+                        }
+                        setTimeout(runLoader, 100); // Check again in 100ms
+                    }
+                }
+                // 100% complete
+                else {
+                    showEnterButton();
+                }
+            }
+
+            function updateUI(val) {
+                percentText.textContent = val < 10 ? "0" + val : val;
+                circle.style.strokeDashoffset = circumference - (val / 100) * circumference;
+            }
+
+            function showEnterButton() {
+                textWrap.style.opacity = "0";
+                setTimeout(() => {
+                    textWrap.style.display = "none";
+                    startBtn.style.display = "block";
+                    startBtn.animate(
+                        [
+                            { opacity: 0, transform: "translate(-50%, 10px)" },
+                            { opacity: 1, transform: "translate(-50%, 0px)" }
+                        ],
+                        { duration: 600, fill: "forwards", easing: "ease-out" }
+                    );
+                }, 400);
+            }
+
+            runLoader();
+
+            startBtn.addEventListener("click", () => {
+                // Ensure video is playing when entered (sometimes browsers block autoplay until gesture)
+                if (video) video.play().catch(() => { });
+
+                overlay.style.opacity = "0";
+                overlay.style.visibility = "hidden";
+                setTimeout(() => { overlay.style.display = "none"; }, 700);
+            });
+        })();
+    </script>
+
+    <!-- ....................loading page endddddddddddddddddd.......................................................... -->
+    <!-- ....................logo start.......................................................... -->
+    <header class="header js-header">
+        <div class="header_logo js-header_logo">
+            <a class="link-logo" aria-label="Home page" href="/">
+                <img class="png" src="/public/assets/images/logo.png" alt="logo"
+                    style="width: 50px; height: auto; margin-top: 20px;">
+            </a>
+        </div>
+        <div class="header_menu">
+            <ul class="header_menu_list ul__reset">
+                <li class="header_menu_item js-cursor-contract">
+                    <a href="#work" target="_blank" rel="noopener noreferrer" class="desc text-uppercase">
+                        <span class="header_menu_item_inner">
+                            <span class="header_menu_item_link header_menu_item_link__deep" style="background: linear-gradient(90deg, #ffffff); 
+             -webkit-background-clip: text; 
+             background-clip: text; 
+             -webkit-text-fill-color: transparent;">
+                                Resource
+                            </span>
+
+                            <span class="header_menu_item_link header_menu_item_link__active" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+             -webkit-background-clip: text; 
+             background-clip: text; 
+             -webkit-text-fill-color: transparent;">
+                                Resource
+                            </span>
+
+                        </span>
+                    </a>
+                </li>
+                <!-- FAQ is still commented out -->
+                <li class="header_menu_item js-cursor-contract">
+                    <a href="#contact" target="_blank" rel="noopener noreferrer" class="desc text-uppercase">
+                        <span class="header_menu_item_inner">
+                            <span class="header_menu_item_link header_menu_item_link__deep" style="background: linear-gradient(90deg, #ffffff); 
+             -webkit-background-clip: text; 
+             background-clip: text; 
+             -webkit-text-fill-color: transparent;">
+                                Contact
+                            </span>
+
+                            <span class="header_menu_item_link header_menu_item_link__active" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+             -webkit-background-clip: text; 
+             background-clip: text; 
+             -webkit-text-fill-color: transparent;">
+                                Contact
+                            </span>
+
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    </header>
+
+    <!--!first Section--> <!--First Section--> <!--First Section-->
+    <!--!first Section--> <!--First Section--> <!--First Section-->
+    <!--!first Section--> <!--First Section--> <!--First Section-->
+    <!--!first Section--> <!--First Section--> <!--First Section-->
+
+
+    <main class="main-layer js-pageContent">
+        <div class="layer layer__dark">
+            <div class="container">
+                <div id="about" style="height: 100;">
+                    <div class="hero">
+
+                        <!--! Background Video Section  -->
+                        <div class="hero_bg" data-lenis-parallax=".5">
+                            <div class="w-100 h-100 js-anim--scale" data-screen-offset="0.3">
+                                <!-- Background Video Section -->
+                                <div class="hero_bg" data-lenis-parallax=".6"
+                                    style="position: relative; width: 100%; height: 100%;">
+                                    <div class="w-100 h-100 js-anim--scale" data-screen-offset="0.3"
+                                        style="position: relative; width: 100%; height: 100%;">
+
+                                        <!-- Dark Overlay -->
+                                        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.50); /* Adjust darkness */
+            z-index: 2;
+            pointer-events: none;
+        "></div>
+
+                                        <!-- Video -->
+                                        <video id="hero-bg-video" autoplay muted playsinline loop preload="auto"
+                                            poster="/assets/images/logo.png" data-pc="/assets/videos/hero.mp4"
+                                            data-mobile="/assets/videos/hero.mp4"
+                                            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
+                                            <source src="/assets/videos/hero.mp4" type="video/mp4">
+                                        </video>
+
+                                        <script>
+                                            // 1. Get the video element
+                                            const video = document.getElementById('hero-bg-video');
+                                            const source = video.querySelector('source');
+
+                                            // 2. Check if we are running on Localhost
+                                            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+
+                                                console.log("Localhost detected: Adjusting video path...");
+
+                                                // 3. Add '/public' to the paths for Localhost
+                                                const localPath = '/public/assets/videos/hero.mp4';
+                                                const localPoster = '/public/assets/images/logo.png';
+
+                                                video.setAttribute('data-pc', localPath);
+                                                video.setAttribute('data-mobile', localPath);
+                                                video.setAttribute('poster', localPoster);
+                                                source.setAttribute('src', localPath);
+
+                                                // 4. Reload the video to apply changes
+                                                video.load();
+                                                video.play();
+                                            }
+                                        </script>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="hero_content">
+                            <div class="row justify-content-center">
+                                <!-- Master Designer V2.0 Main Heading -->
+                                <div class="col-lg-4 col-sm-8 col-12 hero_content_inner js-cursor-extend">
+
+                                    <br><br><br><br><br><br><br>
+
+                                    <h6 class="text-center hero_content_inner_subtitle js-anim--lines--sim"
+                                        data-screen-offset="0.8">
+                                        DESIGNTHON
+                                    </h6>
+
+                                    <h1 class="text-center mb-0" data-screen-offset="0.6" style="
+        letter-spacing: 2px;
+        white-space: normal;
+        word-break: break-word;
+        font-size: clamp(26px, 6vw, 64px);
+        line-height: 1.1;
+        position: relative;
+    ">
+
+                                        <span style="color: white;">MASTER</span>
+
+                                        <span style="
+  background: linear-gradient(to bottom, #00D2FF, #3966E2, #600CD8, #1F1C5A);
+  -webkit-background-clip: text; 
+             background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+">
+
+
+                                            DESIGNER
+
+                                            <!-- Responsive V3.0 under R -->
+                                            <span style="
+                position: absolute;
+                bottom: -0.22em;       /* vertical alignment */
+                right: -0.05em;        /* horizontal alignment */
+                font-size: 0.26em;     /* auto scales with heading */
+                color: white;
+                line-height: 1;
+                transform: translateY(0.3em);
+            ">
+                                                V3.0
+                                            </span>
+
+                                        </span>
+
+                                    </h1>
+
+                                </div>
+
+
+                                <div class="btnreg js-cursor-contract">
+                                    <!--                                     <br class="pc-only"><br class="pc-only"><br class="pc-only"><br class="pc-only"><br class="pc-only">
+                                    <div>
+                                        <p class=" text-center text-uppercase a_h1">Special Workshop <br class="mobile-only"><br class="mobile-only">
+                                            <strong>register now</strong></p>
+                                    </div>
+                                    <br><br><br> -->
+
+                                    <!--                                     <p class="text-center hero_content_inner_subtitle js-anim--lines--sim"
+                                        data-screen-offset="0.8">To everyone
+                                        interested in graphic design and content
+                                        creation!</p>
+                                    <br> -->
+                                    <br><br><br>
+                                    <div class="text-center ">
+                                        <center
+                                            style="display: none; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                                            <button class="gradient-btn" onclick="openInNewTab()" style="background: linear-gradient(90deg, #00C3FF, #9B59B6);
+               color: #E0F7FF; 
+               border: 2px solid rgba(155, 89, 182, 0.1); 
+               border-radius: 12px; 
+               padding: 12px 24px; 
+               font-size: 1rem; 
+               cursor: pointer;
+               transition: 0.3s;">
+                                                GALLERY
+                                            </button>
+                                            <button class="gradient-btn" onclick="openInNewTab1()" style="background: linear-gradient(90deg, #8000FF, #00C3FF);
+               color: #E0F7FF; 
+               border: 2px solid rgba(0, 195, 255, 0.1); 
+               border-radius: 12px; 
+               padding: 12px 24px; 
+               font-size: 1rem; 
+               cursor: pointer;
+               transition: 0.3s;">
+                                                REGISTER NOW
+                                            </button>
+                                        </center>
+
+                                        <!-- Optional simple hover effect -->
+                                        <style>
+                                            .gradient-btn:hover {
+                                                opacity: 0.85;
+                                            }
+                                        </style>
+
+                                        <!--                                         <button class=" blob-btn" onclick="openInNewTab1()">
+                                            SUBMIT
+                                            <span class="blob-btn__inner">
+                                                <span class="blob-btn__blobs">
+                                                    <span class="blob-btn__blob"></span>
+                                                    <span class="blob-btn__blob"></span>
+                                                    <span class="blob-btn__blob"></span>
+                                                    <span class="blob-btn__blob"></span>
+                                                </span>
+                                            </span>
+                                        </button> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
+                                            <defs>
+                                                <filter id="goo">
+                                                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10">
+                                                    </feGaussianBlur>
+                                                    <feColorMatrix in="blur" mode="matrix"
+                                                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
+                                                        result="goo"></feColorMatrix>
+                                                    <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                                                </filter>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div><br class="mobile-only">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="marquee marquee--5 " style="display: none;">
+                    <img class="marquee__item img3" src="/public/assets/images/white sltc.png" height="60"
+                        alt="SLTC Logo" width="170px">
+                    <img class="marquee__item img1" src="/public/assets/images/insight white.png" height="95"
+                        alt="Insight Logo" width="150px" style="margin-bottom: -10px;">
+                    <img class="marquee__item img2" src="/public/assets/images/white media.png" height="80"
+                        alt="Media Logo" width="150px">
+                </div>
+
+                <!-- about start - WITH INLINE BACKGROUND IMAGE -->
+                <div class="abody" style="
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.65)), 
+                url('/public/assets/images/work.png') center/cover no-repeat fixed;
+    min-height: 100vh;
+    padding: 140px 20px 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+">
+                    <div class="acontainer">
+                        <div class="acontent" style="color: white; max-width: 900px; margin: 0 auto;">
+                            <br><br>
+                            <h1 class="a_h1" style="font-size: 2.8rem; 
+           background: linear-gradient(90deg, #00C3FF, #8000FF); 
+           -webkit-background-clip: text; 
+             background-clip: text; 
+           -webkit-text-fill-color: transparent; 
+           text-shadow: 0 0 20px rgba(128,0,255,0.5);">
+                                About
+                            </h1>
+                            <br>
+                            <p class="abtp" style="font-size: 1.05rem; line-height: 1.6;">
+                                <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                -webkit-background-clip: text; 
+             background-clip: text; 
+                                -webkit-text-fill-color: transparent;">
+                                    MASTER DESIGNER V1.0
+                                </span>, presented by the Media Unit of SLTC, was a 4-day workshop series strictly
+                                focused on Photoshop, Illustrator, and InDesign tools. This was followed by
+                                <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                -webkit-background-clip: text; 
+             background-clip: text; 
+                                -webkit-text-fill-color: transparent;">
+                                    MASTER DESIGNER V2.0
+                                </span>, an all-island competition designed to evaluate the most talented individuals in
+                                the field of graphic design across the nation.
+                            </p>
+
+                            <br>
+                            <p class="abtp" style="font-size: 1.05rem; line-height: 1.6;">
+                                Now,
+                                <span class="strong" style="background: linear-gradient(90deg, #00C3FF, #8000FF); 
+                                -webkit-background-clip: text; 
+             background-clip: text; 
+                                -webkit-text-fill-color: transparent;">
+                                    Master Designer V3.0
+                                </span> is here as the ultimate all-island graphic design competition and workshop
+                                series. Aimed at discovering top design talent in Sri Lanka, it promotes creativity and
+                                growth in digital design, including the use of AI tools. It consists of three immersive
+                                phases, from expert-led workshops to a live, physical final round.
+                            </p>
+
+                            <div class="abuttons"><br>
+                                <a href="https://drive.google.com/file/d/1TM24mS22xNG_t46yjabVYHcRPJ7LWgaV/view?usp=drive_link"
+                                    target="_blank" rel="noopener noreferrer" style="
+           display: inline-block;
+           padding: 12px 24px;
+           margin: 8px;
+           border: 2px solid transparent;
+           border-radius: 8px;
+           background: linear-gradient(90deg, #00C3FF, #8000FF);
+           background-clip: padding-box;
+           text-align: center;
+           text-decoration: none;
+           color: white;
+           font-weight: 600;
+           cursor: pointer;
+           transition: all 0.3s ease;
+       " onmouseover="this.style.background='linear-gradient(90deg, #8000FF, #00C3FF)'; this.style.color='#fff';"
+                                    onmouseout="this.style.background='linear-gradient(90deg, #00C3FF, #8000FF)'; this.style.color='#fff';">
+                                    Download
+                                </a>
+                            </div>
+
+                            <h5 style="margin: 0; font-size: 16px;">Delegate Booklet</h5>
+                            </a>
+
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- about end -->
+
+
+
+            <!-- .........................................phase     pc                     ...............start -->
+            <div id="work">
+                <div class="work" id="work">
+                    <div class="work_history pc-only">
+                        <div class="row work_heading work_history_heading">
+                            <div class="col-lg-8 col-sm-10 offset-lg-2 offset-sm-1 col-12">
+                                <p class="work_content_label container_content body-text text-uppercase mb-0">PHASES
+                                </p>
+                            </div>
+                        </div>
+                        <div class="heading-mask heading-mask__now">
+                            <div class="heading-mask_el container_content heading-mask_el__deep">
+                                <div class="row">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h3 mb-1">PHASE 01</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
+                                            <p class="h4 mb-1">Online weekend workshops on Adobe Illustrator and Adobe
+                                                Photoshop. This phase is open to all ages, providing a foundational and
+                                                advanced learning experience guided by industry experts.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-mask_el container_content heading-mask_el__masking">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h2 mb-1 text-dark">01</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el">
+                                            <h4 class="h3 mb-1 text-dark">"Immersive Workshop Series: From Fundamentals
+                                                to Advanced Concepts"</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-mask">
+                            <div class="heading-mask_el container_content heading-mask_el__deep">
+                                <div class="row">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h3 mb-1">PHASE 02</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
+                                            <p class="h4 mb-1">Contestants invite original design submissions based on a
+                                                specific theme. Showcase your creative excellence on a national platform
+                                                individually or as a team of up to three.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-mask_el container_content heading-mask_el__masking">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h2 mb-1 text-dark">02</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el">
+                                            <p class="h3 mb-1 text-dark">"Showcase Your Creative Excellence"</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-mask">
+                            <div class="heading-mask_el container_content heading-mask_el__deep">
+                                <div class="row">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h3 mb-1">PHASE 03</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el js-simple-masking_el js-cursor-contract">
+                                            <p class="h4 mb-1">The top 15 individuals and teams will compete in a live
+                                                physical final round. Finalists will present their designs in a live
+                                                competition, competing for top honors and recognition.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-mask_el container_content heading-mask_el__masking">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-2 offset-lg-2 offset-sm-1 col-3">
+                                        <div class="simple-masking">
+                                            <div class="simple-masking_el"><span class="h2 mb-1 text-dark">03</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-8 col-9">
+                                        <div class="simple-masking_el">
+                                            <p class="h3 mb-1 text-dark">"Grand Final & Live Competition"</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- phases pc endddddddddddddddddddddddddddddddddddddddddddddddddddd  -->
+        <!-- phases pc endddddddddddddddddddddddddddddddddddddddddddddddddddd  -->
+        <!-- phases mobile start  -->
+        <div>
+            <div class="slideshow-container mobile-only">
+
+                <div class="container_p">
+                    <div class="step_p">
+                        <div class="content_p">
+                            <h2>PHASE 01</h2><br>
+                            <p>Online weekend workshops (Adobe Illustrator & Photoshop). Open to all ages. Journey from
+                                fundamentals to advanced concepts guided by industry experts.</p>
+                        </div>
+
+                    </div>
+                    <div class="step_p">
+                        <div class="content_p">
+                            <h2>PHASE 02</h2><br>
+                            <p>Original design submissions based on a specific theme. Showcase your creative excellence
+                                on a national platform.</p>
+                        </div>
+                    </div>
+                    <div class="step_p">
+                        <div class="content_p">
+                            <h2>PHASE 03</h2><br>
+                            <p>Top 15 individuals and teams compete in a live physical final round to showcase
+                                brilliance and compete for top honors.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+            </div>
+
+            <!-- phases mobile endddddddddddddddddddddddddddddddddddddddddddddddddddd  -->
+            <style>
+                @media (max-width: 768px) {
+                    .client {
+                        margin-top: 60px !important;
+                        position: relative;
+                        z-index: 10;
+                        clear: both;
+                    }
+                }
+            </style>
+            <!-- guideline start        ...............................  -->
+                      
+        </div>
+        <div class="pc-only" style="display: none;">
+            <!-- Selections hidden for V3.0 until finalists are announced -->
+        </div>
+        <!-- guideline start        ...............................  -->
+
+
+        <div class="client js-client" id="client">
+            <div class="row client_info">
+                <div class="col-lg-9 col-sm-10 offset-lg-2 offset-sm-1 col-12">
+                    <div class="client_content container_content ">
+                        <p class="work_content_label body-text text-uppercase">
+                            GuideLines</p>
+                        <div class="client_content_desc h22">
+                            <div class="scroll-paragraph-mask js-scroll-paragraph-mask">Teams or individuals
+                                interested
+                                in participating in the competition should register through the registration link.
+                                <hr>
+                                Everyone should fill out all the information in the registration form correctly.
+                                <hr>
+                                Anyone above the age of 15 can participate in the competition.
+                                <hr>
+                                The registration deadline varies for workshops and competition rounds. Please refer to
+                                the timeline for specific dates.
+                                <hr>
+                                After registering your team, you can't change your team members.
+                                <hr>
+                                Upon successful registration, participants will receive a confirmation email.
+                                <hr>
+                                After the registration process, you will get a number. You should keep that number
+                                with
+                                you for the future work of the competition.
+                                <hr>
+                                If you are participating individually, you cannot participate in a team.          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="mobile-only"><br class="mobile-only">
+            <br class="mobile-only"><br class="mobile-only">
+            <br class="mobile-only"><br class="mobile-only">
+
+
+
+
+        </div>
+
+        <!-- ...........timeline.................................................. -->
+        <div class="timeline-containertimeline">
+            <h3 class="timeline-text-center">Timeline</h3>
+            <div class="timeline-experience">
+                <div class="timeline-item">
+                    <h4 class="timeline-company-name"><b>Registration for Workshops</b></h4>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Register to be part of Master Designer v3.0 workshops and
+                        secure your spot to gain graphic design knowledge.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>23<sup>rd</sup> January to <br>29<sup>th</sup> January 2026</b></h4>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Workshop Series</b>
+                    </h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>An eight-day immersive workshop series guided by industry
+                        experts, covering fundamentals to advanced concepts.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>31<sup>st</sup> January to <br>22<sup>nd</sup> February 2026</b>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Registration for Competition</b></h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Showcase your creative excellence on a national platform.
+                        Register for the online competition phase.</b>
+                    </p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>9<sup>th</sup> February to <br>16<sup>th</sup> February 2026</b>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Submission Period (Phase 02)</b></h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Submit your original designs and let your creativity
+                        speak. Unleash your innovation.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>16<sup>th</sup> February to <br>21<sup>st</sup> February 2026</b>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Voting Round</b></h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Promote your design and rally support through public
+                        voting to choose the most outstanding creations.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>24<sup>th</sup> February to <br>3<sup>rd</sup> March 2026</b>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="timeline-item">
+                    <h5 class="timeline-company-name"><b>Grand Final & Closing</b></h5>
+                    <p><i class="fa-li fa fa-hand-o-right"></i>Finalists present designs in a live competition,
+                        competing for top honors and industry recognition.</p>
+                    <div class="timeline-job-info">
+                        <div>
+                            <h4><b>7<sup>th</sup> March 2026</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+                
+        </div>
+
+        <!-- ...................timeline end....................................... -->
+
+        <!-- OUR MEMORIES SECTION START -->
+        <div class="v2-archive-section" id="memories">
+            <div class="container">
+                <center>
+                    <h2 class="v2-title">
+                        Our Memories
+                    </h2>
+                    <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 40px;">
+                        Take a trip down memory lane and revisit the legacy of Master Designer. Explore our previous
+                        editions and the impact we've made on the design community.
+                    </p>
+                </center>
+
+                <div class="v2-phase-container">
+                    <!-- Phase 01 -->
+                    <div class="v2-phase-row">
+                        <div class="v2-phase-label">V2.0 PHASE 01</div>
+                        <div class="v2-phase-content">
+                            In the first phase, designs for one field selected from the given fields are submitted under
+                            the online mode. 15 teams and 15 individual competitors were selected for the final stage.
+                        </div>
+                    </div>
+
+                    <!-- Phase 02 -->
+                    <div class="v2-phase-row">
+                        <div class="v2-phase-label">V2.0 PHASE 02</div>
+                        <div class="v2-phase-content">
+                            In the final phase, selected groups measured their skills at a specific time. The greatest
+                            designs were evaluated and celebrated in a physical competition round.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="v2-site-preview-container js-cursor-extend">
+                    <div class="v2-preview-card" style="width: 100%; max-width: 320px;">
+                        <!-- Responsive width for the section -->
+                        <div class="v2-preview-header">
+                            <span class="v2-dot red"></span>
+                            <span class="v2-dot yellow"></span>
+                            <span class="v2-dot green"></span>
+                            <span class="v2-url-text">master-designer-v2-0.vercel.app</span>
+                        </div>
+                        <a href="https://master-designer-v2-0.vercel.app/" target="_blank" class="v2-preview-link-wrap">
+                            <img src="/public/assets/images/logo.png" alt="V2.0 Preview" class="v2-preview-img"
+                                style="height: 140px;">
+                            <div class="v2-preview-overlay">
+                                <i class="bx bx-show" style="font-size: 32px;"></i>
+                                <span style="font-size: 14px;">VISIT V2.0 ARCHIVE</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OUR MEMORIES SECTION END -->
+
+
+
+        <div class="motto">
+            <div class="motto_bg" data-lenis-speed=".3">
+                <picture class="image__object-fit d-sm-block d-none"><img
+                        src="/public/assets/images/banner-bottom-50.png"
+                        data-srcset="/public/assets/images/banner-bottom-400.jpg 400w, /public/assets/images/banner-bottom-800.jpg 800w, /public/assets/images/banner-bottom-1200.png 1200w, /public/assets/images/banner-bottom-1600.jpg 1600w, /public/assets/images/banner-bottom-2400.jpg 2400w, /public/assets/images/banner-bottom.jpg 3456w"
+                        width="1728" height="1008" sizes="(max-width: 1728px) 100vw, 1728px" alt="banner-bottom" />
+                </picture>
+                <picture class="image__object-fit d-sm-none d-block">
+                    <img src="/public/assets/images/banner-bottom-mobile-50.png"
+                        data-srcset="/public/assets/images/banner-bottom-mobile-50.jpg 400w, /public/assets/images/banner-bottom-mobile-800.jpg 800w, /public/assets/images/banner-bottom-mobile.jpg 856w"
+                        width="856" height="1720" sizes="(max-width: 856px) 100vw, 856px" alt="banner-bottom-mobile"
+                        style="object-position: 85% 50%;" />
+                </picture>
+
+            </div>
+            <div class="motto_content container_content">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-8 col-12 motto_content_inner ">
+                        <div>
+                            <p class="text-center mb-0 h6 js-anim--lines--sim" data-offset=".2">MASTER DESIGNER</p>
+                            <p class="text-center motto_content_heading h1 mb-0 js-anim--chars" data-offset=".2">
+                                Good<br class="d-lg-none d-inline-block">design<br>creates culture
+                            </p>
+                            <p class="desc text-center mb-0 js-anim--lines--sim" data-offset=".2">V 3.0
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br><br>
+        <div class="body_pr">
+            <div class="container_pr">
+                <h3 class="timeline-text-center">Team prizes</h3><br>
+                <div class="prizes_pr">
+                    <div class="prize_pr">
+                        <img src="/public/assets/images/runner_2.png" alt="1st Runner Up">
+                        <p class="position_pr">1<sup>st</sup> RUNNER UP</p>
+                        <p class="amount_pr">LKR 45,000</p>
+                    </div>
+                    <div class="prize_pr">
+                        <img src="/public/assets/images/runner_1.png" alt="Winner">
+                        <p class="position_pr">WINNER</p>
+                        <p class="amount_pr">LKR 60,000</p>
+                    </div>
+                    <div class="prize_pr">
+                        <img src="/public/assets/images/runner_3.png" alt="2nd Runner Up">
+                        <p class="position_pr">2<sup>nd</sup> RUNNER UP</p>
+                        <p class="amount_pr">LKR 30,000</p>
+                    </div>
+                </div><br><br>
+
+                <h3 class="timeline-text-center">Individual prizes</h3><br>
+                <div class="prizes_pr">
+                    <div class="prize_pr">
+                        <img src="/public/assets/images/runner_2.png" alt="1st Runner Up">
+                        <p class="position_pr">1<sup>st</sup> RUNNER UP</p>
+                        <p class="amount_pr">LKR 15,000</p>
+                    </div>
+                    <div class="prize_pr">
+                        <img src="/public/assets/images/runner_1.png" alt="Winner">
+                        <p class="position_pr">WINNER</p>
+                        <p class="amount_pr">LKR 20,000</p>
+                    </div>
+                    <div class="prize_pr">
+                        <img src="/public/assets/images/runner_3.png" alt="2nd Runner Up">
+                        <p class="position_pr">2<sup>nd</sup> RUNNER UP</p>
+                        <p class="amount_pr">LKR 10,000</p>
+                    </div>
+                </div><br><br>
+
+                <h3 class="timeline-text-center">Popularity prize</h3><br>
+                <div class="prizes_pr">
+                    <div class="prize_pr">
+                        <img src="/public/assets/images/runner_1.png" alt="Most Popular">
+                        <p class="position_pr">MOST POPULAR</p>
+                        <p class="amount_pr">LKR 10,000</p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+
+            <!-- tshirsection.............................................................................................................. -->
+
+            <br><br>
+
+
+            <!-- tshirsection.............................................................................................................. -->
+
+            <div class="tbody" style="display: none;">
+                <div class="tshirt-container">
+                    <header>
+                        <h1 class="thb">Official Master Designer V3.0</h1>
+                        <h2>T-shirt & Sticker Pack Coming Soon!</h2>
+                    </header>
+                    <div class="product-section">
+                        <div class="product-image">
+                            <img src="/public/assets/images/t_shirt_f.png" alt="Master Designer V3.0 T-shirt">
+                        </div>
+                        <div class="product-details">
+                            <h3>T-shirt & Sticker Pack Now Available!</h3>
+                            <span class="badge">Material - baby crocodile</span><br><br>
+                            <p>Step into style with the all-new Master Designer V3.0 official T-shirt & Sticker Pack,
+                                designed to
+                                embrace the
+                                latest trends. Wear with confidence.</p>
+                            <div class="product-card">
+                                <p class="price" style="color: #E0F7FF; font-weight: bold; font-size: 1.2rem;">LKR. 1700
+                                </p>
+
+                                <div class="sizes">
+                                    <p style="color: #D1EAF5; margin-bottom: 8px;">Available in sizes</p>
+                                    <div class="size-buttons" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XS</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">S</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">M</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">L</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">XL</button>
+                                        <button class="size-btn"
+                                            style="padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,134,204,0.1); background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; cursor: pointer;">2XL</button>
+                                    </div>
+                                    <br>
+                                </div>
+
+                                <p class="order-deadline" style="color: #D1EAF5; font-size: 0.9rem;">*Order before 28
+                                    Jun
+                                    2024</p>
+
+                                <button class="order-now"
+                                    style="padding: 10px 24px; border-radius: 12px; background: linear-gradient(90deg, #0086CC, #7D3EA0); color: #E0F7FF; border: 2px solid rgba(0,134,204,0.1); cursor: not-allowed;">Order
+                                    Closed</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- tshirsection.............................................................................................................. -->
+
+            <!-- profiles start........................................................ -->
+            <div class="p-body" id="contact">
+                <div style="margin-left: 10%; margin-right: 10%;">
+                    <br><br><br><br>
+                    <p class="contact-text body-text text-uppercase">
+                        Contact us
+                    </p>
+                </div>
+                <div class="profile-row-container">
+
+                    <div class="profile-row">
+
+                        <!--! Profile - 01: Induwara Lakdinu -->
+                        <figure class="profile">
+                            <img src="/profile/chairperson.jpeg" alt="Induwara Lakdinu" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Induwara Lakdinu</h2>
+                                <h4 class="profile-h4">Chairperson</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:induwaralakdinu23@gmail.com"
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
+                                                                    <i class="">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94755843076" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+
+                        <!--! Profile - 02: Bosilu Pupulewela -->
+                        <figure class="profile">
+                            <img src="/profile/vicechairperson.jpeg" alt="Bosilu Pupulewela" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Bosilu Pupulewela</h2>
+                                <h4 class="profile-h4">Vice Chairperson</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:pupulewelabosilu2004@gmail.com"
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
+                                                                    <i class="">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94740975541" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+
+                        <!--! Profile - 03: Udula Theekshana -->
+                        <figure class="profile">
+                            <img src="/profile/vicechairperson2.png" alt="Udula Theekshana" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Udula Theekshana</h2>
+                                <h4 class="profile-h4">Vice Chairperson</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:udula.u20@gmail.com"
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
+                                                                    <i class="">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94714570995" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+                    </div>
+
+                    <div class="profile-row">
+                        <!--! Profile - 04: Samadhi Rajapaksha -->
+                        <figure class="profile">
+                            <img src="/profile/secretary.jpeg" alt="Samadhi Rajapaksha" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Samadhi Rajapaksha</h2>
+                                <h4 class="profile-h4">Secretary</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:samadhirajapaksha20@gmail.com"
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
+                                                                    <i class="">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94725778561" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+
+                        <!--! Profile - 05: Supipi Sonalee -->
+                        <figure class="profile">
+                            <img src="/profile/coordinationteamhead.jpeg" alt="Supipi Sonalee" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Supipi Sonalee</h2>
+                                <h4 class="profile-h4">Coordination Team Head</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:Supisonalee2005@gmail.com"
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
+                                                                    <i class="">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94763399887" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+
+                        <!--! Profile - 06: Sanoji Sasmika -->
+                        <figure class="profile">
+                            <img src="/profile/financeteamhead.jpeg" alt="Sanoji Sasmika" class="profile-img" />
+                            <figcaption>
+                                <h2 class="profile-h2">Sanoji Sasmika</h2>
+                                <h4 class="profile-h4">Finance Team Head</h4>
+                            </figcaption>
+                            <section class="p-section">
+                                <div>
+                                    <div class="social-overlap process-scetion">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="social-bar">
+                                                        <div class="process-section">
+                                                            <div class="social-icons profile-mb-3 iconpad">
+                                                                <a class="slider-nav-item"
+                                                                    href="mailto:sanojithilakarathna6@gmail.com"
+                                                                    onclick="handleClick()" target="_blank"
+                                                                    rel="noopener noreferrer">
+                                                                    <i class="">
+                                                                        <img src="/public/assets/icons/gmail-icon.png"
+                                                                            alt="Gmail icon" class="social-icon-img">
+                                                                    </i>
+                                                                </a>
+                                                                <a class="slider-nav-item"
+                                                                    href="https://wa.me/94760059252" target="_blank"
+                                                                    rel="noopener noreferrer"><i class=""><img
+                                                                            src="/public/assets/icons/wapp-icon.png"
+                                                                            alt="WhatsApp icon"
+                                                                            class="social-icon-img"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </figure>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!-- profile end ........................................................... -->
+            <!-- sponsor ship starts ........................................................... -->
+            <div style="margin-left: 10%; margin-right: 10%; display: none;">
+                <br><br><br><br>
+                <p class="contact-text body-text text-uppercase">
+                    Sponsored bY
+                </p>
+                <div class="sponsor-marquee-container">
+                    <div class="sponsor-marquee-content">
+                        <p class="text-uppercase">OFFICIAL gift parTNER</p>
+                        <img src="/public/assets/images/white_par1.png" alt="Sponsor 1">
+                    </div>
+                    <div class="sponsor-marquee-content">
+                        <p class="text-uppercase">OFFICIAL DIGITAL CERTIFICATE PARTNER</p>
+                        <img src="/public/assets/images/white_par2.png" alt="Sponsor 2">
+                    </div>
+                </div>
+            </div>
+            <br class="mobile-only"><br class="mobile-only">
+            <hr style="border: 1px solid #00B3FF; margin: 50px auto; width: 80%; opacity: 0.5;">
+            <br><br><br><br>
+
+
+
+            <!-- sponsor ship ends ........................................................... -->
+
+
+
+        </div>
+        </div>
+        <button id="js-btn_clipPath" class="" style="display: none;"></button>
+        </div>
+
+
+        <div class="layer layer__red js-masker">
+            <div class="container">
+                <div class="hero hero__red">
+                    <div class="hero_content">
+
+                        <!--! Master Designer V2.0  Main Heading (Section 2) -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-sm-8 col-12 hero_content_inner"><br><br><br><br><br><br><br><span
+                                    class="text-center h6 hero_content_inner_subtitle text-dark">inspiration</span>
+                                <h1 class="text-center text-dark js-anim--chars mb-0" data-screen-offset="0.6">Design
+                                    Maestro
+                                    <!-- <br>shit<br>since<br>2009 -->
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--         <div class="abuttons mobile-only"><br>
+            <center><button class="abt2-button"><a href="faq.html" class="button delegate" target="_blank">
+                        <h5 class="a_h52">FAQ</h5>
+                    </a></button></center><br>
+        </div> -->
+
+
+    </main>
+    <footer id="js-footer" class="footer">
+        <ul class="footer_socials ul__reset"
+            style="display:flex; flex-direction:column; gap:14px; list-style:none; margin:0; padding:0;">
+
+            <!-- Facebook -->
+            <li class="social js-social">
+                <a class="social_link social_link__dribbble" href="https://www.facebook.com/SLTCMedia?mibextid=LQQJ4d"
+                    target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:none; font-size:22px;">
+                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 320 512">
+                        <path d="M279.14 288l14.22-92.66h-88.91V127.86c0-25.35
+                12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0C141.09
+                0 89.09 54.42 89.09 153.31V195.3H0v92.7h89.09V512h107.82V288z" />
+                    </svg>
+                </a>
+            </li>
+
+            <!-- Instagram -->
+            <li class="social js-social">
+                <a class="social_link social_link__instagram"
+                    href="https://www.instagram.com/sltc_media?igsh=MWxpOG52aHdkcjV0aQ==" target="_blank"
+                    rel="noopener noreferrer" style="color:#fff; text-decoration:none; font-size:22px;">
+                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 448 512">
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5
+                370.8 224.1 370.8 339 319.5 339 255.9 287.7 141 224.1
+                141zm0 189.6c-41.2 0 -74.7 -33.5 -74.7 -74.7s33.5 -74.7
+                74.7 -74.7 74.7 33.5 74.7 74.7 -33.5 74.7 -74.7 74.7zm146.4
+                -194.3c0 14.9 -12 26.9 -26.9 26.9s-26.9 -12 -26.9 -26.9
+                12 -26.9 26.9 -26.9 26.9 12 26.9 26.9z" />
+                    </svg>
+                </a>
+            </li>
+
+            <!-- YouTube -->
+            <li class="social js-social">
+                <a class="social_link social_link__youtube" href="https://youtube.com/@insightsltc?si=8Y7upEFEYXyfMxje"
+                    target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:none; font-size:22px;">
+                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 576 512">
+                        <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C456.72
+                64 288 64 288 64S119.28 64 74.629 75.486c-23.497 6.32-42.003
+                24.946-48.284 48.597C15.999 168.75 16 256 16 256s-.001
+                87.25 10.345 131.917c6.281 23.65 24.787 42.276 48.284
+                48.597C119.28 448 288 448 288 448s168.72 0 213.371-11.486c23.497-6.32
+                42.003-24.946 48.284-48.597C560.001 343.25 560 256 560
+                256s.001-87.25-10.345-131.917zM232 336V176l136 80-136 80z" />
+                    </svg>
+                </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="social js-social">
+                <a class="social_link social_link__linkedin"
+                    href="https://www.linkedin.com/company/master-designer-v-2-0/" target="_blank"
+                    rel="noopener noreferrer" style="color:#fff; text-decoration:none; font-size:22px;">
+                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 448 512">
+                        <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341.2C24.34
+                106.8 0 82.5 0 52.7A52.69 52.69 0 0 1 53.84 0C83.7
+                0 108 24.3 108 54.1s-24.3 52.7-54.16 52.7zM447.9
+                448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29
+                0-55.72 37.7-55.72 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5
+                42.76-48.3 87.94-48.3 94 0 111.2 61.9 111.2 142.3V448z" />
+                    </svg>
+                </a>
+            </li>
+
+        </ul>
+
+        <button class="footer_sound js-cursor-contract js-footer_sound desc text-uppercase btn-clear"><span
+                class="footer_sound_label">Sound</span> <span class="footer_sound_list"><span
+                    class="footer_sound_list_item js-footer_sound_list_item__on">On</span> <span
+                    class="footer_sound_list_item js-footer_sound_list_item__off">Off</span></span></button>
+
+    </footer>
+    <audio loop class="js-web-sound" src="/public/assets/audio/1.mp3"></audio>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/src/js/components/box.js"></script>
+    <script src="/src/js/components/nav.js"></script>
+    <script src="/src/js/components/timeline.js"></script>
+    <script src="/src/js/components/count.js"></script>
+    <script src="/src/js/components/test.js"></script>
+
+    <script>
+        function openInNewTab() {
+            window.open('gallery.html', '_blank', 'noopener,noreferrer');
+        }
+        function openInNewTab1() {
+            window.open('https://docs.google.com/forms/d/e/1FAIpQLSc8k0ZcFv_kr_oDjTttSGaAFkoQ39UbDC1vxnDVwjzGdR826Q/viewform', '_blank', 'noopener,noreferrer');
+        }
+
+        // Function to handle all external links
+        document.addEventListener('DOMContentLoaded', function () {
+            // Debug info
+            console.log('DOM Content Loaded');
+
+            // Handle footer social media links
+            const socialLinks = document.querySelectorAll('.new-footer__social a');
+            console.log('Social Links found:', socialLinks.length);
+
+            socialLinks.forEach((link, index) => {
+                console.log(`Social Link ${index}:`, link.href);
+                link.addEventListener('click', function (e) {
+                    console.log('Social link clicked:', this.href);
+                    e.preventDefault();
+                    window.open(this.href, '_blank', 'noopener,noreferrer');
+                });
+            });
+
+            // Handle developer profile links
+            const devLinks = document.querySelectorAll('.new-footer__copy a');
+            console.log('Developer Links found:', devLinks.length);
+
+            devLinks.forEach((link, index) => {
+                console.log(`Developer Link ${index}:`, link.href);
+                link.addEventListener('click', function (e) {
+                    console.log('Developer link clicked:', this.href);
+                    e.preventDefault();
+                    window.open(this.href, '_blank');
+                });
+            });
+
+            // Add click handlers directly to known elements
+            [
+                { url: 'https://www.facebook.com/SLTCMedia?mibextid=LQQJ4d', id: 'facebook-link' },
+                { url: 'https://www.instagram.com/sltc_media?igsh=MWxpOG52aHdkcjV0aQ==', id: 'instagram-link' },
+                { url: 'https://youtube.com/@insightsltc?si=8Y7upEFEYXyfMxje', id: 'youtube-link' },
+                { url: 'https://www.linkedin.com/company/master-designer-v-2-0', id: 'linkedin-link' },
+                { url: 'https://www.linkedin.c../dhanuka-rathnayaka-412ab4228', id: 'dhanuka-link' },
+                { url: 'https://www.linkedin.c../gayanga-bandara', id: 'gayanga-link' }
+            ].forEach(item => {
+                const el = document.getElementById(item.id);
+                if (el) {
+                    el.addEventListener('click', function (e) {
+                        console.log(`${item.id} clicked`);
+                        e.preventDefault();
+                        window.open(item.url, '_blank');
+                    });
+                }
+            });
+        });
+
+        // Backup function for direct calls
+        function openSocialLink(url) {
+            console.log('Opening social link:', url);
+            window.open(url, '_blank');
+            return false;
+        }
+    </script>
+
+
+
+</body>
+
+
+</html>

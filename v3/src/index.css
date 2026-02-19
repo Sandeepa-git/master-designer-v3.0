@@ -1,0 +1,52 @@
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-primary: #00C3FF;
+  --color-secondary: #8000FF;
+  --color-dark: #0d0d0d;
+}
+
+:root {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--color-dark);
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased m-0 min-h-screen bg-black text-white selection:bg-purple-500 selection:text-white;
+}
+
+/* Custom Utilities */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600;
+}
+
+.glass-card {
+  @apply bg-[#111] border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-500/30 transition-colors duration-500;
+}
+
+.bento-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.section-padding {
+  @apply py-24 px-6 md:px-12;
+}
+
+/* Parallax Animation */
+@keyframes parallax-move {
+  from {
+    transform: translateY(-15%) scale(1.2);
+  }
+
+  to {
+    transform: translateY(15%) scale(1.2);
+  }
+}
+
+.parallax-bg {
+  animation: parallax-move linear both;
+  animation-timeline: view();
+  animation-range: entry 0% exit 100%;
+  will-change: transform;
+}
