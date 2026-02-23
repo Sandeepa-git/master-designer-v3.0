@@ -52,3 +52,17 @@ body {
   animation-range: entry 0% exit 100%;
   will-change: transform;
 }
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}

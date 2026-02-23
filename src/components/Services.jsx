@@ -6,7 +6,7 @@ const phases = [
     {
         id: "01",
         title: "PHASE 01",
-        desc: "Online weekend workshops on Adobe Illustrator and Adobe Photoshop. This phase is open to all ages, providing a foundational and advanced learning experience guided by industry experts."
+        desc: "Online weekend workshops on Adobe Illustrator and Adobe Photoshop. This phase is open to all above 16, providing a foundational and advanced learning experience guided by industry experts."
     },
     {
         id: "02",
@@ -16,7 +16,7 @@ const phases = [
     {
         id: "03",
         title: "PHASE 03",
-        desc: "The top 15 individuals and teams will compete in a live physical final round. Finalists will present their designs in a live competition, competing for top honors and recognition."
+        desc: "The top 15 individuals and 10 teams will compete in a live physical final round. Finalists will present their designs in a live competition, competing for top honors and recognition."
     }
 ];
 
@@ -24,74 +24,107 @@ const Services = () => {
     return (
         <section id="services" className="py-24 bg-black relative">
             <div className="container mx-auto px-6">
-                <div className="mb-16 text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white tracking-widest uppercase mb-4">
+                <div className="mb-20 text-center">
+                    <motion.span
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-cyan-400 font-bold tracking-widest text-sm uppercase mb-4 block"
+                    >
+                        The Process
+                    </motion.span>
+                    <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight uppercase mb-4">
                         PHASES
                     </h2>
-                    <div className="w-24 h-1 bg-white/20 mx-auto mt-6" />
+                    <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto mt-6" />
                 </div>
 
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: {
-                            opacity: 1,
-                            transition: {
-                                staggerChildren: 0.2
-                            }
-                        }
-                    }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6"
-                >
+                <div className="flex flex-col gap-24 items-center">
                     {phases.map((phase, idx) => (
                         <motion.div
                             key={phase.id}
-                            variants={{
-                                hidden: { opacity: 0, y: 50, scale: 0.95 },
-                                visible: {
-                                    opacity: 1,
-                                    y: 0,
-                                    scale: 1,
-                                    transition: { duration: 0.8, ease: "easeOut" }
-                                }
+                            initial={{ opacity: 0, y: 100, rotateX: 10 }}
+                            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{
+                                duration: 1,
+                                ease: [0.22, 1, 0.36, 1]
                             }}
-                            whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                            className="bg-[#111] border border-white/10 rounded-3xl p-8 hover:border-cyan-500/50 transition-colors duration-300 flex flex-col h-full group relative overflow-hidden"
+                            className="relative group w-full max-w-[450px]"
+                            style={{ perspective: "1000px" }}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 to-purple-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            {/* Card Container - Strict Portrait Design */}
+                            <div className="relative aspect-[3/4.2] flex flex-col rounded-[2.8rem] p-[3px] bg-gradient-to-br from-purple-500 via-cyan-500/50 to-cyan-500 overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(34,211,238,0.2)]">
+                                <div className="absolute inset-0 bg-black rounded-[2.8rem]" />
 
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 0.1, x: 0 }}
-                                transition={{ delay: 0.5, duration: 1 }}
-                                className="absolute top-0 right-0 p-8 font-black text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent select-none pointer-events-none transform translate-x-12 -translate-y-8 group-hover:opacity-20"
-                            >
-                                {phase.id}
-                            </motion.div>
-
-                            <div className="mb-6 relative z-10">
-                                <motion.span
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.3 + (idx * 0.1) }}
-                                    className={`inline-block px-3 py-1 rounded-full text-xs font-bold tracking-widest text-white mb-4 border ${idx === 1 ? 'border-purple-500/50 bg-purple-500/10' : 'border-cyan-500/50 bg-cyan-500/10'}`}
+                                {/* Background Logo - Enhanced Visibility */}
+                                <motion.div
+                                    initial={{ scale: 1.1, opacity: 0 }}
+                                    whileInView={{ scale: 1, opacity: 0.15 }}
+                                    transition={{ duration: 1.2 }}
+                                    className="absolute inset-0 pointer-events-none"
                                 >
-                                    PHASE {phase.id}
-                                </motion.span>
-                                <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                                    {phase.title}
-                                </h3>
-                            </div>
+                                    <div className="absolute inset-0 flex items-center justify-center p-12">
+                                        <img src="/assets/images/logo.png" alt="" className="w-full h-auto object-contain grayscale invert" />
+                                    </div>
+                                </motion.div>
 
-                            <p className="text-gray-400 text-base leading-relaxed flex-1 relative z-10">
-                                {phase.desc}
-                            </p>
+                                {/* Content - Centered for Portrait View */}
+                                <div className="relative h-full flex flex-col items-center justify-center p-10 md:p-12 z-10 text-center pb-24">
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.5, y: 20 }}
+                                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                        transition={{ delay: 0.3, duration: 0.5 }}
+                                        className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl font-black text-white group-hover:bg-cyan-500 group-hover:border-cyan-400 transition-all duration-500 mb-8"
+                                    >
+                                        {phase.id}
+                                    </motion.div>
+
+                                    <motion.h3
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.4, duration: 0.6 }}
+                                        className="text-3xl md:text-3xl font-black text-white mb-6 group-hover:text-cyan-400 transition-colors tracking-tighter"
+                                    >
+                                        {phase.title}
+                                    </motion.h3>
+
+                                    <motion.p
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.5, duration: 0.6 }}
+                                        className="text-gray-400 text-base md:text-lg leading-relaxed font-light group-hover:text-gray-200 transition-colors"
+                                    >
+                                        {phase.desc}
+                                    </motion.p>
+                                </div>
+
+                                {/* Bottom Identity Tab */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.6, duration: 0.6 }}
+                                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] z-20"
+                                >
+                                    <div className="relative px-6 py-4 bg-black border-t border-x border-white/10 rounded-t-[2.2rem] flex flex-col items-center gap-1 shadow-[0_-15px_30px_rgba(0,0,0,0.8)] group-hover:border-cyan-500/50 transition-all">
+                                        <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                        <p className="text-[10px] md:text-xs font-black tracking-[0.3em] text-white uppercase whitespace-nowrap">
+                                            Master Designer V3.0
+                                        </p>
+                                        <div className="w-12 h-[1px] bg-white/10 my-1" />
+                                        <p className="text-[7px] md:text-[8px] font-bold tracking-[0.4em] text-cyan-500/80 uppercase">
+                                            Good Design, Creates Culture
+                                        </p>
+                                    </div>
+                                </motion.div>
+
+                                {/* Premium Glow */}
+                                <div className="absolute inset-0 rounded-[2.8rem] bg-gradient-to-br from-cyan-500/0 via-transparent to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition-all duration-700 pointer-events-none" />
+                            </div>
                         </motion.div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

@@ -57,27 +57,27 @@ const Hero = () => {
                 </motion.div>
 
                 {/* Main Heading - Staggered */}
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none mb-8">
-                    <div className="overflow-hidden">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.1] md:leading-[1.15] mb-12 py-4">
+                    <div className="overflow-visible py-2">
                         <motion.span
                             custom={0}
                             initial="hidden"
                             animate="visible"
                             variants={titleVariant}
-                            className="block text-white"
+                            className="block text-white px-2"
                         >
                             MASTER
                         </motion.span>
                     </div>
-                    <div className="overflow-hidden">
+                    <div className="overflow-visible py-2">
                         <motion.span
                             custom={1}
                             initial="hidden"
                             animate="visible"
                             variants={titleVariant}
-                            className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600"
+                            className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 px-2"
                         >
-                            DESIGNER <span className="text-3xl md:text-5xl text-gray-500 font-medium ml-4">V3.0</span>
+                            DESIGNER <span className="inline-block text-3xl md:text-5xl text-gray-500 font-medium ml-4 pb-1">V3.0</span>
                         </motion.span>
                     </div>
                 </h1>

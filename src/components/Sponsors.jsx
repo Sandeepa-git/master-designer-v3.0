@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 const sponsors = [
     { name: 'SLTC', logo: '/assets/images/white sltc.png' },
-    { name: 'Insight', logo: '/assets/images/insight white.png' },
     { name: 'Media', logo: '/assets/images/white media.png' },
+    { name: 'Insight', logo: '/assets/images/insight white.png' },
 ];
 
 const Sponsors = () => {
@@ -22,7 +22,7 @@ const Sponsors = () => {
                             transition={{ duration: 0.8, delay: idx * 0.15, ease: "easeOut" }}
                             src={sponsor.logo}
                             alt={sponsor.name}
-                            className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105"
+                            className="h-12 md:h-16 object-contain transition-all duration-300 transform hover:scale-105"
                         />
                     ))}
                 </div>

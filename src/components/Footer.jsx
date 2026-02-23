@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 import { Facebook, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 
 const socialLinks = [
-    { Icon: Facebook, href: "https://www.facebook.com/SLTCMedia?mibextid=LQQJ4d", label: "Facebook", color: "hover:bg-blue-600 hover:border-blue-500" },
-    { Icon: Instagram, href: "https://www.instagram.com/sltc_media?igsh=MWxpOG52aHdkcjV0aQ==", label: "Instagram", color: "hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 hover:border-purple-500" },
-    { Icon: Youtube, href: "https://youtube.com/@insightsltc?si=8Y7upEFEYXyfMxje", label: "YouTube", color: "hover:bg-red-600 hover:border-red-500" },
-    { Icon: Linkedin, href: "https://www.linkedin.com/company/master-designer-v-2-0/", label: "LinkedIn", color: "hover:bg-blue-700 hover:border-blue-600" }
+    { Icon: Facebook, href: "https://www.facebook.com/SLTCMedia", label: "Facebook", color: "hover:bg-blue-600 hover:border-blue-500" },
+    { Icon: Instagram, href: "https://www.instagram.com/sltc_media", label: "Instagram", color: "hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 hover:border-purple-500" },
+    { Icon: Youtube, href: "https://youtube.com/@insightsltc", label: "YouTube", color: "hover:bg-red-600 hover:border-red-500" }
 ];
 
 const quickLinks = [
@@ -29,7 +28,7 @@ const Footer = () => {
 
             <div className="container mx-auto px-6 pt-16 pb-8 relative z-10">
                 {/* Main Footer Content */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -44,7 +43,7 @@ const Footer = () => {
                             </span>
                         </a>
                         <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
-                            Sri Lanka's premier inter-university graphic design competition, empowering young designers nationwide.
+                            Sri Lanka's premier graphic design initiative, celebrating creativity and innovation since 2022.
                         </p>
                     </motion.div>
 
@@ -71,38 +70,64 @@ const Footer = () => {
                         </ul>
                     </motion.div>
 
-                    {/* Social */}
+                    {/* Media Links */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Follow Us</h4>
-                        <div className="flex gap-3">
+                        <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Media Links</h4>
+                        <div className="flex flex-col gap-3">
                             {socialLinks.map(({ Icon, href, label, color }) => (
-                                <motion.a
+                                <a
                                     key={label}
                                     href={href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label={label}
-                                    whileHover={{ y: -4, scale: 1.1 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className={`w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 ${color}`}
+                                    className="text-gray-500 hover:text-white transition-colors text-sm flex items-center gap-3 group"
                                 >
-                                    <Icon className="w-4 h-4" />
-                                </motion.a>
+                                    <div className={`w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 ${color}`}>
+                                        <Icon className="w-3.5 h-3.5 text-gray-400 group-hover:text-white" />
+                                    </div>
+                                    {label}
+                                </a>
                             ))}
                         </div>
+                    </motion.div>
+
+                    {/* Event Links */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                    >
+                        <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Event Links</h4>
+                        <ul className="space-y-3">
+                            <li>
+                                <a href="https://www.linkedin.com/company/master-designer-v" target="_blank" className="text-gray-500 hover:text-cyan-400 transition-colors text-sm flex items-center gap-2">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/share/1EEownrZSB" target="_blank" className="text-gray-500 hover:text-cyan-400 transition-colors text-sm flex items-center gap-2">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/master_designer_v2.0" target="_blank" className="text-gray-500 hover:text-cyan-400 transition-colors text-sm flex items-center gap-2">Instagram</a>
+                            </li>
+                        </ul>
                     </motion.div>
                 </div>
 
                 {/* Bottom Bar */}
                 <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5">
-                    <p className="text-gray-600 text-xs mb-4 md:mb-0">
-                        &copy; {new Date().getFullYear()} Master Designer v3.0 — All rights reserved.
-                    </p>
+                    <div className="text-center md:text-left mb-6 md:mb-0">
+                        <p className="text-gray-600 text-xs mb-2">
+                            Copyright 2025-2026 © Media Unit of SLTC
+                        </p>
+                        <p className="text-gray-500 text-[10px] tracking-wider uppercase">
+                            Developed by <a href="#" className="text-cyan-500 hover:text-cyan-400 transition-colors">Sandeepa Wimalasiri</a> | Visual Elements by <a href="#" className="text-purple-500 hover:text-purple-400 transition-colors">Nadun Manawadu</a>
+                        </p>
+                    </div>
 
                     <motion.button
                         onClick={scrollToTop}

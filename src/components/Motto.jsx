@@ -9,7 +9,7 @@ const Motto = () => {
                 <img
                     src="/assets/images/banner-bottom-50.png"
                     alt="Motto Background"
-                    className="w-full h-full object-cover opacity-40 grayscale"
+                    className="w-full h-full object-cover opacity-60"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
             </div>
@@ -55,7 +55,7 @@ const Motto = () => {
                     className="mt-8"
                 >
                     <div className="w-16 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mx-auto mb-6" />
-                    <span className="text-gray-500 text-lg md:text-xl font-light tracking-[0.5em]">V 3.0</span>
+                    <span className="text-gray-500 text-lg md:text-xl font-light tracking-[0.5em]">V3.0</span>
                 </motion.div>
             </div>
         </section>

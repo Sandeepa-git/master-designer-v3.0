@@ -6,7 +6,7 @@ const timelineEvents = [
     {
         title: "Registration for Workshops",
         date: "23rd January to 29th January 2026",
-        desc: "Register to be part of Master Designer v3.0 workshops and secure your spot to gain graphic design knowledge."
+        desc: "Register to be part of Master Designer V3.0 workshops and secure your spot to gain graphic design knowledge."
     },
     {
         title: "Workshop Series",
@@ -15,17 +15,17 @@ const timelineEvents = [
     },
     {
         title: "Registration for Competition",
-        date: "9th February to 16th February 2026",
+        date: "9th February",
         desc: "Showcase your creative excellence on a national platform. Register for the online competition phase."
     },
     {
         title: "Submission Period (Phase 02)",
-        date: "16th February to 21st February 2026",
+        date: "23rd February to 28th February 12.00AM",
         desc: "Submit your original designs and let your creativity speak. Unleash your innovation."
     },
     {
         title: "Voting Round",
-        date: "24th February to 3rd March 2026",
+        date: "01st March 12.00AM to 5th March 2026",
         desc: "Promote your design and rally support through public voting to choose the most outstanding creations."
     },
     {

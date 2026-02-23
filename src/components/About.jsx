@@ -40,7 +40,7 @@ const About = () => {
                         transition={{ delay: 0.4 }}
                         className="text-gray-400 text-lg mb-6 leading-relaxed"
                     >
-                        <span className="text-cyan-400 font-bold">MASTER DESIGNER V1.0</span>, presented by the Media Unit of SLTC, was a 4-day workshop series strictly focused on Photoshop, Illustrator, and InDesign tools. This was followed by <span className="text-purple-400 font-bold">MASTER DESIGNER V2.0</span>, an all-island competition designed to evaluate the most talented individuals in the field of graphic design across the nation.
+                        Master Designer V3.0 is the latest edition of the all-island graphic design initiative organized by the Media Unit of SLTC. Building on the success of previous versions, it combines both competition and workshop elements to discover and celebrate design talent across Sri Lanka.
                     </motion.p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ const About = () => {
                         transition={{ delay: 0.5 }}
                         className="text-gray-400 text-lg mb-10 leading-relaxed"
                     >
-                        Now, <span className="text-cyan-400 font-bold">Master Designer V3.0</span> is here as the ultimate all-island graphic design competition and workshop series. Aimed at discovering top design talent in Sri Lanka, it promotes creativity and growth in digital design, including the use of AI tools. It consists of three immersive phases, from expert-led workshops to a live, physical final round.
+                        The program is open to individuals and teams of up to three members, aged 16 and above, and emphasizes creativity, collaboration, and innovation in digital design. It unfolds across three structured phases: Phase 1: Online weekend workshops on Adobe Illustrator and Photoshop, open to all ages. Phase 2: Original design submissions based on a given theme. Phase 03: A live final round at SLTC Padukka, where the top 15 individuals and 10 teams compete before an audience.
                     </motion.p>
 
                     <motion.div
@@ -80,12 +80,12 @@ const About = () => {
                         <img
                             src="/assets/images/work.png"
                             alt="About Master Designer"
-                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-opacity duration-700 parallax-bg"
+                            className="w-full h-full object-cover transition-opacity duration-700 parallax-bg"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80" />
                         <div className="absolute bottom-6 left-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                             <p className="text-white font-bold text-2xl mb-1">The Journey</p>
-                            <p className="text-cyan-400 text-sm tracking-wider">Since 2015</p>
+                            <p className="text-cyan-400 text-sm tracking-wider">Since 2022</p>
                         </div>
                     </div>
                 </motion.div>

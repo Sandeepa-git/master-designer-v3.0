@@ -49,71 +49,103 @@ const Memories = () => {
                     </motion.p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* V2 Info */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {/* Version 1.0 Card */}
                     <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-50px" }}
-                        className="space-y-6"
+                        initial={{ opacity: 0, y: 40, rotateY: -5 }}
+                        whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                        className="bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 hover:border-cyan-500/50 transition-all duration-300 group relative overflow-hidden flex flex-col h-full"
+                        style={{ perspective: "1000px" }}
                     >
-                        <motion.div
-                            variants={fadeUp}
-                            custom={0}
-                            whileHover={{ x: 8 }}
-                            className="border-l-4 border-cyan-500 pl-6 py-3 bg-cyan-500/5 rounded-r-xl hover:bg-cyan-500/10 transition-all duration-300 cursor-default"
-                        >
-                            <h3 className="text-xl font-bold text-cyan-400 mb-2">V2.0 PHASE 01</h3>
-                            <p className="text-gray-300 leading-relaxed text-sm">
-                                In the first phase, designs for one field selected from the given fields are submitted under the online mode. 15 teams and 15 individual competitors were selected for the final stage.
-                            </p>
-                        </motion.div>
-                        <motion.div
-                            variants={fadeUp}
-                            custom={1}
-                            whileHover={{ x: 8 }}
-                            className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-500/5 rounded-r-xl hover:bg-purple-500/10 transition-all duration-300 cursor-default"
-                        >
-                            <h3 className="text-xl font-bold text-purple-400 mb-2">V2.0 PHASE 02</h3>
-                            <p className="text-gray-300 leading-relaxed text-sm">
-                                In the final phase, selected groups measured their skills at a specific time. The greatest designs were evaluated and celebrated in a physical competition round.
-                            </p>
-                        </motion.div>
+                        <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <h4 className="text-6xl font-black text-white">V1.0</h4>
+                        </div>
+                        <div className="relative z-10 flex-1">
+                            <motion.span
+                                initial={{ opacity: 0, x: -10 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.3 }}
+                                className="text-cyan-400 font-bold tracking-widest text-xs uppercase mb-4 block"
+                            >
+                                Archive 2022
+                            </motion.span>
+                            <motion.h3
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.4 }}
+                                className="text-2xl font-bold text-white mb-6 group-hover:text-cyan-400 transition-colors"
+                            >
+                                Master Designer V1.0
+                            </motion.h3>
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: 0.5 }}
+                                className="text-gray-400 text-sm leading-relaxed mb-6"
+                            >
+                                Master Designer V1.0, the inaugural four-day workshop series organized by the Media Unit of SLTC in 2022, served as a launchpad for aspiring graphic designers to explore, experiment, and strengthen their creative skills.
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: 0.6 }}
+                                className="text-gray-400 text-sm leading-relaxed"
+                            >
+                                This immersive program was designed specifically for undergraduates of SLTC, offering valuable learning opportunities through hands-on sessions with industry-standard tools such as Photoshop, Illustrator, and InDesign.
+                            </motion.p>
+                        </div>
                     </motion.div>
 
-                    {/* V2 Preview Card */}
+                    {/* Version 2.0 Card */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 40, rotateY: 5 }}
+                        whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        whileHover={{ y: -10, scale: 1.02 }}
-                        className="bg-[#0a0a0a] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group max-w-md mx-auto hover:border-cyan-500/30 transition-all duration-500"
+                        transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                        className="bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 hover:border-purple-500/50 transition-all duration-300 group relative overflow-hidden flex flex-col h-full"
+                        style={{ perspective: "1000px" }}
                     >
-                        {/* Browser chrome */}
-                        <div className="bg-[#111] px-4 py-3 flex items-center gap-2 border-b border-white/5">
-                            <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                            <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                            <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                            <span className="ml-4 text-xs text-gray-500 font-mono hidden sm:block">master-designer-v2-0.vercel.app</span>
+                        <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <h4 className="text-6xl font-black text-white">V2.0</h4>
                         </div>
-
-                        <div className="relative aspect-video bg-black flex items-center justify-center p-8">
-                            <img src="/assets/images/logo.png" alt="V2 Logo" className="h-24 opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110" />
-
-                            {/* Hover overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex items-center justify-center flex-col gap-4 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-sm">
+                        <div className="relative z-10 flex-1">
+                            <motion.span
+                                initial={{ opacity: 0, x: 10 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.3 }}
+                                className="text-purple-400 font-bold tracking-widest text-xs uppercase mb-4 block"
+                            >
+                                Archive 2024
+                            </motion.span>
+                            <motion.h3
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.4 }}
+                                className="text-2xl font-bold text-white mb-6 group-hover:text-purple-400 transition-colors"
+                            >
+                                Master Designer V2.0
+                            </motion.h3>
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: 0.5 }}
+                                className="text-gray-400 text-sm leading-relaxed mb-6"
+                            >
+                                This was not merely a competition — it was a national platform for creativity and innovation. Master Designer V2.0, organized by the Media Unit of SLTC, brought together Sri Lanka’s most talented graphic designers.
+                            </motion.p>
+                            <div className="mt-auto">
                                 <motion.a
                                     href="https://master-designer-v2-0.vercel.app/"
                                     target="_blank"
                                     rel="noreferrer"
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="px-6 py-3 bg-white text-black font-bold rounded-full flex items-center gap-2 hover:bg-cyan-400 transition-colors text-sm"
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="inline-flex items-center gap-2 text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-xl hover:bg-white/10 transition-all"
                                 >
                                     Visit Archive <ExternalLink size={14} />
                                 </motion.a>
-                                <p className="text-gray-400 text-xs">Explore our V2.0 legacy</p>
                             </div>
                         </div>
                     </motion.div>

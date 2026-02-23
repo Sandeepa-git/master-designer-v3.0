@@ -110,9 +110,9 @@ const Preloader = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 1, duration: 0.5 }}
-                    className="px-4 py-1.5 border border-white/10 rounded-full mb-8 bg-white/[0.02] backdrop-blur-sm"
+                    className="px-6 py-1.5 border border-white/10 rounded-full mb-8 bg-white/[0.02] backdrop-blur-sm"
                 >
-                    <span className="text-gray-500 text-xs tracking-[0.3em] font-mono">V3.0</span>
+                    <span className="text-gray-500 text-xs tracking-[0.3em] font-mono whitespace-nowrap">V3.0</span>
                 </motion.div>
 
                 {/* Progress bar */}
