@@ -93,15 +93,15 @@ const Timeline = () => {
 
                             <motion.div
                                 whileHover={{ y: -5, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
-                                className="w-1/2 p-3 md:p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm transition-all duration-300 group hover:border-cyan-500/30"
+                                className="flex-1 p-3 md:p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm transition-all duration-300 group hover:border-cyan-500/30 overflow-hidden"
                             >
                                 <span className="inline-block px-2 py-0.5 md:px-3 md:py-1 rounded bg-purple-500/20 border border-purple-500/40 text-purple-300 text-[10px] md:text-xs font-mono mb-2 md:mb-4">
                                     {event.date}
                                 </span>
-                                <h3 className="text-sm md:text-xl font-bold text-white mb-2 md:mb-3 group-hover:text-cyan-400 transition-colors">{event.title}</h3>
-                                <p className="text-gray-400 text-[11px] md:text-sm leading-tight md:leading-relaxed">{event.desc}</p>
+                                <h3 className="text-sm md:text-xl font-bold text-white mb-2 md:mb-3 group-hover:text-cyan-400 transition-colors uppercase tracking-tight">{event.title}</h3>
+                                <p className="text-gray-400 text-[10px] md:text-sm leading-tight md:leading-relaxed">{event.desc}</p>
                             </motion.div>
-                            <div className="w-1/2" />
+                            <div className="flex-1" />
                         </motion.div>
                     ))}
                 </div>

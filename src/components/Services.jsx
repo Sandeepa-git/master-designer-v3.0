@@ -53,8 +53,8 @@ const Services = () => {
                             className="relative group w-full max-w-[450px]"
                             style={{ perspective: "1000px" }}
                         >
-                            {/* Card Container - Strict Portrait Design */}
-                            <div className="relative aspect-[3/4.2] flex flex-col rounded-[2.8rem] p-[3px] bg-gradient-to-br from-purple-500 via-cyan-500/50 to-cyan-500 overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(34,211,238,0.2)]">
+                            {/* Card Container - Strict Portrait Design on Desktop, Flexible on Mobile */}
+                            <div className="relative aspect-auto md:aspect-[3/4.2] min-h-[450px] md:min-h-0 flex flex-col rounded-[2.8rem] p-[3px] bg-gradient-to-br from-purple-500 via-cyan-500/50 to-cyan-500 overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(34,211,238,0.2)]">
                                 <div className="absolute inset-0 bg-black rounded-[2.8rem]" />
 
                                 {/* Background Logo - Enhanced Visibility */}
@@ -64,18 +64,18 @@ const Services = () => {
                                     transition={{ duration: 1.2 }}
                                     className="absolute inset-0 pointer-events-none"
                                 >
-                                    <div className="absolute inset-0 flex items-center justify-center p-12">
+                                    <div className="absolute inset-0 flex items-center justify-center p-8 md:p-12">
                                         <img src="/assets/images/logo.png" alt="" className="w-full h-auto object-contain grayscale invert" />
                                     </div>
                                 </motion.div>
 
                                 {/* Content - Centered for Portrait View */}
-                                <div className="relative h-full flex flex-col items-center justify-center p-10 md:p-12 z-10 text-center pb-24">
+                                <div className="relative h-full flex flex-col items-center justify-center p-8 md:p-12 z-10 text-center pb-24 md:pb-28">
                                     <motion.div
                                         initial={{ opacity: 0, scale: 0.5, y: 20 }}
                                         whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                         transition={{ delay: 0.3, duration: 0.5 }}
-                                        className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl font-black text-white group-hover:bg-cyan-500 group-hover:border-cyan-400 transition-all duration-500 mb-8"
+                                        className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-2xl md:text-3xl font-black text-white group-hover:bg-cyan-500 group-hover:border-cyan-400 transition-all duration-500 mb-6 md:mb-8"
                                     >
                                         {phase.id}
                                     </motion.div>
@@ -84,7 +84,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.4, duration: 0.6 }}
-                                        className="text-3xl md:text-3xl font-black text-white mb-6 group-hover:text-cyan-400 transition-colors tracking-tighter"
+                                        className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6 group-hover:text-cyan-400 transition-colors tracking-tighter"
                                     >
                                         {phase.title}
                                     </motion.h3>
@@ -93,7 +93,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.5, duration: 0.6 }}
-                                        className="text-gray-400 text-base md:text-lg leading-relaxed font-light group-hover:text-gray-200 transition-colors"
+                                        className="text-gray-400 text-sm md:text-lg leading-relaxed font-light group-hover:text-gray-200 transition-colors px-2"
                                     >
                                         {phase.desc}
                                     </motion.p>
@@ -104,16 +104,16 @@ const Services = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.6, duration: 0.6 }}
-                                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] z-20"
+                                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] md:w-[75%] z-20"
                                 >
-                                    <div className="relative px-6 py-4 bg-black border-t border-x border-white/10 rounded-t-[2.2rem] flex flex-col items-center gap-1 shadow-[0_-15px_30px_rgba(0,0,0,0.8)] group-hover:border-cyan-500/50 transition-all">
+                                    <div className="relative px-4 py-3 md:px-6 md:py-4 bg-black border-t border-x border-white/10 rounded-t-[2rem] md:rounded-t-[2.2rem] flex flex-col items-center gap-1 shadow-[0_-15px_30px_rgba(0,0,0,0.8)] group-hover:border-cyan-500/50 transition-all">
                                         <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                                        <p className="text-[10px] md:text-xs font-black tracking-[0.3em] text-white uppercase whitespace-nowrap">
+                                        <p className="text-[9px] md:text-xs font-black tracking-[0.2em] md:tracking-[0.3em] text-white uppercase whitespace-nowrap">
                                             Master Designer V3.0
                                         </p>
-                                        <div className="w-12 h-[1px] bg-white/10 my-1" />
-                                        <p className="text-[7px] md:text-[8px] font-bold tracking-[0.4em] text-cyan-500/80 uppercase">
+                                        <div className="w-10 h-[1px] bg-white/10 my-1" />
+                                        <p className="text-[6px] md:text-[8px] font-bold tracking-[0.3em] md:tracking-[0.4em] text-cyan-500/80 uppercase">
                                             Good Design, Creates Culture
                                         </p>
                                     </div>
