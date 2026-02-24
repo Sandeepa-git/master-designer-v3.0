@@ -38,11 +38,11 @@ body {
 /* Parallax Animation */
 @keyframes parallax-move {
   from {
-    transform: translateY(-15%) scale(1.2);
+    transform: translateY(-15%) scale(1.4);
   }
 
   to {
-    transform: translateY(15%) scale(1.2);
+    transform: translateY(15%) scale(1.4);
   }
 }
 
