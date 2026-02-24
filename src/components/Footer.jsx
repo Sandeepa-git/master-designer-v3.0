@@ -104,15 +104,24 @@ const Footer = () => {
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
                         <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Event Links</h4>
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                             <li>
-                                <a href="https://www.linkedin.com/company/master-designer-v" target="_blank" className="text-gray-500 hover:text-cyan-400 transition-colors text-sm flex items-center gap-2">LinkedIn</a>
+                                <a href="https://www.linkedin.com/company/master-designer-v" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyan-400 transition-colors text-sm flex items-center gap-3">
+                                    <Linkedin className="w-4 h-4" />
+                                    LinkedIn
+                                </a>
                             </li>
                             <li>
-                                <a href="https://www.facebook.com/share/1EEownrZSB" target="_blank" className="text-gray-500 hover:text-cyan-400 transition-colors text-sm flex items-center gap-2">Facebook</a>
+                                <a href="https://www.facebook.com/share/1EEownrZSB" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyan-400 transition-colors text-sm flex items-center gap-3">
+                                    <Facebook className="w-4 h-4" />
+                                    Facebook
+                                </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/master_designer_v2.0" target="_blank" className="text-gray-500 hover:text-cyan-400 transition-colors text-sm flex items-center gap-2">Instagram</a>
+                                <a href="https://www.instagram.com/master_designer_v2.0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyan-400 transition-colors text-sm flex items-center gap-3">
+                                    <Instagram className="w-4 h-4" />
+                                    Instagram
+                                </a>
                             </li>
                         </ul>
                     </motion.div>

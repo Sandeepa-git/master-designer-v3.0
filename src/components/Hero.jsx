@@ -52,7 +52,7 @@ const Hero = () => {
                     transition={{ delay: 1.2, duration: 0.6 }}
                 >
                     <span className="inline-block py-1.5 px-4 rounded-full bg-white/5 border border-white/10 text-xs md:text-sm tracking-[0.3em] text-cyan-400 mb-8 uppercase backdrop-blur-md">
-                        DESIGNTHON
+                        DESIGNATHON
                     </span>
                 </motion.div>
 

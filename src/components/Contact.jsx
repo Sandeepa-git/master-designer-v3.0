@@ -88,7 +88,7 @@ const Contact = () => {
                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                             <div className="relative z-10 flex flex-col items-center">
-                                <div className={`${member.featured ? 'w-32 h-32' : 'w-24 h-24'} rounded-full p-1 bg-gradient-to-br from-white/10 to-transparent mb-4 group-hover:from-cyan-400 group-hover:to-purple-500 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.1)]`}>
+                                <div className="w-28 h-28 rounded-full p-1 bg-gradient-to-br from-white/10 to-transparent mb-4 group-hover:from-cyan-400 group-hover:to-purple-500 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.1)]">
                                     <div className="w-full h-full rounded-full overflow-hidden bg-black">
                                         <img
                                             src={member.img}

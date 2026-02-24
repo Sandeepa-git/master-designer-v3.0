@@ -46,7 +46,7 @@ const Testimonials = () => {
                     Client Stories
                 </h2>
 
-                <div className="relative h-[400px] flex items-center justify-center">
+                <div className="relative min-h-[450px] md:h-[500px] flex items-center justify-center">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={current}
@@ -54,40 +54,47 @@ const Testimonials = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.5 }}
-                            className="bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl max-w-2xl w-full"
+                            className="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-12 rounded-3xl shadow-2xl max-w-2xl w-full relative overflow-hidden"
                         >
-                            <Quote className="w-10 h-10 text-cyan-400 mb-6 mx-auto opacity-50" />
-                            <p className="text-lg md:text-2xl text-gray-200 indent-8 italic leading-relaxed mb-8">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-purple-600 opacity-30" />
+
+                            <Quote className="w-8 h-8 md:w-10 md:h-10 text-cyan-400 mb-6 mx-auto opacity-50" />
+                            <p className="text-base md:text-2xl text-gray-200 italic leading-relaxed mb-8">
                                 "{reviews[current].review}"
                             </p>
 
                             <div className="flex items-center justify-center gap-4">
-                                <img
-                                    src={reviews[current].img}
-                                    alt={reviews[current].name}
-                                    className="w-14 h-14 rounded-full object-cover border-2 border-cyan-500/30"
-                                />
+                                <div className="relative">
+                                    <div className="absolute inset-0 bg-cyan-500/20 blur-md rounded-full" />
+                                    <img
+                                        src={reviews[current].img}
+                                        alt={reviews[current].name}
+                                        className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-cyan-500/30 relative z-10"
+                                    />
+                                </div>
                                 <div className="text-left">
-                                    <h4 className="text-white font-bold">{reviews[current].name}</h4>
-                                    <p className="text-cyan-400 text-sm">{reviews[current].role}</p>
+                                    <h4 className="text-white font-bold text-sm md:text-base">{reviews[current].name}</h4>
+                                    <p className="text-cyan-400 text-xs md:text-sm">{reviews[current].role}</p>
                                 </div>
                             </div>
                         </motion.div>
                     </AnimatePresence>
 
                     {/* Navigation Buttons */}
-                    <button
-                        onClick={prev}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 p-3 bg-white/5 hover:bg-white/10 rounded-full text-white transition-colors"
-                    >
-                        <ChevronLeft />
-                    </button>
-                    <button
-                        onClick={next}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 p-3 bg-white/5 hover:bg-white/10 rounded-full text-white transition-colors"
-                    >
-                        <ChevronRight />
-                    </button>
+                    <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 md:-mx-12 pointer-events-none">
+                        <button
+                            onClick={prev}
+                            className="p-2 md:p-3 bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 rounded-full text-white transition-all hover:scale-110 pointer-events-auto active:scale-95"
+                        >
+                            <ChevronLeft size={20} />
+                        </button>
+                        <button
+                            onClick={next}
+                            className="p-2 md:p-3 bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 rounded-full text-white transition-all hover:scale-110 pointer-events-auto active:scale-95"
+                        >
+                            <ChevronRight size={20} />
+                        </button>
+                    </div>
                 </div>
 
                 {/* Dots */}

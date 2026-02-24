@@ -67,16 +67,15 @@ const About = () => {
 
                 </motion.div>
 
-                {/* Image Content */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
                     whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="relative group"
+                    className="relative group w-full"
                 >
                     <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-3xl opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-700" />
-                    <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gray-900 border border-white/10 group-hover:border-white/20 transition-colors">
+                    <div className="relative rounded-3xl overflow-hidden aspect-[4/3] md:aspect-[4/5] bg-gray-900 border border-white/10 group-hover:border-white/20 transition-colors">
                         <img
                             src="/assets/images/work.png"
                             alt="About Master Designer"

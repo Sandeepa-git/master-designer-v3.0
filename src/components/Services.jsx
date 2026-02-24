@@ -39,7 +39,7 @@ const Services = () => {
                     <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto mt-6" />
                 </div>
 
-                <div className="flex flex-col gap-24 items-center">
+                <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-center justify-center">
                     {phases.map((phase, idx) => (
                         <motion.div
                             key={phase.id}
@@ -48,24 +48,25 @@ const Services = () => {
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{
                                 duration: 1,
+                                delay: idx * 0.1,
                                 ease: [0.22, 1, 0.36, 1]
                             }}
-                            className="relative group w-full max-w-[450px]"
+                            className="relative group w-full max-w-[400px] md:w-1/3"
                             style={{ perspective: "1000px" }}
                         >
                             {/* Card Container - Strict Portrait Design on Desktop, Flexible on Mobile */}
-                            <div className="relative aspect-auto md:aspect-[3/4.2] min-h-[450px] md:min-h-0 flex flex-col rounded-[2.8rem] p-[3px] bg-gradient-to-br from-purple-500 via-cyan-500/50 to-cyan-500 overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(34,211,238,0.2)]">
+                            <div className="relative aspect-[3/4] md:aspect-[3/4.2] w-full flex flex-col rounded-[2.8rem] p-[3px] bg-gradient-to-br from-purple-500 via-cyan-500/50 to-cyan-500 overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(34,211,238,0.2)]">
                                 <div className="absolute inset-0 bg-black rounded-[2.8rem]" />
 
                                 {/* Background Logo - Enhanced Visibility */}
                                 <motion.div
                                     initial={{ scale: 1.1, opacity: 0 }}
-                                    whileInView={{ scale: 1, opacity: 0.15 }}
+                                    whileInView={{ scale: 1, opacity: 0.2 }}
                                     transition={{ duration: 1.2 }}
                                     className="absolute inset-0 pointer-events-none"
                                 >
-                                    <div className="absolute inset-0 flex items-center justify-center p-8 md:p-12">
-                                        <img src="/assets/images/logo.png" alt="" className="w-full h-auto object-contain grayscale invert" />
+                                    <div className="absolute inset-0 flex items-center justify-center p-6 md:p-12">
+                                        <img src="/assets/images/logo.png" alt="" className="w-full h-full object-cover grayscale invert opacity-50" />
                                     </div>
                                 </motion.div>
 
