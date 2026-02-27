@@ -59,7 +59,7 @@ const About = () => {
                         transition={{ delay: 0.6 }}
                         className="mb-10"
                     >
-                        <a href="https://drive.google.com/file/d/1TM24mS22xNG_t46yjabVYHcRPJ7LWgaV/view?usp=drive_link" target="_blank" className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all transform hover:-translate-y-1">
+                        <a href="https://drive.google.com/file/d/1ZVYPhk0o5MEbdwiw0CAl7De6W6cAs7zx/view?usp=drivesdk" target="_blank" className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all transform hover:-translate-y-1">
                             Download Delegate Booklet
                         </a>
                     </motion.div>
@@ -72,7 +72,7 @@ const About = () => {
                     whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="relative group w-full"
+                    className="relative group w-full max-w-md mx-auto"
                 >
                     <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-3xl opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-700" />
                     <div className="relative rounded-3xl overflow-hidden aspect-[4/3] md:aspect-[4/5] bg-gray-900 border border-white/10 group-hover:border-white/20 transition-colors">

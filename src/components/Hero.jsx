@@ -94,7 +94,26 @@ const Hero = () => {
                 </motion.p>
 
                 {/* CTA Buttons */}
-
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 2.5, duration: 0.8 }}
+                    className="flex flex-col sm:flex-row gap-6 justify-center"
+                >
+                    <a
+                        href="https://drive.google.com/file/d/1ZVYPhk0o5MEbdwiw0CAl7De6W6cAs7zx/view?usp=drivesdk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl font-bold text-white transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
+                    >
+                        <span className="relative z-10 flex items-center gap-2">
+                            Delegate Booklet
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </span>
+                    </a>
+                </motion.div>
             </div>
 
             {/* Scroll Indicator */}
