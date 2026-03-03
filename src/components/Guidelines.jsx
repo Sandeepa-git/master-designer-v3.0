@@ -24,7 +24,7 @@ const Guidelines = () => {
                         </li>
                         <li className="flex gap-4">
                             <span className="text-cyan-400 font-bold">•</span>
-                            Anyone above the age of 15 can participate in the competition.
+                            Anyone above the age of 16 can participate in the competition.
                         </li>
                         <li className="flex gap-4">
                             <span className="text-purple-400 font-bold">•</span>
