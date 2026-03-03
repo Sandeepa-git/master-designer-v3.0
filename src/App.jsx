@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Sponsors from './components/Sponsors';
+import WaveSkillPartner from './components/WaveSkillPartner';
 import About from './components/About';
 import Services from './components/Services';
 import Guidelines from './components/Guidelines';
@@ -49,6 +50,7 @@ function App() {
               <Memories />
               <Motto />
               <Prizes />
+              <WaveSkillPartner />
               <TShirt />
               <Contact />
             </main>
