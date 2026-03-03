@@ -20,14 +20,10 @@ const timelineEvents = [
     },
     {
         title: "Submission Period (Phase 02)",
-        date: "23rd February to 28th February 12.00AM",
+        date: "23rd February to 2nd March 12.00AM",
         desc: "Submit your original designs and let your creativity speak. Unleash your innovation."
     },
-    {
-        title: "Voting Round",
-        date: "01st March 12.00AM to 5th March 2026",
-        desc: "Promote your design and rally support through public voting to choose the most outstanding creations."
-    },
+
     {
         title: "Grand Final & Closing",
         date: "7th March 2026",
