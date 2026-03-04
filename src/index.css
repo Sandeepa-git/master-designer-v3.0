@@ -66,3 +66,23 @@ body {
 .animate-spin-slow {
   animation: spin-slow 12s linear infinite;
 }
+
+/* Sponsor Marquee */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.sponsor-marquee {
+  animation: marquee-scroll 22s linear infinite;
+  width: max-content;
+}
+
+.sponsor-marquee:hover {
+  animation-play-state: paused;
+}
