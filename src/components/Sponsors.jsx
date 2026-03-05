@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 const sponsors = [
     { name: 'SLTC', logo: '/assets/images/white sltc.png' },
     { name: 'Media', logo: '/assets/images/white media.png' },
-    { name: 'Insight', logo: '/assets/images/insight white.png' },
+    { name: 'Insight', logo: '/assets/images/insight white.png', whiteBg: true },
+    { name: 'Priyantha Service Station', logo: '/assets/images/priyantha.png', whiteBg: true },
 ];
 
 const Sponsors = () => {

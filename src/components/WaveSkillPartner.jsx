@@ -8,6 +8,7 @@ const sponsors = [
     { name: 'SLTC', logo: '/assets/images/white sltc.png', whiteBg: false },
     { name: 'Media Unit', logo: '/assets/images/white media.png', whiteBg: false },
     { name: 'Insight', logo: '/assets/images/insight white.png', whiteBg: false },
+    { name: 'Priyantha Service Station', logo: '/assets/images/priyantha.png', whiteBg: false },
 ];
 
 // Triplicate for seamless infinite loop
